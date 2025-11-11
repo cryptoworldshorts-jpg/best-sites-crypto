@@ -1,4 +1,4 @@
-/* Dark theme */
+/* BASE */
 body {
     background: #0d0f14;
     color: #fff;
@@ -6,14 +6,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Header */
+/* HERO */
 .hero {
     text-align: center;
     padding: 40px 20px;
 }
 .hero h1 {
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 700;
+    color: #3af2ff;
     margin-bottom: 5px;
 }
 .hero p {
@@ -21,7 +22,7 @@ body {
     opacity: 0.8;
 }
 
-/* Grid layout */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -31,59 +32,82 @@ body {
     padding: 20px;
 }
 
-/* Cards */
+/* CARD */
 .card {
     background: #13161d;
     border-radius: 14px;
-    padding: 20px;
-    text-align: center;
+    padding: 22px;
     border: 1px solid #22252d;
-    transition: 0.25s;
-}
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #3af2ff;
+    transition: 0.3s;
 }
 
-/* Icon */
-.icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 12px;
+.card:hover {
+    border-color: #3af2ff;
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px #3af2ff44;
+}
+
+/* TOP PART */
+.top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 15px;
 }
 
-/* Titles */
-.card h2 {
+.icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+}
+
+.top h2 {
     font-size: 20px;
-    margin: 5px 0 12px;
+    font-weight: 700;
+    margin: 0;
 }
 
-/* Text */
-.card p {
-    margin: 4px 0;
+/* FEATURES LIST */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+}
+
+.features li {
     font-size: 14px;
-    opacity: 0.85;
+    margin: 6px 0;
+    opacity: 0.9;
+    position: relative;
+    padding-left: 22px;
 }
 
-/* Button */
+.features li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* BUTTON */
 .btn {
     display: block;
-    margin: 15px auto 0;
+    text-align: center;
     padding: 12px 0;
-    width: 80%;
     background: #3af2ff;
     color: #000;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 8px;
+    font-size: 15px;
     transition: 0.2s;
 }
+
 .btn:hover {
     background: #76f7ff;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
