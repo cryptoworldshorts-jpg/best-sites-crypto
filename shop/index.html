@@ -94,16 +94,21 @@
       min-height:44px;
     }
 
-    .cta{
-      display:inline-block;
-      padding:10px 20px;
-      border-radius:26px;
-      background:var(--gold);
-      color:#071018;
-      font-weight:700;
-      transition:transform .18s ease, background .18s ease;
-    }
-    .cta:hover{background:var(--gold-dark);transform:scale(1.04)}
+    /* NEW BUTTON COLOR – from your old site */
+.cta{
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:26px;
+  background:#3af2ff;
+  color:#001;
+  font-weight:800;
+  transition:transform .18s ease, background .18s ease;
+}
+.cta:hover{
+  background:#7ff7ff;
+  transform:translateY(-3px);
+}
+
 
     /* Responsive */
     @media (max-width:1100px){ .grid{grid-template-columns:repeat(3,1fr)} .thumb{height:150px} }
