@@ -1,176 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Crypto World Shop</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto World Shop - Best Crypto Products 2025</title>
 
-  <!-- META SEO -->
-  <meta name="description" content="Crypto World Shop — trusted crypto wallets, cards, and accessories for secure trading and investing." />
-  <meta name="keywords" content="crypto shop, hardware wallet, ledger, trezor, safepal, binance card, bitrefill, bitcoin store, crypto gear" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Crypto World Shop" />
-  <meta property="og:description" content="Discover the best crypto wallets, cards, and accessories for 2025 — secure your assets with trusted brands." />
-  <meta property="og:image" content="https://i.postimg.cc/gk5j4k5F/prewiew-1.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cryptoworldshorts-jpg.github.io/best-sites-crypto/shop/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Crypto World Shop" />
-  <meta name="twitter:description" content="Explore top crypto wallets, cards, and gift services trusted by millions." />
-  <meta name="twitter:image" content="https://i.postimg.cc/gk5j4k5F/prewiew-1.jpg" />
+  <!-- SEO -->
+  <meta name="description" content="Discover the best crypto hardware wallets, cards, tools, and accessories. Ledger, Trezor, SafePal, Binance Card and more — curated by Crypto World.">
+  <meta name="keywords" content="crypto shop, hardware wallet, ledger, trezor, safepal, binance card, crypto tools">
+  <meta name="author" content="Crypto World">
+  <meta name="robots" content="index, follow">
 
+  <!-- Style -->
   <style>
-    /* ========== BASIC RESET ========== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-    }
-
     body {
-      background: #0b0e11;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #0b0f19;
       color: #fff;
-      line-height: 1.6;
     }
 
-    /* ========== HEADER ========== */
-    .shop-header {
-      background: linear-gradient(135deg, #1e2329, #111418);
-      padding: 40px 20px;
+    header {
       text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    .shop-header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #ffcc00;
-    }
-
-    .shop-header p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    /* ========== PRODUCT GRID ========== */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product-card {
-      background: #161b22;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .product-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #ffcc00;
-    }
-
-    .product-card p {
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: #ffcc00;
+      padding: 1rem 0;
+      background: linear-gradient(90deg, #0ef, #08f);
+      font-weight: bold;
       color: #000;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 25px;
+      padding: 40px 25px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .box {
+      background: #0d121f;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(0, 255, 255, 0.12);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+    }
+
+    .box img {
+      width: 85%;
+      border-radius: 14px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 18px rgba(0, 255, 255, 0.25);
+    }
+
+    .box h3 {
+      color: #ffcc00;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .box p {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .box a {
+      display: inline-block;
+      background: #00eaff;
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 25px;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: 0.25s ease;
     }
 
-    .btn:hover {
-      background: #e6b800;
-    }
-
-    /* ========== FOOTER ========== */
-    .shop-footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
-      color: #999;
-      background: #0e1116;
-      border-top: 1px solid #1b1f25;
-      margin-top: 40px;
+    .box a:hover {
+      background: #00b8d4;
+      transform: scale(1.07);
     }
   </style>
 </head>
 
 <body>
-  <header class="shop-header">
-    <h1>🛒 Crypto World Shop</h1>
-    <p>Top crypto gear, wallets & tools — trusted by the crypto community.</p>
-  </header>
 
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="https://i.postimg.cc/Vv2YnV1W/ledger.jpg" alt="Ledger Wallet">
-      <h3>Ledger Nano X</h3>
-      <p>Secure your crypto with the most trusted hardware wallet in 2025.</p>
-      <a href="ledger.html" class="btn">View Details</a>
-    </div>
+<header>Crypto World Shop – Top Crypto Tools & Hardware 2025</header>
 
-    <div class="product-card">
-      <img src="https://i.postimg.cc/m2c5bKfn/trezor.jpg" alt="Trezor Wallet">
-      <h3>Trezor Model T</h3>
-      <p>Next-gen security for Bitcoin & altcoins with touchscreen simplicity.</p>
-      <a href="trezor.html" class="btn">View Details</a>
-    </div>
+<div class="container">
 
-    <div class="product-card">
-      <img src="https://i.postimg.cc/8PfTT5Kz/safepal.jpg" alt="SafePal Wallet">
-      <h3>SafePal S1</h3>
-      <p>Hardware + app wallet combo trusted by Binance Labs and millions worldwide.</p>
-      <a href="safepal.html" class="btn">View Details</a>
-    </div>
+  <!-- 1 Ledger -->
+  <div class="box">
+    <img src="https://i.postimg.cc/Vv2YnV1W/ledger.jpg" alt="Ledger Nano X">
+    <h3>Ledger Nano X</h3>
+    <p>Secure your crypto with the world’s most trusted hardware wallet.</p>
+    <a href="shop/ledger.html">View Details</a>
+  </div>
 
-    <div class="product-card">
-      <img src="https://i.postimg.cc/wvJ0ydH1/binance-card.jpg" alt="Binance Card">
-      <h3>Binance Card</h3>
-      <p>Spend your crypto anywhere Visa is accepted — fast, secure & global.</p>
-      <a href="binance-card.html" class="btn">View Details</a>
-    </div>
+  <!-- 2 Trezor -->
+  <div class="box">
+    <img src="https://i.postimg.cc/m2c5bKfn/trezor.jpg" alt="Trezor Model T">
+    <h3>Trezor Model T</h3>
+    <p>Next-gen hardware wallet with touchscreen security.</p>
+    <a href="shop/trezor.html">View Details</a>
+  </div>
 
-    <div class="product-card">
-      <img src="https://i.postimg.cc/FKXRx3n5/bitrefill.jpg" alt="Bitrefill Gift Cards">
-      <h3>Bitrefill Gift Cards</h3>
-      <p>Use crypto for everyday shopping — Amazon, Netflix, and more.</p>
-      <a href="bitrefill.html" class="btn">View Details</a>
-    </div>
-  </section>
+  <!-- 3 SafePal -->
+  <div class="box">
+    <img src="https://i.postimg.cc/Bnbm2D7H/safepal.jpg" alt="SafePal S1">
+    <h3>SafePal S1</h3>
+    <p>Affordable and secure cold wallet supporting 50+ chains.</p>
+    <a href="shop/safepal.html">View Details</a>
+  </div>
 
-  <footer class="shop-footer">
-    <p>© 2025 Crypto World Shop • All rights reserved.</p>
-  </footer>
+  <!-- 4 Binance Card -->
+  <div class="box">
+    <img src="https://i.postimg.cc/R0rHw2KS/binance-card.jpg" alt="Binance Card">
+    <h3>Binance Card</h3>
+    <p>Spend your crypto anywhere. Visa accepted globally.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <!-- 5–20 Placeholder Products -->
+  <!-- You can rename anytime, only change title/desc/link later -->
+
+  <div class="box">
+    <img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg">
+    <h3>Crypto Tracker Pro</h3>
+    <p>Advanced portfolio tracking for traders.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <div class="box">
+    <img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg">
+    <h3>Cold Wallet Steel Backup</h3>
+    <p>Fireproof recovery phrase plate for maximum safety.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <div class="box">
+    <img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg">
+    <h3>Crypto Tax Tool</h3>
+    <p>Generate full crypto tax reports in seconds.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <div class="box">
+    <img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg">
+    <h3>VPN for Crypto</h3>
+    <p>High-security no-logs VPN for traders & investors.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <!-- You now have 20 items → next batch is auto generated -->
+
+  <div class="box">
+    <img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg">
+    <h3>Anti-Phishing USB Key</h3>
+    <p>Protect logins with FIDO authentication.</p>
+    <a href="#">Coming Soon</a>
+  </div>
+
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Portfolio Analyzer</h3><p>AI risk analysis for traders.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Bitcoin Gift Card</h3><p>Send Bitcoin easily in card form.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Crypto Apparel</h3><p>Premium Bitcoin & crypto merchandise.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Crypto Phone Case</h3><p>Shock-resistant design with crypto branding.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>DeFi Safety Guide</h3><p>Learn how to avoid rug pulls & hacks.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Web3 Domain (.crypto)</h3><p>Blockchain identity for your wallet.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Mining Starter Kit</h3><p>Light mining setup for beginners.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>USB Crypto Light</h3><p>RGB desktop crypto logo lamp.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Bitcoin Notebook</h3><p>Premium notebook for crypto notes.</p><a href="#">Coming Soon</a></div>
+  <div class="box"><img src="https://i.postimg.cc/6q7LW0qF/placeholder.jpg"><h3>Crypto Sticker Pack</h3><p>50+ premium vinyl crypto stickers.</p><a href="#">Coming Soon</a></div>
+
+</div>
+
 </body>
 </html>
