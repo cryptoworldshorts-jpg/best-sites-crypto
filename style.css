@@ -81,9 +81,10 @@ body{
 .shop-button-wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* centar lijevo-desno */
+  align-items: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 20px;              /* udaljenost od dna */
   left: 0;
   z-index: 9999;
 }
@@ -104,4 +105,5 @@ body{
   transform: scale(1.05);
 }
 </style>
+
 
