@@ -106,4 +106,13 @@ body{
 }
 </style>
 
+.details-btn {
+  background: #1a1f26 !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.details-btn:hover {
+  background: #2c343d !important;
+}
 
