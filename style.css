@@ -116,3 +116,27 @@ body{
   background: #2c343d !important;
 }
 
+/* Button row – poravnanje */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Details dugme – ista veličina kao SIGN UP, samo tamniji stil */
+.details-btn {
+  background: #1a242d;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 0;
+  width: 82%;
+  text-decoration: none;
+}
+
+.details-btn:hover {
+  background: #26323d;
+  transform: translateY(-3px);
+}
