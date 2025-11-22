@@ -1,1 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://cryptoworldtools.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- SHOP -->
+  <url><loc>https://cryptoworldtools.com/shop/index.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/ledger.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/trezor.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/safepal.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/indicator.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/trendspider.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/shop/ftmo.html</loc></url>
+
+  <!-- EXCHANGES -->
+  <url><loc>https://cryptoworldtools.com/exchange/okx.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/bitget.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/kucoin.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/bingx.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/binance.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/mexc.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/bybit.html</loc></url>
+  <url><loc>https://cryptoworldtools.com/exchange/kcex.html</loc></url>
+
+</urlset>
 
