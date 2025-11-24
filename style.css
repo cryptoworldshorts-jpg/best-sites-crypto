@@ -136,6 +136,42 @@ body{
   text-decoration: none;
 }
 
+.share-box {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.share-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.share-buttons a {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.share-facebook { background: #1877F2; }
+.share-twitter { background: #1DA1F2; }
+.share-telegram { background: #0088cc; }
+.share-reddit { background: #FF4500; }
+
+.share-buttons a:hover {
+  opacity: 0.85;
+}
+
 .details-btn:hover {
   background: #26323d;
   transform: translateY(-3px);
