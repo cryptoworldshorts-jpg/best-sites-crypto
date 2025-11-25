@@ -235,6 +235,28 @@
     </div>
 
   </main>
+<script>
+function sharePage() {
+  const shareData = {
+    title: document.title,
+    text: "Check out this crypto tool!",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(console.error);
+  } else {
+    // Fallback share dugmići
+    const url = encodeURIComponent(window.location.href);
+    document.getElementById("fallback-share").style.display = "flex";
+
+    document.querySelector(".fb").href = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+    document.querySelector(".tw").href = "https://twitter.com/intent/tweet?url=" + url;
+    document.querySelector(".tg").href = "https://t.me/share/url?url=" + url;
+    document.querySelector(".rd").href = "https://reddit.com/submit?url=" + url;
+  }
+}
+</script>
 
 </body>
 </html>
