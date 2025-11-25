@@ -152,20 +152,7 @@
       <a href="https://cryptoworldtools.com/">Back</a>
     </div>
 
-    <div class="share-box">
-  <button class="share-btn" onclick="sharePage()">
-    <span>🔗 Share This Page</span>
-  </button>
-
-  <div id="fallback-share" class="fallback-share">
-    <a href="#" class="fb" target="_blank">Facebook</a>
-    <a href="#" class="tw" target="_blank">Twitter</a>
-    <a href="#" class="tg" target="_blank">Telegram</a>
-    <a href="#" class="rd" target="_blank">Reddit</a>
-  </div>
-</div>
-
-
+    
 
     <!-- ARTICLE START (1100+ words) -->
 
@@ -235,28 +222,6 @@
     </div>
 
   </main>
-<script>
-function sharePage() {
-  const shareData = {
-    title: document.title,
-    text: "Check out this crypto tool!",
-    url: window.location.href
-  };
-
-  if (navigator.share) {
-    navigator.share(shareData).catch(console.error);
-  } else {
-    // Fallback share dugmići
-    const url = encodeURIComponent(window.location.href);
-    document.getElementById("fallback-share").style.display = "flex";
-
-    document.querySelector(".fb").href = "https://www.facebook.com/sharer/sharer.php?u=" + url;
-    document.querySelector(".tw").href = "https://twitter.com/intent/tweet?url=" + url;
-    document.querySelector(".tg").href = "https://t.me/share/url?url=" + url;
-    document.querySelector(".rd").href = "https://reddit.com/submit?url=" + url;
-  }
-}
-</script>
 
 </body>
 </html>
