@@ -153,6 +153,63 @@
       <a href="https://cryptoworldtools.com/">Back</a>
     </div>
 
+    <!-- Share Buttons -->
+<div class="share-buttons" aria-label="Share this page">
+  <a href="#" class="share-facebook" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer"></a>
+  <a href="#" class="share-twitter" aria-label="Share on Twitter" target="_blank" rel="noopener noreferrer"></a>
+  <a href="#" class="share-linkedin" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer"></a>
+  <a href="#" class="share-whatsapp" aria-label="Share on WhatsApp" target="_blank" rel="noopener noreferrer"></a>
+  <a href="#" class="share-telegram" aria-label="Share on Telegram" target="_blank" rel="noopener noreferrer"></a>
+  <a href="#" class="share-reddit" aria-label="Share on Reddit" target="_blank" rel="noopener noreferrer"></a>
+</div>
+
+<style>
+.share-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.share-buttons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: invert(1); /* za bolju vidljivost na tamnoj pozadini */
+}
+
+.share-buttons a:hover {
+  transform: scale(1.1);
+  filter: invert(0.7) brightness(1.2);
+}
+
+.share-facebook { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg'); }
+.share-twitter { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg'); }
+.share-linkedin { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg'); }
+.share-whatsapp { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg'); }
+.share-telegram { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg'); }
+.share-reddit { background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg'); }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.querySelector('.share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  document.querySelector('.share-twitter').href = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`;
+  document.querySelector('.share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+  document.querySelector('.share-whatsapp').href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+  document.querySelector('.share-telegram').href = `https://telegram.me/share/url?url=${pageUrl}&text=${pageTitle}`;
+  document.querySelector('.share-reddit').href = `https://www.reddit.com/submit?url=${pageUrl}&title=${pageTitle}`;
+});
+</script>
+
+
     <h2>What Is Bybit?</h2>
     <p>
       Bybit is one of the fastest-growing crypto exchanges in the world, known for its powerful futures trading engine, high liquidity,
