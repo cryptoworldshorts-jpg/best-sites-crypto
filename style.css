@@ -136,3 +136,45 @@ body{
   text-decoration: none;
 }
 
+.share-box {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.share-btn {
+  background: #00e0ff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  transition: 0.2s ease-in-out;
+}
+
+.share-btn:hover {
+  transform: scale(1.05);
+  background: #0ff;
+}
+
+.fallback-share {
+  display: none;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.fallback-share a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.fallback-share .fb { background: #1877F2; }
+.fallback-share .tw { background: #1DA1F2; }
+.fallback-share .tg { background: #0088cc; }
+.fallback-share .rd { background: #FF4500; }
