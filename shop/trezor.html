@@ -57,6 +57,63 @@
     }
   }
   </script>
+    <!-- FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which coins and tokens does Trezor Model T support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trezor Model T supports a wide range of cryptocurrencies including Bitcoin, many major altcoins and numerous ERC-20 tokens, with new assets added over time. The exact and most up-to-date list is always available on the official Trezor website and in the Trezor Suite app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the main difference between Trezor Model T and cheaper hardware wallets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Model T offers a color touchscreen, fully open-source firmware and strong integration with Trezor Suite, which makes daily use and secure confirmations more comfortable. Entry-level devices can be cheaper, but usually sacrifice the touchscreen experience or some advanced features that power users value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Trezor Model T safe for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Trezor Model T is beginner-friendly as long as new users carefully follow the setup guide and back up their recovery seed properly. The touchscreen helps reduce mistakes when entering PINs and confirming addresses, which is helpful for people who are new to hardware wallets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I lose or damage my Trezor device?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "During initial setup you write down a recovery seed (backup phrase) which is the true key to your funds. If the device is lost, stolen or damaged, you can restore your wallets and assets on a new Trezor or compatible wallet using this seed, provided it was stored safely and never shared online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can malware on my computer steal my crypto if I use Trezor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Even if your computer is infected, the attacker cannot directly access your private keys because they stay on the Trezor device. However, you should still carefully verify all transaction details on the Trezor touchscreen, as malware could try to change destination addresses shown in the browser or on the PC screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to leave my coins on the Trezor all the time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your coins are always stored on the blockchain itself, while the Trezor Model T holds the private keys that control access to them. You do not need the device plugged in all the time, only when you want to sign transactions or manage your wallets through Trezor Suite."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
