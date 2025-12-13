@@ -24,39 +24,49 @@
   <!-- 💠 Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
-  <!-- Structured Data for Product -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "SafePal S1",
-    "image": "https://i.postimg.cc/wMPqQWYt/Safepal1.jpg",
-    "description": "SafePal S1 is an air-gapped hardware wallet with support for 50+ blockchains and over 100,000 tokens, offering affordable offline crypto security.",
-    "brand": {
-      "@type": "Brand",
-      "name": "SafePal"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://www.safepal.com/store/s1?ref=mzblngy",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
-    "review": {
-      "@type": "Review",
-      "author": {
-        "@type": "Organization",
-        "name": "Crypto World"
-      },
-      "reviewBody": "SafePal S1 offers offline QR code signing, a wide token support, advanced tamper-proof hardware, and unrivaled security for budget-conscious crypto users.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.5",
-        "bestRating": "5"
+  <!-- Structured Data for Product (FIXED) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "SafePal S1",
+  "image": "https://i.postimg.cc/wMPqQWYt/Safepal1.jpg",
+  "description": "SafePal S1 is an air-gapped hardware wallet with support for 50+ blockchains and over 100,000 tokens, offering affordable offline crypto security.",
+  "brand": {
+    "@type": "Brand",
+    "name": "SafePal"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.safepal.com/store/s1?ref=mzblngy",
+    "priceCurrency": "USD",
+    "price": "49.99",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
       }
     }
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Organization",
+      "name": "Crypto World"
+    },
+    "reviewBody": "SafePal S1 offers offline QR code signing, a wide token support, advanced tamper-proof hardware, and unrivaled security for budget-conscious crypto users.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.5",
+      "bestRating": "5"
+    }
   }
-  </script>
+}
+</script>
 
   <!-- FAQPage Structured Data -->
   <script type="application/ld+json">
