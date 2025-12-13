@@ -24,39 +24,43 @@
   <!-- 💠 Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
-  <!-- Structured Data for Product -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "FTMO Funded Trader Program",
-    "image": "https://i.postimg.cc/SxxDvS0f/ftmo.jpg",
-    "description": "FTMO funds skilled traders with up to $400,000 capital and offers profit splits up to 90% through challenge and verification stages.",
-    "brand": {
-      "@type": "Brand",
-      "name": "FTMO"
+ <!-- Structured Data for Product (FIXED) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "FTMO Funded Trader Program",
+  "image": "https://i.postimg.cc/SxxDvS0f/ftmo.jpg",
+  "description": "FTMO funds skilled traders with up to $200,000 capital and offers profit splits up to 90% through challenge and verification stages.",
+  "brand": {
+    "@type": "Brand",
+    "name": "FTMO"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg",
+    "priceCurrency": "EUR",
+    "lowPrice": "155.00",
+    "highPrice": "1080.00",
+    "offerCount": "5",
+    "availability": "https://schema.org/InStock"
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Organization",
+      "name": "Crypto World"
     },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
-    "review": {
-      "@type": "Review",
-      "author": {
-        "@type": "Organization",
-        "name": "Crypto World"
-      },
-      "reviewBody": "FTMO offers a comprehensive funded trader program with transparent rules, high profit splits, and great support for 2025.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.8",
-        "bestRating": "5"
-      }
+    "reviewBody": "FTMO offers a comprehensive funded trader program with transparent rules, high profit splits, and great support for 2025.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.8",
+      "bestRating": "5"
     }
   }
-  </script>
+}
+</script>
+
 
   <!-- FAQPage Structured Data -->
   <script type="application/ld+json">
