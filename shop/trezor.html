@@ -24,39 +24,50 @@
   <!-- 💠 Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
-  <!-- Structured Data for Product Review -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Trezor Model T",
-    "image": "https://i.postimg.cc/vTNxnHNd/Trezor-(1).jpg",
-    "description": "Premium hardware wallet with touchscreen security, open-source firmware, and support for over 1200 cryptocurrencies.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Trezor"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://affil.trezor.io/aff_c?offer_id=137&aff_id=36543",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
-    "review": {
-      "@type": "Review",
-      "author": {
-        "@type": "Organization",
-        "name": "Crypto World"
-      },
-      "reviewBody": "Trezor Model T offers industry-leading security with a user-friendly touchscreen and fully open-source firmware perfect for beginners and experts.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.7",
-        "bestRating": "5"
+ <!-- Structured Data for Product Review (FIXED) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Trezor Model T",
+  "image": "https://i.postimg.cc/vTNxnHNd/Trezor-(1).jpg",
+  "description": "Premium hardware wallet with touchscreen security, open-source firmware, and support for over 1200 cryptocurrencies.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Trezor"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://affil.trezor.io/aff_c?offer_id=137&aff_id=36543",
+    "priceCurrency": "USD",
+    "price": "179.00",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
       }
     }
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Organization",
+      "name": "Crypto World"
+    },
+    "reviewBody": "Trezor Model T offers industry-leading security with a user-friendly touchscreen and fully open-source firmware perfect for beginners and experts.",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.7",
+      "bestRating": "5"
+    }
   }
-  </script>
+}
+</script>
+
     <!-- FAQPage Structured Data -->
   <script type="application/ld+json">
   {
