@@ -230,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </p>
 
 <h2>Key Takeaways</h2>
+<ul class="key-takeaways-list">
 <ul>
   <li>Trezor Model T is an advanced hardware wallet with a color touchscreen, designed to secure your digital assets offline.</li>
   <li>The device is created by SatoshiLabs, a company known for pioneering open‑source crypto security solutions.</li>
@@ -257,53 +258,31 @@ document.addEventListener('DOMContentLoaded', function () {
   Because all sensitive actions are confirmed on the touchscreen, Trezor helps protect your digital assets against common phishing tricks that try to hijack transactions in browser windows.
 </p>
 
-<h2>Trezor Suite App &amp; Supported Coins and Tokens</h2>
-<p>
-  You manage your holdings through the Trezor Suite app, which acts as a control panel for viewing balances, sending and receiving payments and tracking portfolio value.
-  The app connects to the Trezor Model T when you need to sign a transaction, but your private keys stay on the hardware wallet at all times.
-</p>
-<p>
-  Trezor Suite supports a wide range of coins and tokens, including major networks and many popular ERC‑20 assets.
-  This makes it possible to keep a diversified portfolio in one place while still benefiting from the extra crypto security that comes from keeping keys offline.
-</p>
-
 <h2>Pros &amp; Cons of Trezor Model T</h2>
 <p>
-  Before choosing a Trezor device, it helps to weigh the main advantages against a few trade‑offs compared with other ways of storing crypto.
-  Model T is built for long‑term self‑custody, which may be more or less appealing depending on how you use your assets.
+  Before choosing a Trezor device, it helps to weigh the main advantages against a few trade‑offs compared with other ways of storing crypto. Model T is built for long‑term self‑custody, which may be more or less appealing depending on how you use your assets.
 </p>
 
-<p><strong>Pros</strong></p>
-<ul>
-  <li>
-    <strong>Strong crypto security:</strong>
-    Private keys stay on the hardware wallet and all actions are confirmed on the touchscreen, protecting your digital assets from most online attacks.
-  </li>
-  <li>
-    <strong>Open‑source approach:</strong>
-    As part of the SatoshiLabs group, Trezor publishes its firmware and tools so the community can review how the wallet works.
-  </li>
-  <li>
-    <strong>Comfortable daily use:</strong>
-    The color screen and Trezor Suite app make it easy to manage many coins and tokens without giving up control of your keys.
-  </li>
-</ul>
-
-<p><strong>Cons</strong></p>
-<ul>
-  <li>
-    <strong>More expensive than entry‑level devices:</strong>
-    Model T costs more than basic hardware wallets, which may be overkill for very small portfolios.
-  </li>
-  <li>
-    <strong>Requires careful backups:</strong>
-    Losing both the device and the recovery seed can mean losing access, so users must take responsibility for secure backups.
-  </li>
-  <li>
-    <strong>Less convenient than hot wallets:</strong>
-    You need the Trezor device with you to approve any outgoing transaction, which adds a bit of friction for frequent traders.
-  </li>
-</ul>
+<div class="pros-cons-container">
+  <div class="pros-box">
+    <h3>✅ Pros</h3>
+    <ul>
+      <li><strong>Top-Tier Security:</strong> Keys stay offline; all actions confirmed on the secure touchscreen.</li>
+      <li><strong>Open Source Leader:</strong> Audited firmware by SatoshiLabs ensures total transparency.</li>
+      <li><strong>Great User Experience:</strong> Large color touchscreen & intuitive Trezor Suite app.</li>
+      <li><strong>Advanced Features:</strong> Supports Shamir Backup (SLIP-39) for ultimate seed security.</li>
+    </ul>
+  </div>
+  
+  <div class="cons-box">
+    <h3>❌ Cons</h3>
+    <ul>
+      <li><strong>Premium Price:</strong> More expensive than basic wallets (like Trezor One or Ledger Nano S).</li>
+      <li><strong>Responsibility Required:</strong> You are your own bank; losing the seed means losing funds.</li>
+      <li><strong>Physical Connection:</strong> Less convenient for quick trades compared to hot wallets.</li>
+    </ul>
+  </div>
+</div>
 
 <h2>Final Verdict: Who Should Choose Trezor Model T in 2025?</h2>
 <p>
@@ -491,4 +470,79 @@ document.addEventListener('DOMContentLoaded', function () {
 .footer-disclaimer-link:hover {
   text-decoration: underline;
 }
+
+  /* --- KEY TAKEAWAYS LIST STYLING (Plave kvačice) --- */
+ul.key-takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* --- PROS & CONS STYLING (Zeleni/Crveni Boxovi) --- */
+.pros-cons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.pros-box, .cons-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pros-box {
+  background: rgba(0, 234, 255, 0.08); /* Plavičasta pozadina */
+  border-left: 4px solid #00eaff;
+}
+
+.cons-box {
+  background: rgba(255, 68, 68, 0.08); /* Crvenkasta pozadina */
+  border-left: 4px solid #ff4444;
+}
+
+.pros-box h3, .cons-box h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.pros-box h3 { color: #00eaff; }
+.cons-box h3 { color: #ff4444; }
+
+.pros-box ul, .cons-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pros-box li, .cons-box li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
 </style>
