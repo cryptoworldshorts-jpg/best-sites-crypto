@@ -205,6 +205,81 @@
     .footer-disclaimer-link:hover {
       text-decoration: underline;
     }
+
+    /* --- KEY TAKEAWAYS LIST STYLING (Plave kvačice) --- */
+ul.key-takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* --- PROS & CONS STYLING (Zeleni/Crveni Boxovi) --- */
+.pros-cons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.pros-box, .cons-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pros-box {
+  background: rgba(0, 234, 255, 0.08); /* Plavičasta pozadina */
+  border-left: 4px solid #00eaff;
+}
+
+.cons-box {
+  background: rgba(255, 68, 68, 0.08); /* Crvenkasta pozadina */
+  border-left: 4px solid #ff4444;
+}
+
+.pros-box h3, .cons-box h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.pros-box h3 { color: #00eaff; }
+.cons-box h3 { color: #ff4444; }
+
+.pros-box ul, .cons-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pros-box li, .cons-box li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
   </style>
 </head>
 
@@ -300,14 +375,15 @@
   </p>
 
   <h2>Key Takeaways</h2>
-  <ul>
-    <li>KuCoin is a high-liquidity crypto exchange with a strong focus on altcoins, futures trading and built-in trading bots in 2025.</li>
-    <li>This KuCoin exchange review 2025 covers spot trading, futures contracts, margin trading, P2P, KuCoin Earn and the mobile app experience.</li>
-    <li>KuCoin supports a wide range of crypto assets and trading pairs, giving users access to early-stage tokens as well as blue-chip coins.</li>
-    <li>Trading fees are competitive, with tiered maker and taker fee discounts available for high-volume users and KCS token holders.</li>
-    <li>Security features include cold storage, proof of reserves reporting, SOC 2 Type II audits, anti-phishing codes and real-time risk monitoring.</li>
-    <li>KuCoin is best suited for active traders who want low-cost spot and futures markets, plus flexible savings products for passive income.</li>
-  </ul>
+<ul class="key-takeaways-list">
+  <li>KuCoin is a high-liquidity crypto exchange with a strong focus on altcoins, futures trading and built-in trading bots in 2025.</li>
+  <li>This KuCoin exchange review 2025 covers spot trading, futures contracts, margin trading, P2P, KuCoin Earn and the mobile app experience.</li>
+  <li>KuCoin supports a wide range of crypto assets and trading pairs, giving users access to early-stage tokens as well as blue-chip coins.</li>
+  <li>Trading fees are competitive, with tiered maker and taker fee discounts available for high-volume users and KCS token holders.</li>
+  <li>Security features include cold storage, proof of reserves reporting, SOC 2 Type II audits, anti-phishing codes and real-time risk monitoring.</li>
+  <li>KuCoin is best suited for active traders who want low-cost spot and futures markets, plus flexible savings products for passive income.</li>
+</ul>
+
 
   <h2>What Is KuCoin Exchange?</h2>
   <p>
@@ -449,51 +525,32 @@
     This balance makes the exchange suitable for newcomers who only need basic spot trading as well as experienced users managing complex spot and futures portfolios in 2025.
   </p>
 
-  <h2>Pros &amp; Cons of KuCoin Exchange in 2025</h2>
-  <p>
-    Like any major crypto exchange, KuCoin has clear strengths but also some limitations that traders should understand before using it seriously.
-    This part of the KuCoin review summarizes the most important pros and cons in 2025.
-  </p>
+ <h2>Pros &amp; Cons of KuCoin Exchange in 2025</h2>
+<p>
+  Like any major crypto exchange, KuCoin has clear strengths but also some limitations that traders should understand before using it seriously. This part of the KuCoin review summarizes the most important pros and cons in 2025.
+</p>
 
-  <p><strong>Pros</strong></p>
-  <ul>
-    <li>
-      <strong>Wide range of crypto assets and trading pairs:</strong>
-      KuCoin supports hundreds of coins and a very large number of spot and futures trading pairs, making it suitable for both simple portfolios and higher‑risk altcoin strategies.
-    </li>
-    <li>
-      <strong>Low trading fees and KCS token discounts:</strong>
-      The tiered maker/taker fee system, combined with KCS token rebates, makes KuCoin attractive for high‑volume spot and futures trading.
-    </li>
-    <li>
-      <strong>Advanced products and tools:</strong>
-      Spot trading, futures contracts, margin trading, P2P, flexible savings, staking and built‑in trading bots are all available within a single exchange account.
-    </li>
-    <li>
-      <strong>Strong security measures and transparency:</strong>
-      Proof of reserves, SOC 2 Type II audits, anti‑phishing code options, cold storage and real‑time monitoring all help build trust in the KuCoin exchange.
-    </li>
-    <li>
-      <strong>Global availability:</strong>
-      KuCoin operates in more than 200 countries, making it accessible to a large number of users around the world.
-    </li>
-  </ul>
-
-  <p><strong>Cons</strong></p>
-  <ul>
-    <li>
-      <strong>Complexity for beginners:</strong>
-      The wide range of products (spot and futures, margin, bots, P2P, Earn) can be confusing for users who are new to crypto exchanges.
-    </li>
-    <li>
-      <strong>Regional restrictions:</strong>
-      Not all options are available in every country, so some users may not be able to access all futures trading or P2P features.
-    </li>
-    <li>
-      <strong>Leverage and derivatives risk:</strong>
-      Margin trading and futures contracts carry high risk, especially if users do not fully understand liquidation levels and position management.
-    </li>
-  </ul>
+<div class="pros-cons-container">
+  <div class="pros-box">
+    <h3>✅ Pros</h3>
+    <ul>
+      <li><strong>Altcoin Gem King:</strong> Huge selection of low-cap coins & early listings.</li>
+      <li><strong>Low Fees & KCS:</strong> Discounts for holding KCS token & high volume.</li>
+      <li><strong>Advanced Features:</strong> Futures, Margin, Staking & FREE Trading Bots.</li>
+      <li><strong>Top Security:</strong> Proof of Reserves & SOC 2 Type II Audited.</li>
+      <li><strong>Global Reach:</strong> Accessible in 200+ countries with strong P2P support.</li>
+    </ul>
+  </div>
+  
+  <div class="cons-box">
+    <h3>❌ Cons</h3>
+    <ul>
+      <li><strong>Complex Interface:</strong> Can overwhelm beginners with too many options.</li>
+      <li><strong>Regional Bans:</strong> Some features restricted in specific countries (e.g. USA).</li>
+      <li><strong>Leverage Risks:</strong> Easy access to high leverage requires strict discipline.</li>
+    </ul>
+  </div>
+</div>
 
   <h2>Final Verdict: Who Should Use KuCoin in 2025?</h2>
   <p>
