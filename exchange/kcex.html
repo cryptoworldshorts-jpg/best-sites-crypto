@@ -254,6 +254,35 @@
     .cons-box h3 { color: #ff4444; }
     .pros-box ul, .cons-box ul { padding-left: 20px; margin: 0; }
     .pros-box li, .cons-box li { margin-bottom: 8px; color: #ddd; }
+
+    /* --- KEY TAKEAWAYS LIST STYLING --- */
+ul.key-takeaways-list {
+  list-style: none; /* Miče dosadne bijele točke */
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px; /* Da ne bude preširoko na velikim ekranima */
+  text-align: left; /* Poravnava tekst lijevo da se lakše čita */
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px; /* Pravi mjesto za ikonicu */
+  margin-bottom: 15px; /* Razmak između redova */
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔"; /* Ikonica kvačice */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff; /* Tvoja plava boja */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
   </style>
 </head>
 
@@ -315,13 +344,16 @@
     </p>
 
     <h2>Key Takeaways</h2>
-    <ul>
-      <li>KCEX is a crypto exchange focused on minimal trading fee levels, making it attractive to active traders who care about keeping costs as low as possible.</li>
-      <li>The core product is spot trading, with a selection of popular cryptocurrency pairs that covers the needs of most everyday traders.</li>
-      <li>The interface is more straightforward than many large crypto exchanges, which helps users who prefer a fast, uncluttered way to place orders.</li>
-      <li>Maker fees and the standard taker fee are structured to reward frequent trading and high turnover strategies.</li>
-      <li>KCEX is a better fit for users who want ultra-low fees than for traders who need a wide range of advanced products or a large ecosystem of extra services.</li>
-    </ul>
+
+<ul class="key-takeaways-list">
+  <li>KCEX is a crypto exchange focused on minimal trading fee levels, making it attractive to active traders who care about keeping costs as low as possible.</li>
+  <li>The core product is spot trading, with a selection of popular cryptocurrency pairs that covers the needs of most everyday traders.</li>
+  <li>The interface is more straightforward than many large crypto exchanges, which helps users who prefer a fast, uncluttered way to place orders.</li>
+  <li>Maker fees and the standard taker fee are structured to reward frequent trading and high turnover strategies.</li>
+  <li>KCEX is a better fit for users who want ultra-low fees than for traders who need a wide range of advanced products or a large ecosystem of extra services.</li>
+</ul>
+
+
 
     <h2>What Is KCEX Exchange?</h2>
     <p>
