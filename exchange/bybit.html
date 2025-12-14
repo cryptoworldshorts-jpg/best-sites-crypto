@@ -259,6 +259,35 @@
     .cons-box h3 { color: #ff4444; }
     .pros-box ul, .cons-box ul { padding-left: 20px; margin: 0; }
     .pros-box li, .cons-box li { margin-bottom: 8px; color: #ddd; }
+
+    /* --- KEY TAKEAWAYS LIST STYLING --- */
+ul.key-takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
   </style>
 </head>
 
@@ -323,14 +352,16 @@
     </p>
 
     <h2>Key Takeaways</h2>
-    <ul>
-      <li>Bybit is a derivatives-first cryptocurrency exchange with strong support for futures trading, leverage trading and margin trading alongside standard spot markets.</li>
-      <li>This Bybit exchange review 2025 covers trading fees, maker fees, security features, trading bots, order types and the Bybit mobile app.</li>
-      <li>The platform offers a tiered fee system where discounts are based on your trading volume, making it attractive for high-frequency and professional traders.</li>
-      <li>Bybit supports a range of trading options, including linear and inverse contracts, as well as structured products and basic earn tools for users who want extra yield.</li>
-      <li>Security measures such as factor authentication (2FA), anti phishing codes and proof of reserves reporting help Bybit maintain user trust.</li>
-      <li>Bybit is best suited to users who already understand derivatives and leverage, rather than complete beginners who only need simple spot trades.</li>
-    </ul>
+
+<ul class="key-takeaways-list">
+  <li>Bybit is a derivatives-first cryptocurrency exchange with strong support for futures trading, leverage trading and margin trading alongside standard spot markets.</li>
+  <li>This Bybit exchange review 2025 covers trading fees, maker fees, security features, trading bots, order types and the Bybit mobile app.</li>
+  <li>The platform offers a tiered fee system where discounts are based on your trading volume, making it attractive for high-frequency and professional traders.</li>
+  <li>Bybit supports a range of trading options, including linear and inverse contracts, as well as structured products and basic earn tools for users who want extra yield.</li>
+  <li>Security measures such as factor authentication (2FA), anti phishing codes and proof of reserves reporting help Bybit maintain user trust.</li>
+  <li>Bybit is best suited to users who already understand derivatives and leverage, rather than complete beginners who only need simple spot trades.</li>
+</ul>
+
 
     <h2>What Is Bybit Exchange?</h2>
     <p>
