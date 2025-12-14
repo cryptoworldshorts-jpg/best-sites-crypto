@@ -201,6 +201,81 @@
     .footer-disclaimer-link:hover {
       text-decoration: underline;
     }
+
+    /* --- KEY TAKEAWAYS LIST STYLING (Plave kvačice) --- */
+ul.key-takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* --- PROS & CONS STYLING (Zeleni/Crveni Boxovi) --- */
+.pros-cons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.pros-box, .cons-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pros-box {
+  background: rgba(0, 234, 255, 0.08); /* Plavičasta pozadina */
+  border-left: 4px solid #00eaff;
+}
+
+.cons-box {
+  background: rgba(255, 68, 68, 0.08); /* Crvenkasta pozadina */
+  border-left: 4px solid #ff4444;
+}
+
+.pros-box h3, .cons-box h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.pros-box h3 { color: #00eaff; }
+.cons-box h3 { color: #ff4444; }
+
+.pros-box ul, .cons-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pros-box li, .cons-box li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
   </style>
 </head>
 
@@ -295,14 +370,15 @@
     </p>
 
     <h2>Key Takeaways</h2>
-    <ul>
-      <li>MEXC is a cryptocurrency exchange with a strong focus on futures trading, offering perpetual contracts with high leverage for experienced traders.</li>
-      <li>This MEXC exchange review 2025 covers trading pairs, futures market depth, copy trading, demo trading, security tools and the MEXC mobile app.</li>
-      <li>MEXC provides a large selection of spot markets alongside derivatives, allowing users to move capital between spot and futures strategies on one platform in real time.</li>
-      <li>Security features include factor authentication (2FA), anti phishing codes, withdrawal whitelist options, proof of reserves reporting and the 100 million guardian fund designed to cover extreme events.</li>
-      <li>While high leverage and perpetual contracts offer strong profit potential, they are also high risk and best suited to experienced traders who understand advanced risk management.</li>
-      <li>MEXC is a competitive option for users who want an exchange focused on derivatives and copy trading, rather than a general-purpose beginner platform.</li>
-    </ul>
+<ul class="key-takeaways-list">
+  <li>MEXC is a cryptocurrency exchange with a strong focus on futures trading, offering perpetual contracts with high leverage for experienced traders.</li>
+  <li>This MEXC exchange review 2025 covers trading pairs, futures market depth, copy trading, demo trading, security tools and the MEXC mobile app.</li>
+  <li>MEXC provides a large selection of spot markets alongside derivatives, allowing users to move capital between spot and futures strategies on one platform in real time.</li>
+  <li>Security features include factor authentication (2FA), anti phishing codes, withdrawal whitelist options, proof of reserves reporting and the 100 million guardian fund designed to cover extreme events.</li>
+  <li>While high leverage and perpetual contracts offer strong profit potential, they are also high risk and best suited to experienced traders who understand advanced risk management.</li>
+  <li>MEXC is a competitive option for users who want an exchange focused on derivatives and copy trading, rather than a general-purpose beginner platform.</li>
+</ul>
+
 
     <h2>What Is MEXC Exchange?</h2>
     <p>
@@ -429,46 +505,32 @@
     </p>
 
     <h2>Pros &amp; Cons of MEXC Exchange in 2025</h2>
-    <p>
-      As this MEXC review shows, the exchange offers powerful tools for derivatives traders but is not without trade-offs.
-      Understanding the main pros and cons helps users decide whether MEXC fits their own trading style and risk tolerance.
-    </p>
+<p>
+  As this MEXC review shows, the exchange offers powerful tools for derivatives traders but is not without trade-offs. Understanding the main pros and cons helps users decide whether MEXC fits their own trading style and risk tolerance.
+</p>
 
-    <p><strong>Pros</strong></p>
+<div class="pros-cons-container">
+  <div class="pros-box">
+    <h3>✅ Pros</h3>
     <ul>
-      <li>
-        <strong>Strong focus on futures trading:</strong>
-        A deep futures market with many perpetual contracts and high leverage options appeals to active, experienced traders.
-      </li>
-      <li>
-        <strong>Wide range of trading pairs:</strong>
-        MEXC supports a large selection of spot and futures pairs, including many altcoins not always listed on larger exchanges.
-      </li>
-      <li>
-        <strong>Robust security features:</strong>
-        Factor authentication (2FA), anti phishing codes, withdrawal whitelist tools, proof of reserves updates and the 100 million guardian fund add multiple layers of protection.
-      </li>
-      <li>
-        <strong>Copy trading and demo trading:</strong>
-        These features help users learn strategies, test ideas and gradually build confidence before committing larger amounts of capital.
-      </li>
+      <li><strong>Futures Focus:</strong> Deep liquidity & huge selection of perpetual contracts.</li>
+      <li><strong>Altcoin Gem Hunter:</strong> Lists new tokens faster than most competitors.</li>
+      <li><strong>High Security:</strong> 100M Guardian Fund & full Proof of Reserves.</li>
+      <li><strong>Demo Trading:</strong> Practice strategies risk-free before using real money.</li>
+      <li><strong>Copy Trading:</strong> Follow top traders to automate your results.</li>
     </ul>
+  </div>
+  
+  <div class="cons-box">
+    <h3>❌ Cons</h3>
+    <ul>
+      <li><strong>High Leverage Risk:</strong> Up to 200x leverage is dangerous for beginners.</li>
+      <li><strong>Complex Interface:</strong> Can feel cluttered due to many advanced features.</li>
+      <li><strong>Copy Trading Risks:</strong> Following others blindly can still lead to losses.</li>
+    </ul>
+  </div>
+</div>
 
-    <p><strong>Cons</strong></p>
-    <ul>
-      <li>
-        <strong>High risk profile:</strong>
-        The ability to trade with up to 500x leverage on some perpetual contracts introduces very high risk, especially for inexperienced users.
-      </li>
-      <li>
-        <strong>Complex interface for beginners:</strong>
-        The focus on derivatives and advanced tools can make the platform feel intimidating compared to more beginner-friendly exchanges.
-      </li>
-      <li>
-        <strong>Copy trading limitations:</strong>
-        Relying heavily on strategy leaders can be dangerous if market conditions change suddenly or if followers do not understand the underlying risk.
-      </li>
-    </ul>
 
     <h2>Final Verdict: Who Should Use MEXC in 2025?</h2>
     <p>
