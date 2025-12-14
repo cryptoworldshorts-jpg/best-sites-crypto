@@ -198,6 +198,81 @@
     .footer-disclaimer-link:hover {
       text-decoration: underline;
     }
+
+    /* --- KEY TAKEAWAYS LIST STYLING (Plave kvačice) --- */
+ul.key-takeaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+ul.key-takeaways-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul.key-takeaways-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00eaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* --- PROS & CONS STYLING (Zeleni/Crveni Boxovi) --- */
+.pros-cons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.pros-box, .cons-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pros-box {
+  background: rgba(0, 234, 255, 0.08); /* Plavičasta pozadina */
+  border-left: 4px solid #00eaff;
+}
+
+.cons-box {
+  background: rgba(255, 68, 68, 0.08); /* Crvenkasta pozadina */
+  border-left: 4px solid #ff4444;
+}
+
+.pros-box h3, .cons-box h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.pros-box h3 { color: #00eaff; }
+.cons-box h3 { color: #ff4444; }
+
+.pros-box ul, .cons-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pros-box li, .cons-box li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
   </style>
 </head>
 
@@ -291,14 +366,15 @@
     </p>
 
     <h2>Key Takeaways</h2>
-    <ul>
-      <li>BingX is a crypto exchange focused on copy trading, perpetual futures trading and easy-to-use trading bots in 2025.</li>
-      <li>This BingX exchange review 2025 covers spot trading, futures markets, grid bots, deposits and withdrawal options, and BingX customer support.</li>
-      <li>BingX offers a copy trading feature that lets beginners follow experienced traders, while conservative traders can choose lower-risk strategies and position sizes.</li>
-      <li>Trading fees are competitive on both spot and futures markets, with clear maker and taker fee tables inside the trading platform.</li>
-      <li>Security tools include two-factor authentication, anti-phishing protections and monitoring of account activity in real time.</li>
-      <li>BingX is best for users who want a simple way to combine spot trading, futures trading and automation without leaving one exchange.</li>
-    </ul>
+<ul class="key-takeaways-list">
+  <li>BingX is a crypto exchange focused on copy trading, perpetual futures trading and easy-to-use trading bots in 2025.</li>
+  <li>This BingX exchange review 2025 covers spot trading, futures markets, grid bots, deposits and withdrawal options, and BingX customer support.</li>
+  <li>BingX offers a copy trading feature that lets beginners follow experienced traders, while conservative traders can choose lower-risk strategies and position sizes.</li>
+  <li>Trading fees are competitive on both spot and futures markets, with clear maker and taker fee tables inside the trading platform.</li>
+  <li>Security tools include two-factor authentication, anti-phishing protections and monitoring of account activity in real time.</li>
+  <li>BingX is best for users who want a simple way to combine spot trading, futures trading and automation without leaving one exchange.</li>
+</ul>
+
 
     <h2>What Is BingX Exchange?</h2>
     <p>
@@ -414,46 +490,32 @@
     </p>
 
     <h2>Pros &amp; Cons of BingX Exchange in 2025</h2>
-    <p>
-      Like any crypto exchange, BingX has clear advantages but also certain drawbacks that users should understand before choosing it as a primary trading venue.
-      This section of the BingX review summarizes the main pros and cons in 2025.
-    </p>
+<p>
+  Like any crypto exchange, BingX has clear advantages but also certain drawbacks that users should understand before choosing it as a primary trading venue. This section of the BingX review summarizes the main pros and cons in 2025.
+</p>
 
-    <p><strong>Pros</strong></p>
+<div class="pros-cons-container">
+  <div class="pros-box">
+    <h3>✅ Pros</h3>
     <ul>
-      <li>
-        <strong>Strong focus on copy trading:</strong>
-        The BingX copy trading feature makes it easy for beginners to follow experienced traders, with clear performance statistics and risk metrics for each strategy.
-      </li>
-      <li>
-        <strong>Built-in trading bots:</strong>
-        Spot grid and futures grid bots are integrated directly into the platform, allowing users to automate popular strategies without external tools.
-      </li>
-      <li>
-        <strong>Simple, focused product lineup:</strong>
-        BingX offers spot trading, perpetual futures trading, copy trading and basic earn tools, which covers most active trading needs without overwhelming complexity.
-      </li>
-      <li>
-        <strong>Competitive fees:</strong>
-        Trading fees on both spot and futures markets follow a transparent maker-taker model, making it easier for traders to calculate and control costs.
-      </li>
+      <li><strong>Copy Trading Specialist:</strong> Top-tier platform for following expert traders.</li>
+      <li><strong>Free Trading Bots:</strong> Built-in Grid bots for spot and futures.</li>
+      <li><strong>User-Friendly:</strong> Simple interface perfect for beginners & automation fans.</li>
+      <li><strong>Competitive Fees:</strong> Transparent maker/taker rates for all markets.</li>
+      <li><strong>Crypto + Forex:</strong> Unique feature allowing trade of indices/forex (where available).</li>
     </ul>
+  </div>
+  
+  <div class="cons-box">
+    <h3>❌ Cons</h3>
+    <ul>
+      <li><strong>Smaller Selection:</strong> Fewer niche altcoins than Binance or KuCoin.</li>
+      <li><strong>Copy Trading Risk:</strong> Following others blindly can still result in losses.</li>
+      <li><strong>Leverage Danger:</strong> High leverage on futures needs careful risk management.</li>
+    </ul>
+  </div>
+</div>
 
-    <p><strong>Cons</strong></p>
-    <ul>
-      <li>
-        <strong>Less depth than the very largest exchanges:</strong>
-        While BingX supports a solid set of digital assets, some niche tokens and advanced products available on bigger platforms may not be listed.
-      </li>
-      <li>
-        <strong>Copy trading risk:</strong>
-        Relying too heavily on copy trading leaders can be risky if market conditions change or if users do not diversify across multiple strategies.
-      </li>
-      <li>
-        <strong>Leverage exposure:</strong>
-        Perpetual futures trading and grid strategies with leverage can lead to rapid losses if traders do not manage position size and liquidation levels carefully.
-      </li>
-    </ul>
 
     <h2>Final Verdict: Who Should Use BingX in 2025?</h2>
     <p>
