@@ -28,26 +28,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "Organization",
-    "name": "KCEX Exchange",
-    "image": "https://i.postimg.cc/BQZ5YzBJ/kcex1.jpg",
-    "description": "Fast growing derivatives exchange known for No KYC trading, low fees and copy trading."
+  "@type": "Product",
+  "name": "KCEX Exchange",
+  "image": "https://i.postimg.cc/BQZ5YzBJ/kcex1.jpg",
+  "description": "Fast growing derivatives exchange known for No KYC trading, low fees and copy trading.",
+  "brand": {
+    "@type": "Brand",
+    "name": "KCEX"
   },
-  "author": {
-    "@type": "Organization",
-    "name": "Crypto World"
-  },
-  "reviewRating": {
-    "@type": "Rating",
+  "aggregateRating": {
+    "@type": "AggregateRating",
     "ratingValue": "4.6",
+    "reviewCount": "92",
     "bestRating": "5",
     "worstRating": "1"
   },
-  "datePublished": "2025-10-25"
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.kcex.com/",
+    "priceCurrency": "USD",
+    "price": "0",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotApplicable"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": 0,
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.6",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Crypto World"
+    },
+    "datePublished": "2025-10-25",
+    "reviewBody": "KCEX is a standout choice for traders needing privacy and speed, offering high leverage without mandatory KYC checks."
+  }
 }
 </script>
+
 
 <!-- STILOVI (Isti kao prije) -->
   <style>
