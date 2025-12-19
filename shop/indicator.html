@@ -113,16 +113,17 @@
       color: #64748b;
     }
 
-    /* IMAGE WITH MASK */
+        /* IMAGE WITH MASK */
     .hero-image-box {
       position: relative;
-      background-image: url('https://i.postimg.cc/ydPrXSk1/Vipai1.png'); /* TVOJA SLIKA */
-      background-size: cover;
+      /* OVDJE STAVI SVOJ LINK SLIKE */
+      background-image: url('https://i.postimg.cc/ydPrXSk1/Vipai1.png'); 
+      background-size: contain; /* OVO JE PROMJENA: contain umjesto cover */
+      background-repeat: no-repeat;
       background-position: center;
       height: 400px;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      border: 1px solid var(--border);
+      /* border-radius: 20px;  <- Ovo možda maknuti ako slika ima svoje rubove */
+      /* box-shadow: 0 20px 50px rgba(0,0,0,0.5); <- I ovo po želji */
     }
 
     .hero-image-box::after {
