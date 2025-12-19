@@ -46,7 +46,7 @@
       font-family: 'Segoe UI', system-ui, sans-serif;
       background-color: var(--bg-dark);
       color: var(--text-main);
-      line-height: 1.8; /* Povećan line-height za čitljivost */
+      line-height: 1.8;
     }
     
     a { text-decoration: none; color: inherit; transition: 0.3s; }
@@ -65,7 +65,7 @@
       z-index: 100;
     }
 
-    /* HERO SECTION (KCEX STYLE) */
+    /* HERO SECTION */
     .hero-wrapper {
       position: relative;
       padding: 60px 20px 80px;
@@ -223,7 +223,7 @@
     .check { color: #10b981; font-weight: bold; }
     .cross { color: #ef4444; font-weight: bold; }
 
-    /* PROBLEM/SOLUTION BOX */
+    /* BOXES */
     .problem-box {
       background: rgba(239, 68, 68, 0.05);
       border-left: 4px solid var(--danger);
@@ -235,6 +235,13 @@
       border-left: 4px solid var(--accent);
       padding: 20px;
       margin-bottom: 40px;
+    }
+    .info-box {
+        background: #0f172a; 
+        padding: 25px; 
+        border-radius: 12px; 
+        border: 1px solid #1e293b;
+        margin: 20px 0;
     }
 
     /* FOOTER */
@@ -344,36 +351,83 @@
       </ul>
     </div>
 
-    <!-- PROBLEM / SOLUTION (SEO & CRO) -->
+    <!-- PROBLEM / SOLUTION -->
     <h2>Why Most Crypto Indicators Fail</h2>
     <div class="problem-box">
       <strong>❌ The Problem:</strong> Most free TradingView scripts (like RSI or standard MACD) are "lagging". They tell you to buy <em>after</em> the pump has already happened. Even worse, many of them "repaint" – meaning they delete losing signals from the chart to look perfect in hindsight.
     </div>
     <div class="solution-box">
-      <strong>✅ The Solution:</strong> VIP Indicators uses a "Confluence Algorithm". It scans for Trend + Volume + Volatility simultaneously. It only prints a signal when all three align. And most importantly: <strong>It never repaints.</strong> What you see on historical charts is exactly what would have happened live.
+      <strong>✅ The Solution:</strong> VIP Indicators uses a "Confluence Algorithm". It scans for Trend + Volume + Volatility simultaneously. It only prints a signal when all three align. And most importantly: <strong>It never repaints.</strong>
     </div>
 
+    <!-- NEW SECTION 1: NON-REPAINTING EXPLAINED -->
+    <h2>What Makes an Indicator Truly Non-Repainting?</h2>
+    <p>
+        One of the most abused terms in the trading industry is “non-repainting”. Many indicators claim they do not repaint, but in reality, they simply hide losing signals or adjust historical data after the candle closes.
+    </p>
+    <p><strong>So what does non-repainting actually mean?</strong> A non-repainting indicator must meet three strict conditions:</p>
+    <ol style="margin-top: 20px;">
+        <li><strong>Signals must remain fixed once printed:</strong> Once a Buy or Sell signal appears on the chart, it must stay there permanently — regardless of future price movement.</li>
+        <li><strong>No use of future candle data:</strong> Many scripts secretly reference future candles to “optimize” past results. This creates perfect-looking charts that completely fail in live trading.</li>
+        <li><strong>Same behavior in live and historical markets:</strong> What you see on past data must behave exactly the same way in real-time conditions.</li>
+    </ol>
+    <p>
+        The reason most free TradingView indicators repaint is simple: they are designed to look impressive, not to be traded with real money. <strong>VIP AI Trading Indicators</strong> were specifically engineered to avoid this trap. The logic only evaluates closed candles, confirmed volume data, and finalized volatility readings.
+    </p>
+
+    <!-- TECHNICAL DEEP DIVE -->
     <h2>Technical Deep Dive: How It Works</h2>
-    <p>
-      The <strong>VIP Indicators AI Trading System</strong> is not just a simple crossover tool. It uses a sophisticated 3-layer confirmation logic to ensure high-probability setups:
-    </p>
-    
+    <p>The VIP Indicators AI Trading System uses a sophisticated 3-layer confirmation logic:</p>
     <h3>1. Trend Filter (The "No-Trade" Zone)</h3>
-    <p>
-      The number one reason traders lose money is trading against the trend. Our AI checks higher timeframes (e.g., 4H trend while you scalp 5m). If the macro trend is bearish, it will automatically block all "Buy" signals, saving you from catching falling knives.
-    </p>
-
+    <p>The AI checks higher timeframes. If the macro trend is bearish, it will automatically block all "Buy" signals, saving you from catching falling knives.</p>
     <h3>2. Dynamic Support & Resistance</h3>
-    <p>
-      Instead of static lines, the indicator draws dynamic zones based on volume profile. These are areas where "Smart Money" (institutions) are likely to step in. The Buy/Sell signals typically appear right at these bounce zones.
-    </p>
-
+    <p>Instead of static lines, the indicator draws dynamic zones based on volume profile. These are areas where "Smart Money" is likely to step in.</p>
     <h3>3. Volatility Breakout</h3>
-    <p>
-      Markets range (move sideways) 70% of the time. Trading during a range is a recipe for disaster. The AI measures volatility contraction and only signals when a true breakout is detected.
-    </p>
+    <p>The AI measures volatility contraction and only signals when a true breakout is detected, avoiding chop.</p>
 
-    <!-- COMPARISON TABLE (High Value) -->
+    <!-- NEW SECTION 2: BEST MARKETS & TIMEFRAMES -->
+    <h2>Best Markets & Timeframes for VIP AI Indicators</h2>
+    <p>VIP Indicators are designed to be market-agnostic, meaning they adapt to price behavior rather than relying on fixed parameters. However, performance varies depending on volatility, liquidity, and timeframe selection.</p>
+    
+    <div class="info-box">
+        <h4 style="margin-top:0; color: #fff;">🪙 Crypto Markets</h4>
+        <ul>
+            <li><strong>Bitcoin (BTC):</strong> Excellent performance on 5m, 15m, and 1H timeframes.</li>
+            <li><strong>Ethereum (ETH):</strong> Ideal for scalping due to consistent volume.</li>
+            <li><strong>Major Altcoins:</strong> Best during trending market phases.</li>
+        </ul>
+        <p style="font-size: 0.95rem; margin-bottom: 0;">Crypto works particularly well because of high volatility and strong impulsive moves, which the AI volatility filter is designed to detect.</p>
+    </div>
+
+    <div class="info-box">
+        <h4 style="margin-top:0; color: #fff;">📉 Forex & Indices</h4>
+        <ul>
+            <li><strong>Gold (XAUUSD):</strong> One of the strongest performers for scalpers.</li>
+            <li><strong>NASDAQ & S&P 500:</strong> Clean trends during London & New York sessions.</li>
+            <li><strong>Major Forex Pairs:</strong> EUR/USD and GBP/USD during high-liquidity hours.</li>
+        </ul>
+        <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Recommended Timeframes:</strong> Scalping (1m – 5m), Intraday (15m – 1H). The system intentionally avoids ultra-low liquidity environments.</p>
+    </div>
+
+    <!-- NEW SECTION 3: RISK MANAGEMENT EXAMPLE -->
+    <h2>Realistic Risk Management Example (How Professionals Use Signals)</h2>
+    <p>No indicator — including VIP Indicators — should ever be used without proper risk management. Here is a realistic example of how disciplined traders use Buy/Sell signals:</p>
+    
+    <div style="background: #0f172a; border-left: 4px solid #10b981; padding: 25px; margin: 25px 0;">
+        <h4 style="margin-top: 0; color: #10b981;">Scenario: BTC/USDT Scalp Trade</h4>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 15px;"><strong>📉 Timeframe:</strong> 5-minute chart</li>
+            <li style="margin-bottom: 15px;"><strong>🛡️ Account Risk:</strong> 1% per trade</li>
+            <li style="margin-bottom: 15px;"><strong>1️⃣ Signal Confirmation:</strong> A Buy signal appears aligned with the higher-timeframe trend and near a dynamic support zone.</li>
+            <li style="margin-bottom: 15px;"><strong>2️⃣ Stop-Loss Placement:</strong> Stop-loss is placed below the most recent swing low — not arbitrarily.</li>
+            <li style="margin-bottom: 0;"><strong>3️⃣ Take-Profit Planning:</strong> Target is set at a minimum 1:2 risk-to-reward ratio.</li>
+        </ul>
+        <p style="margin-top: 15px; margin-bottom: 0; border-top: 1px solid #1e293b; padding-top: 15px; font-style: italic;">
+            Even with a modest 60–65% win rate, this approach remains profitable over time. VIP Indicators are not designed to eliminate losses — they are designed to control them.
+        </p>
+    </div>
+
+    <!-- COMPARISON TABLE -->
     <h2>VIP Indicators vs Free TradingView Scripts</h2>
     <table class="comparison-table">
       <thead>
@@ -412,30 +466,41 @@
       </tbody>
     </table>
 
-    <!-- WHO IS THIS FOR (Qualification) -->
-    <h2>Who Is This Indicator For? (And Who Should Avoid It)</h2>
-    <p>
-      We want to be transparent. This tool is powerful, but it is not a "magic money printer". It is designed for specific types of traders.
-    </p>
-    
+    <!-- WHO IS THIS FOR -->
+    <h2>Who Is This Indicator For?</h2>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
       <div style="flex: 1; min-width: 250px; background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.2);">
         <h4 style="margin-top: 0; color: #10b981;">✅ Perfect For:</h4>
         <ul style="margin-bottom: 0;">
-          <li><strong>Scalpers:</strong> Traders who love the 1m and 5m timeframes on Gold, Bitcoin, or Indices.</li>
-          <li><strong>Beginners:</strong> Who struggle to draw support/resistance lines manually.</li>
-          <li><strong>Disciplined Traders:</strong> Who just need a clear "trigger" to enter a trade.</li>
+          <li><strong>Scalpers:</strong> Traders who love the 1m and 5m timeframes.</li>
+          <li><strong>Beginners:</strong> Who struggle to draw support/resistance lines.</li>
+          <li><strong>Disciplined Traders:</strong> Who just need a clear "trigger".</li>
         </ul>
       </div>
       <div style="flex: 1; min-width: 250px; background: rgba(239, 68, 68, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.2);">
         <h4 style="margin-top: 0; color: #ef4444;">❌ Avoid If:</h4>
         <ul style="margin-bottom: 0;">
-          <li><strong>Gamblers:</strong> If you plan to use 100x leverage on every signal without looking at the chart.</li>
-          <li><strong>Lazy Traders:</strong> If you think you can automate this 100% without any supervision.</li>
-          <li><strong>Zero Knowledge:</strong> You should know what a "candlestick" is before buying.</li>
+          <li><strong>Gamblers:</strong> If you plan to use 100x leverage.</li>
+          <li><strong>Lazy Traders:</strong> If you want 100% automation.</li>
+          <li><strong>Zero Knowledge:</strong> Learn what a "candle" is first.</li>
         </ul>
       </div>
     </div>
+
+    <!-- NEW SECTION 4: COMMON MISTAKES -->
+    <h2>Common Mistakes New Users Should Avoid</h2>
+    <p>To ensure transparency, it’s important to highlight common mistakes that lead to poor results — even with high-quality tools.</p>
+    <ul style="list-style: none; padding: 0;">
+        <li style="background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #ef4444;">
+            <strong style="color: #ef4444;">❌ Over-leveraging:</strong> Using extreme leverage turns even good signals into gambling.
+        </li>
+        <li style="background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #ef4444;">
+            <strong style="color: #ef4444;">❌ Ignoring Market Context:</strong> Indicators work best when aligned with trend and session timing.
+        </li>
+        <li style="background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #ef4444;">
+            <strong style="color: #ef4444;">❌ Trading Every Signal:</strong> Selective trading always outperforms overtrading.
+        </li>
+    </ul>
 
     <!-- PRICING -->
     <div class="pricing-box">
@@ -459,22 +524,29 @@
       <p style="margin-top: 15px; font-size: 0.9rem;">Protected by 30-Day Money Back Guarantee</p>
     </div>
 
-    <!-- FAQ (Objection Handling) -->
+    <!-- NEW SECTION 5: FINAL VERDICT -->
+    <div style="background: rgba(168, 85, 247, 0.1); padding: 30px; border-radius: 12px; margin-bottom: 40px; border: 1px solid var(--primary);">
+        <h2 style="margin-top: 0; color: #fff;">Final Verdict: Is VIP AI Trading Indicators Worth It?</h2>
+        <p>VIP AI Trading Indicators are best suited for traders who value clarity, discipline, and structure over hype. They are not a shortcut to instant profits — but they significantly reduce decision fatigue, eliminate repainting issues, and provide consistent, repeatable trade setups.</p>
+        <p style="margin-bottom: 0;">For scalpers, day traders, and TradingView users who want reliable Buy/Sell signals without emotional bias, this system offers solid value — especially when combined with proper risk management.</p>
+    </div>
+
+    <!-- FAQ -->
     <h2>Frequently Asked Questions</h2>
     
     <div style="background: #0f172a; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #1e293b;">
       <h4 style="margin: 0 0 10px 0; color: #fff;">Can VIP Indicators really achieve a 93% win rate?</h4>
-      <p style="margin: 0; font-size: 0.95rem;">The 93% win rate is based on historical backtesting of the algorithm on specific pairs. In live trading, results will vary based on market conditions and your risk management. We recommend aiming for a realistic 60-70% win rate with good risk-to-reward ratio.</p>
+      <p style="margin: 0; font-size: 0.95rem;">The 93% win rate is based on historical backtesting. In live trading, aim for a realistic 60-70% win rate with good risk management.</p>
     </div>
 
     <div style="background: #0f172a; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #1e293b;">
       <h4 style="margin: 0 0 10px 0; color: #fff;">Do I need the paid TradingView plan?</h4>
-      <p style="margin: 0; font-size: 0.95rem;">No! Our indicators are optimized to work perfectly on the <strong>free (Basic) plan</strong> of TradingView. You don't need to upgrade unless you want more than 3 indicators on one chart.</p>
+      <p style="margin: 0; font-size: 0.95rem;">No! Our indicators are optimized to work perfectly on the <strong>free (Basic) plan</strong> of TradingView.</p>
     </div>
 
     <div style="background: #0f172a; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #1e293b;">
       <h4 style="margin: 0 0 10px 0; color: #fff;">Is this a "Bot"? Will it trade for me?</h4>
-      <p style="margin: 0; font-size: 0.95rem;">No, this is an <strong>Indicator</strong> (Analysis Tool). It draws Buy/Sell signals on your chart, but YOU must press the button to enter the trade on your broker/exchange. This keeps you in control of your money.</p>
+      <p style="margin: 0; font-size: 0.95rem;">No, this is an <strong>Indicator</strong>. It draws signals on your chart, but YOU must press the button to trade. This keeps you in control.</p>
     </div>
 
   </main>
