@@ -107,17 +107,45 @@
     "priceCurrency": "USD",
     "price": "9.00",
     "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitText": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitText": "DAY"
+        }
+      }
+    },
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
-      "applicableCountry": "BA",
+      "applicableCountry": "US",
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
       "merchantReturnDays": 30,
       "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/ReturnShippingFees"
+      "returnFees": "https://schema.org/FreeReturn"
     }
   }
 }
 </script>
+
 
 
   <!-- STILOVI (KCEX Dark Theme + Sales Elements) -->
