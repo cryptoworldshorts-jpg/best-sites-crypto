@@ -297,6 +297,38 @@ footer {
   text-decoration: underline;
 }
 
+  .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.image-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.image-gallery figcaption {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 </style>
 </head>
 
@@ -684,6 +716,22 @@ Bitget delivers one of the most complete and reliable mobile trading experiences
 <p>
 For users who prioritize mobile-first trading, fast execution, and full access to futures and copy trading tools, Bitget’s mobile app is a major competitive advantage.
 </p>
+
+  <div class="image-gallery">
+
+  <figure>
+    <img src="https://i.postimg.cc/pTsTL0Jt/mob.jpg"
+         alt="Bitget mobile trading interface with live crypto charts">
+    <figcaption>Live crypto trading on Bitget mobile app</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://i.postimg.cc/zDPvmcfF/mob-bitget.jpg"
+         alt="Bitget copy trading feature on mobile app">
+    <figcaption>Copy trading directly from your phone</figcaption>
+  </figure>
+
+</div>
 
   <h2 id="bitget-onboarding-kyc-2026">Onboarding & KYC: Getting Started on Bitget (2026)</h2>
 <p>
