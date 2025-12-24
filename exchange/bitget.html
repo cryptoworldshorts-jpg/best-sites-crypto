@@ -326,9 +326,38 @@ footer {
   .image-gallery {
     grid-template-columns: 1fr;
   }
+
+  /* MOBILE STICKY CTA */
+.mobile-sticky-cta {
+  display: none;
 }
 
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 420px;
+    background: #2563eb;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+  }
 
+  .mobile-sticky-cta:hover {
+    background: #1e40af;
+    text-decoration: none;
+  }
+}
+}
 </style>
 </head>
 
@@ -1060,6 +1089,15 @@ Crypto trading involves risk. Futures and copy trading may result in losses. Nev
 <p>© 2026 CryptoWorldTools — All Rights Reserved</p>
 <p><a href="/disclaimer.html" style="color:#38bdf8;">Disclaimer & Affiliate Disclosure</a></p>
 </footer>
+
+  <!-- MOBILE STICKY CTA -->
+<a href="https://share.bitget.com/u/EMT3XDHN"
+   class="mobile-sticky-cta"
+   target="_blank"
+   rel="noopener">
+  Trade on Bitget (Official Platform)
+</a>
+
 
 </body>
 </html>
