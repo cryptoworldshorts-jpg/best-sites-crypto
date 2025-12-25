@@ -195,6 +195,39 @@
       .hero {
         grid-template-columns: 1fr;
       }
+
+      /* MOBILE STICKY CTA */
+.mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    background: linear-gradient(90deg, #f0b90b, #f8d12f);
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(240, 185, 11, 0.4);
+    text-align: center;
+    min-width: 260px;
+  }
+
+  .mobile-sticky-cta:hover {
+    transform: translateX(-50%) scale(1.04);
+    background: linear-gradient(90deg, #f8d12f, #f0b90b);
+  }
+}
+
     }
   </style>
 </head>
@@ -881,6 +914,15 @@ Binance is a strong choice in 2026 for users who want low fees, high liquidity, 
         </p>
       </div>
     </footer>
+
+  <!-- MOBILE STICKY CTA -->
+<a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00R6QA2PC6"
+   class="mobile-sticky-cta"
+   target="_blank"
+   rel="noopener noreferrer">
+  Trade on Binance
+</a>
+
 
 </body>
 </html>
