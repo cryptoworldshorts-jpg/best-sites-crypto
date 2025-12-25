@@ -196,14 +196,15 @@
         grid-template-columns: 1fr;
       }
 
-      /* MOBILE STICKY CTA */
+     /* MOBILE STICKY CTA – HARD DESKTOP DISABLE */
 .mobile-sticky-cta {
-  display: none;
+  display: none !important;
 }
 
-@media (max-width: 768px) {
+/* SAMO MOBILNI PRIKAZ */
+@media screen and (max-width: 768px) {
   .mobile-sticky-cta {
-    display: block;
+    display: block !important;
     position: fixed;
     bottom: 15px;
     left: 50%;
@@ -221,14 +222,8 @@
     text-align: center;
     min-width: 260px;
   }
-
-  .mobile-sticky-cta:hover {
-    transform: translateX(-50%) scale(1.04);
-    background: linear-gradient(90deg, #f8d12f, #f0b90b);
-  }
 }
 
-    }
   </style>
 </head>
 
