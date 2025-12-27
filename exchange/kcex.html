@@ -44,12 +44,26 @@
     "url": "https://www.kcex.com/",
     "priceCurrency": "USD",
     "price": "0",
+    "priceValidUntil": "2026-12-31", 
     "availability": "https://schema.org/InStock",
     "image": "https://i.postimg.cc/BQZ5YzBJ/kcex1.jpg",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "doesNotShip": true
+    },
     "hasMerchantReturnPolicy": {
       "@type": "MerchantReturnPolicy",
-      "returnPolicyCategory": "https://schema.org/NoReturnsAccepted",
-      "applicableCountry": "Worldwide"
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
     }
   },
   "review": {
@@ -69,6 +83,7 @@
   }
 }
 </script>
+
 
   <script type="application/ld+json">
 {
