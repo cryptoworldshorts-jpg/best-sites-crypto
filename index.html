@@ -391,6 +391,50 @@ document.getElementById("readMoreBtn").onclick = function () {
   </a>
 </div>
 
+  <!-- === DEX SEPARATOR === -->
+<div style="grid-column: 1 / -1; margin: 40px 0 20px 0; text-align: center;">
+  <div style="
+      background: linear-gradient(90deg, #6966ff 0%, #a855f7 100%);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 20px rgba(105, 102, 255, 0.4);
+      display: inline-block;
+      border: 2px solid #fff;
+  ">
+    🛡️ DECENTRALIZED EXCHANGES (NO KYC)
+  </div>
+  <p style="color: #ccc; margin-top: 10px; font-size: 14px;">
+    Trade directly from your wallet. No ID required. 100% Anonymous.
+  </p>
+</div>
+
+<!-- === DYDX CARD (SPECIAL DEX STYLE) === -->
+<div class="card dex-special">
+  <div class="dex-badge-top">NO KYC • TOP PICK</div>
+  <div class="top">
+    <!-- Zamijeni src sa logom ako ga imaš lokalno ili koristi ovaj -->
+    <img src="https://cryptologos.cc/logos/dydx-dydx-logo.png" class="icon" alt="dYdX Exchange" style="border-radius: 50%;">
+    <h2>dYdX v4</h2>
+  </div>
+  <ul class="features">
+    <li style="color: #a3a1ff;">★ 100% Anonymous (No ID)</li>
+    <li>Self-Custody (Your Keys)</li>
+    <li>Low Fees & Deep Liquidity</li>
+    <li>Up to 20x Leverage</li>
+  </ul>
+  
+  <!-- Tvoj Affiliate Link -->
+  <a class="btn" href="dydx.trade?ref=RobustStormU1X" target="_blank" rel="noopener" style="background: #6966ff !important; color: white !important;">START TRADING</a>
+
+  <a class="btn details-btn" href="exchange/dydx.html">DETAILS</a>
+</div>
+
+
 
 </section>
 
@@ -575,6 +619,42 @@ document.addEventListener('DOMContentLoaded', function () {
   font-size: 1.05rem;
   text-align: center;  /* prije je bilo left */
 }
+
+  /* Stil za posebnu DEX karticu */
+.card.dex-special {
+  border: 2px solid #6966ff; /* Ljubičasti okvir */
+  box-shadow: 0 0 15px rgba(105, 102, 255, 0.2);
+  position: relative;
+  overflow: visible; /* Da se badge vidi izvan okvira */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.dex-special:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(105, 102, 255, 0.5);
+}
+
+/* Oznaka u gornjem kutu */
+.dex-badge-top {
+  position: absolute;
+  top: -12px;
+  right: -10px; /* Možeš staviti 'left: 50%' i 'transform: translateX(-50%)' za centriranje */
+  background: #ff0055; /* Crvena za pažnju */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Prilagodba liste za DEX */
+.card.dex-special .features li {
+  border-bottom: 1px solid rgba(105, 102, 255, 0.2);
+}
+
 
 </style>
 
