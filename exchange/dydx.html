@@ -23,6 +23,32 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is dYdX affected by DAC8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. dYdX is a decentralized exchange (DEX) with no KYC and no centralized entity collecting user data. DAC8 applies to centralized crypto service providers, not to self-custodial decentralized protocols like dYdX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is dYdX taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "dYdX itself does not report user activity to tax authorities. However, traders are generally responsible for reporting their own trading gains according to the tax laws of their country. Tax obligations depend on local regulations, not on the exchange itself."
+      }
+    }
+  ]
+}
+</script>
+
+
   <!-- Structured Data (Review) -->
   <script type="application/ld+json">
   {
@@ -119,6 +145,40 @@
     /* Back Button */
     .back-nav { padding: 20px; }
     .back-nav a { color: #6966ff; text-decoration: none; font-weight: bold; }
+
+    .site-footer {
+  background: #050816;
+  padding: 20px 10px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-inner p {
+  margin: 0;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.footer-inner a {
+  color: #00b8d4;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.footer-inner a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 
@@ -319,16 +379,13 @@ Traders are advised to keep accurate records and consult a qualified tax profess
 
 </div>
 
-<footer>
-      <div class="footer-inner">
-        <p>© 2026 CryptoWorldTools — All Rights Reserved</p>
-        <p class="footer-links">
-          <a href="/disclaimer.html" class="footer-disclaimer-link">
-            Disclaimer &amp; Affiliate Disclosure
-          </a>
-        </p>
-      </div>
-    </footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 CryptoWorldTools — All Rights Reserved</p>
+    <a href="/disclaimer.html">Disclaimer &amp; Affiliate Disclosure</a>
+  </div>
+</footer>
+
 
 </body>
 </html>
