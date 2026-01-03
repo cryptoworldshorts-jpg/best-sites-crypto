@@ -108,6 +108,12 @@
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
+  <url>
+  <loc>https://cryptoworldtools.com/exchange/kcex-usa.html</loc>
+  <lastmod>2026-01-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
     <!-- VPS Pages -->
   <url>
     <loc>https://cryptoworldtools.com/vps/vpscore.html</loc>
