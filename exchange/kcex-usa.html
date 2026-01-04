@@ -143,6 +143,33 @@
     th, td { border: 1px solid #444; padding: 15px; text-align: left; }
     th { background: #1a192e; color: #fff; }
     tr:nth-child(even) { background: #161828; }
+
+    /* Stil za fiksno dugme na mobitelu */
+@media (max-width: 768px) {
+    .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00eaff;
+        color: #000;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1000;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+    /* Dodaj malo paddinga na dno body-ja da dugme ne prekriva zadnji dio teksta */
+    body { padding-bottom: 60px; }
+}
+
+/* Sakrij dugme na desktopu */
+@media (min-width: 769px) {
+    .sticky-cta { display: none; }
+}
   </style>
 </head>
 
@@ -269,6 +296,8 @@
     <p>&copy; 2026 CryptoWorldTools. Not financial advice. Use at your own risk.</p>
     <p><a href="../index.html" style="color: #00eaff; text-decoration: none;">Home</a> | <a href="kcex.html" style="color: #00eaff; text-decoration: none;">Full KCEX Review</a></p>
 </footer>
+
+  <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="sticky-cta" target="_blank" rel="nofollow sponsored">Register on KCEX (No KYC)</a>
 
 </body>
 </html>
