@@ -473,6 +473,27 @@
   color: #7dd3fc;
 }
 
+  /* Calculator Integration Style */
+  .calculator-promo-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 2px solid #38bdf8;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
+  }
+  .calc-promo-img { width: 120px; height: 120px; object-fit: contain; }
+  .calc-promo-content h3 { margin-top: 0 !important; color: #fff !important; font-size: 1.4rem; }
+  .calc-promo-content p { font-size: 1rem; color: #94a3b8; margin-bottom: 20px; }
+  
+  @media (max-width: 768px) {
+    .calculator-promo-card { flex-direction: column; text-align: center; padding: 20px; }
+    .calc-promo-img { width: 80px; height: 80px; }
+  }
+
 </style>
 </head>
 
@@ -573,6 +594,14 @@
         <li>✅ <strong>Futures Focused:</strong> High-leverage derivatives interface (up to 100x).</li>
         <li>✅ <strong>Copy Trading:</strong> Automatically mirror experienced Master Traders.</li>
       </ul>
+      <div class="calculator-promo-card">
+      <img src="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" alt="Crypto Calculator" class="calc-promo-img">
+      <div class="calc-promo-content">
+        <h3>Maximize Your KCEX Profits</h3>
+        <p>Don't guess your earnings. Use our <strong>Professional Profit Calculator</strong> specifically tuned for KCEX's 0.01% fee structure. Calculate net profit, ROI, and liquidation levels instantly.</p>
+        <a href="../tools/profit-calculator.html" class="cta-button" style="padding: 12px 24px; font-size: 1rem;">Open Profit Calculator</a>
+      </div>
+    </div>
     </div>
 
     <!-- QUICK STATS -->
@@ -659,6 +688,10 @@ The most notable advantage of KCEX is its <strong>0% maker fee</strong> across b
 
 <p>
 Taker fees (market orders) remain highly competitive and are generally lower than industry averages, especially when compared to large centralized exchanges that charge up to 0.06% per trade.
+</p>
+
+    <p style="text-align: center; margin-top: 15px;">
+  💡 <strong>Pro Tip:</strong> Use our <a href="../tools/profit-calculator.html" style="color: #38bdf8; font-weight: bold; text-decoration: underline;">KCEX Fee & Profit Calculator</a> to see exactly how much you save with 0.00% maker fees compared to other exchanges.
 </p>
 
     
