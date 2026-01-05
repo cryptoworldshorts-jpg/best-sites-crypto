@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Lot Size Calculator - FTMO & Prop Firm Ready | CryptoWorldTools</title>
+    <meta name="description" content="Calculate your exact position size and risk for Forex trading. Perfect for FTMO, MyForexFunds, and Prop Firm challenges. Manage your risk like a pro.">
+    <link rel="canonical" href="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
+    <link rel="stylesheet" href="../style.css?v=11">
+    
+    <style>
+        body {
+            background-color: #050816;
+            color: #ddd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
+        .calc-container {
+            background: linear-gradient(145deg, #0b1228, #050816);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            width: 100%;
+            max-width: 450px;
+            margin-top: 50px;
+        }
+
+        h1 { color: #10b981; text-align: center; font-size: 24px; margin-bottom: 25px; }
+
+        .input-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #10b981; }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #1e293b;
+            background: #0f172a;
+            color: #fff;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .result-box {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 25px;
+            border: 1px dashed #10b981;
+        }
+
+        .result-val {
+            display: block;
+            font-size: 32px;
+            font-weight: 800;
+            color: #10b981;
+            margin-top: 5px;
+        }
+
+        .risk-info {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            color: #00eaff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calc-container">
+        <h1>📉 Lot Size Calculator</h1>
+        
+        <div class="input-group">
+            <label>Account Balance ($)</label>
+            <input type="number" id="balance" placeholder="e.g. 10000" value="10000" oninput="calculateLot()">
+        </div>
+
+        <div class="input-group">
+            <label>Risk Percentage (%)</label>
+            <input type="number" id="risk" placeholder="e.g. 1" value="1" step="0.1" oninput="calculateLot()">
+        </div>
+
+        <div class="input-group">
+            <label>Stop Loss (Pips)</label>
+            <input type="number" id="stoploss" placeholder="e.g. 20" value="20" oninput="calculateLot()">
+        </div>
+
+        <div class="input-group">
+            <label>Instrument</label>
+            <select id="pair" onchange="calculateLot()">
+                <option value="10">Major Pairs (EURUSD, GBPUSD...)</option>
+                <option value="1">JYP Pairs (USDJPY...)</option>
+                <option value="10">Gold (XAUUSD)</option>
+                <option value="0.1">Indices (US30, NAS100)</option>
+            </select>
+        </div>
+
+        <div class="result-box">
+            <span style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Recommended Lot Size:</span>
+            <span id="lotResult" class="result-val">0.50</span>
+            <div id="riskMoney" class="risk-info">Risk Amount: $100.00</div>
+        </div>
+
+        <center><a href="/" class="back-link">← Back to CryptoWorldTools</a></center>
+    </div>
+
+    <section style="max-width: 600px; margin-top: 40px; padding: 20px; color: #94a3b8; font-size: 14px; line-height: 1.6; text-align: center;">
+        <h3>How to use?</h3>
+        <p>Enter your prop firm account balance (e.g., $50,000 FTMO), set your preferred risk per trade (usually 0.5% or 1%), and your stop loss in pips. The calculator will tell you exactly which lot size to use to stay within your risk parameters.</p>
+    </section>
+
+    <script>
+        function calculateLot() {
+            const balance = parseFloat(document.getElementById('balance').value);
+            const riskPercent = parseFloat(document.getElementById('risk').value);
+            const stoploss = parseFloat(document.getElementById('stoploss').value);
+            const pipValueMultiplier = parseFloat(document.getElementById('pair').value);
+
+            if (balance > 0 && riskPercent > 0 && stoploss > 0) {
+                // 1. Izračunaj rizik u dolarima
+                const riskAmount = balance * (riskPercent / 100);
+                
+                // 2. Izračunaj lot size
+                // Formula: Lot Size = Risk Amount / (Stop Loss * Pip Value)
+                // Standardni lot pip value za npr EURUSD je $10
+                let lotSize = riskAmount / (stoploss * pipValueMultiplier);
+                
+                // Prikaz rezultata
+                document.getElementById('lotResult').innerText = lotSize.toFixed(2);
+                document.getElementById('riskMoney').innerText = "Risk Amount: $" + riskAmount.toFixed(2);
+            } else {
+                document.getElementById('lotResult').innerText = "0.00";
+                document.getElementById('riskMoney').innerText = "Enter valid numbers";
+            }
+        }
+
+        // Pozovi jednom na početku
+        window.onload = calculateLot;
+    </script>
+
+</body>
+</html>
