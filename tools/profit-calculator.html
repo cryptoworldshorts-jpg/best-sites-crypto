@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Profit & Fee Calculator | Professional Trading Tools</title>
+    <meta name="description" content="Calculate your crypto trading net profit after exchange fees. Support for Long/Short positions and custom exchange fees.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --bg-card: #0f172a;
+            --primary: #a855f7;
+            --accent: #00eaff;
+            --danger: #ef4444;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        header a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        header a:hover { color: var(--primary); }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+        }
+
+        /* Calculator Sidebar */
+        .calc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        h1 { font-size: 1.5rem; margin-bottom: 25px; color: #fff; text-align: center; }
+
+        .input-group { margin-bottom: 18px; }
+        .input-group label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; font-weight: 600; }
+        
+        .input-wrapper { position: relative; }
+        .input-wrapper span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem; }
+        
+        input, select {
+            width: 100%;
+            background: #1e293b;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 12px 12px 35px;
+            color: #fff;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(168, 85, 247, 0.2); }
+
+        .toggle-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border);
+            background: #1e293b;
+            color: var(--text-muted);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .toggle-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        /* Results Display */
+        .results-card {
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .res-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .res-label { color: var(--text-muted); font-size: 1rem; }
+        .res-value { font-weight: 700; font-size: 1.1rem; font-family: 'Courier New', monospace; }
+
+        .net-profit-box {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .net-profit-box span { display: block; color: var(--text-muted); margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .net-profit-box #netProfit { font-size: 2.5rem; display: block; color: var(--accent); }
+
+        .cta-box {
+            margin-top: 30px;
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px dotted var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .btn-cta {
+            display: block;
+            background: var(--primary);
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="https://cryptoworldtools.com">← Back to CryptoWorldTools</a>
+</header>
+
+<div class="container">
+    <div class="calc-card">
+        <h1>Profit Calculator</h1>
+        
+        <div class="toggle-group">
+            <button class="toggle-btn active" onclick="setSide('long', this)">LONG</button>
+            <button class="toggle-btn" onclick="setSide('short', this)">SHORT</button>
+        </div>
+
+        <div class="input-group">
+            <label>Investment Amount</label>
+            <div class="input-wrapper">
+                <span>$</span>
+                <input type="number" id="investment" value="1000" oninput="calculate()">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Entry Price</label>
+            <div class="input-wrapper">
+                <span>$</span>
+                <input type="number" id="entryPrice" value="50000" oninput="calculate()">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Exit Price</label>
+            <div class="input-wrapper">
+                <span>$</span>
+                <input type="number" id="exitPrice" value="55000" oninput="calculate()">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Exchange Fee (e.g. 0.02 for KCEX)</label>
+            <div class="input-wrapper">
+                <span>%</span>
+                <input type="number" id="fee" value="0.02" step="0.01" oninput="calculate()">
+            </div>
+        </div>
+    </div>
+
+    <div class="results-card">
+        <div>
+            <div class="res-row">
+                <span class="res-label">Gross Profit/Loss</span>
+                <span class="res-value" id="grossProfit">$0.00</span>
+            </div>
+            <div class="res-row">
+                <span class="res-label">Total Fees (Entry + Exit)</span>
+                <span class="res-value" id="totalFees" style="color: var(--danger);">$0.00</span>
+            </div>
+            <div class="res-row">
+                <span class="res-label">ROI (Return on Investment)</span>
+                <span class="res-value" id="roi">0%</span>
+            </div>
+
+            <div class="net-profit-box">
+                <span>Net Profit After Fees</span>
+                <strong id="netProfit">$0.00</strong>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <p style="margin: 0; font-size: 0.85rem;">Save on fees with our verified No-KYC partner</p>
+            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="btn-cta" target="_blank">Start Trading on KCEX</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    let side = 'long';
+
+    function setSide(newSide, btn) {
+        side = newSide;
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        calculate();
+    }
+
+    function calculate() {
+        const invest = parseFloat(document.getElementById('investment').value) || 0;
+        const entry = parseFloat(document.getElementById('entryPrice').value) || 0;
+        const exit = parseFloat(document.getElementById('exitPrice').value) || 0;
+        const feePercent = parseFloat(document.getElementById('fee').value) || 0;
+
+        if (invest > 0 && entry > 0 && exit > 0) {
+            const amount = invest / entry;
+            let grossProfit = 0;
+
+            if (side === 'long') {
+                grossProfit = (exit - entry) * amount;
+            } else {
+                grossProfit = (entry - exit) * amount;
+            }
+
+            // Fee calculation (Applied on both entry and exit total volume)
+            const entryFee = invest * (feePercent / 100);
+            const exitValue = invest + grossProfit;
+            const exitFee = exitValue * (feePercent / 100);
+            const totalFees = entryFee + exitFee;
+
+            const netProfit = grossProfit - totalFees;
+            const roi = (netProfit / invest) * 100;
+
+            // UI Update
+            document.getElementById('grossProfit').innerText = '$' + grossProfit.toLocaleString(undefined, {minimumFractionDigits: 2});
+            document.getElementById('totalFees').innerText = '$' + totalFees.toLocaleString(undefined, {minimumFractionDigits: 2});
+            document.getElementById('netProfit').innerText = '$' + netProfit.toLocaleString(undefined, {minimumFractionDigits: 2});
+            document.getElementById('roi').innerText = roi.toFixed(2) + '%';
+
+            // Color Coding
+            document.getElementById('netProfit').style.color = netProfit >= 0 ? 'var(--accent)' : 'var(--danger)';
+            document.getElementById('roi').style.color = netProfit >= 0 ? 'var(--accent)' : 'var(--danger)';
+        }
+    }
+
+    // Initial run
+    calculate();
+</script>
+
+</body>
+</html>
