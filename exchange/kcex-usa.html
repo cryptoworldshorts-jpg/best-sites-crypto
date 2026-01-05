@@ -170,6 +170,37 @@
 @media (min-width: 769px) {
     .sticky-cta { display: none; }
 }
+
+    /* Tool Box Style for Calculator Link */
+    .tool-promo-box {
+        background: linear-gradient(90deg, #1a192e 0%, #0f111e 100%);
+        border: 1px solid #a855f7;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .tool-promo-text h4 { margin: 0; color: #a855f7; font-size: 1.1rem; }
+    .tool-promo-text p { margin: 5px 0 0; font-size: 0.9rem !important; color: #94a3b8 !important; }
+    .btn-tool {
+        background: #a855f7;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+    .btn-tool:hover { background: #fff; color: #a855f7; }
+    
+    @media (max-width: 600px) {
+        .tool-promo-box { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 
@@ -199,6 +230,14 @@
     <h2>Is KCEX Available in the USA?</h2>
     <p>If you are a crypto trader based in the United States, you know the struggle. The SEC has cracked down on almost every major exchange, leaving you with very few options for <strong>futures trading</strong> or accessing <strong>new altcoins</strong>.</p>
     <p>Platforms like Binance.US and Coinbase are heavily regulated, require full KYC (Know Your Customer), and often delist tokens that the SEC deems "securities."</p>
+
+    <div class="tool-promo-box">
+        <div class="tool-promo-text">
+            <h4>Planning your KCEX trades?</h4>
+            <p>Use our free tool to calculate your net profit after fees.</p>
+        </div>
+        <a href="../tools/profit-calculator.html" class="btn-tool">Open Calculator</a>
+    </div>
     
     <h3>Enter KCEX: The No-KYC Solution</h3>
     <p>KCEX has emerged as a top choice for US traders in 2025 and 2026 for one simple reason: <strong>It does not require identity verification.</strong></p>
@@ -255,6 +294,10 @@
   <section class="content-box">
     <h2>Withdrawal Limits Without KYC</h2>
     <p>Can you actually withdraw your profits? Yes. The limits for unverified accounts are surprisingly high, making it suitable even for whales.</p>
+
+    <p>Before you withdraw, make sure to track your performance. If you are trading with high leverage, use our 
+       <a href="../tools/profit-calculator.html" style="color: #a855f7; font-weight: bold; text-decoration: underline;">
+       Futures Profit & Leverage Calculator</a> to see your exact ROI and net earnings after the 0.01% fee.</p>
     
     <table>
         <thead>
