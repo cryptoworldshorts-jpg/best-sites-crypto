@@ -3,113 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex & FTMO Lot Size Calculator | CryptoWorldTools</title>
-    <link rel="canonical" href="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
-    <link rel="stylesheet" href="../style.css?v=12">
+    <title>Professional Forex Position Sizer | CryptoWorldTools</title>
+    <link rel="stylesheet" href="../style.css?v=13">
     <style>
-        :root { --neon: #10b981; --dark-bg: #050816; --card-bg: #0b1228; }
-        body { background: var(--dark-bg); color: #ddd; font-family: sans-serif; margin: 0; padding: 20px; }
-        .calc-wrapper { max-width: 500px; margin: 40px auto; background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
-        h1 { color: var(--neon); text-align: center; font-size: 26px; margin-bottom: 30px; }
-        .field { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #94a3b8; font-size: 14px; }
-        input, select { width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #1e293b; background: #0f172a; color: #fff; font-size: 16px; box-sizing: border-box; outline: none; transition: 0.3s; }
-        input:focus { border-color: var(--neon); box-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
+        :root { --neon-green: #00ff88; --danger: #ff4d4d; --bg: #050816; --card: #0b1228; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 20px; }
         
-        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
-        .res-box { background: rgba(16, 185, 129, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.1); text-align: center; }
-        .res-label { font-size: 12px; color: #94a3b8; text-transform: uppercase; margin-bottom: 5px; display: block; }
-        .res-value { font-size: 24px; font-weight: 800; color: var(--neon); }
-        
-        .main-lot { grid-column: 1 / -1; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--neon); }
-        .main-lot .res-value { font-size: 42px; }
+        .pro-calc { 
+            max-width: 600px; 
+            margin: 40px auto; 
+            background: var(--card); 
+            border-radius: 24px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
 
-        .info-text { margin-top: 30px; font-size: 13px; color: #64748b; line-height: 1.6; text-align: center; }
-        .back-btn { display: block; text-align: center; margin-top: 20px; color: #00eaff; text-decoration: none; font-size: 14px; }
+        .header-gradient {
+            background: linear-gradient(90deg, #00ff88, #00bdff);
+            padding: 2px;
+        }
+        .header-content { background: var(--card); padding: 20px; text-align: center; }
+        .header-content h1 { margin: 0; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; color: var(--neon-green); }
+
+        .body-content { padding: 30px; }
+        
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: 1 / -1; }
+
+        label { display: block; font-size: 12px; color: #8892b0; margin-bottom: 8px; text-transform: uppercase; font-weight: 700; }
+        input, select { 
+            width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #1e293b; 
+            background: #0f172a; color: #fff; font-size: 16px; outline: none; transition: 0.3s;
+        }
+        input:focus { border-color: var(--neon-green); background: #161e31; }
+
+        .live-results { 
+            margin-top: 30px; 
+            background: rgba(0,0,0,0.3); 
+            border-radius: 16px; 
+            padding: 25px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .lot-display { text-align: center; margin-bottom: 20px; }
+        .lot-label { font-size: 14px; color: #8892b0; }
+        .lot-value { font-size: 56px; font-weight: 900; color: var(--neon-green); display: block; line-height: 1; margin: 10px 0; }
+
+        .stat-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stat-row:last-child { border: none; }
+        .stat-label { color: #8892b0; }
+        .stat-val { font-weight: 700; color: #fff; }
+        .risk-warning { color: var(--danger); }
+
+        .info-pill {
+            background: rgba(0, 189, 255, 0.1);
+            color: #00bdff;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
 
-<div class="calc-wrapper">
-    <h1>📉 Position Sizer</h1>
-
-    <div class="field">
-        <label>Account Balance (USD)</label>
-        <input type="number" id="balance" value="100000" oninput="calculate()">
-    </div>
-
-    <div class="field">
-        <label>Risk Percentage (%)</label>
-        <input type="number" id="risk" value="1" step="0.1" oninput="calculate()">
-    </div>
-
-    <div class="field">
-        <label>Stop Loss (Pips)</label>
-        <input type="number" id="stoploss" value="20" oninput="calculate()">
-    </div>
-
-    <div class="field">
-        <label>Instrument Type</label>
-        <select id="pipType" onchange="calculate()">
-            <option value="10">Forex Majors (EURUSD, GBPUSD, etc.)</option>
-            <option value="10">Forex Crosses (EURGBP, AUDCAD, etc.)</option>
-            <option value="0.7">JPY Pairs (USDJPY, EURJPY) - Approx</option>
-            <option value="10">Gold (XAUUSD) - 1 Lot = $10/pip</option>
-            <option value="1">Indices (US30, NAS100) - 1 Lot = $1/point</option>
-        </select>
-    </div>
-
-    <div class="results-grid">
-        <div class="res-box main-lot">
-            <span class="res-label">Recommended Lot Size</span>
-            <span id="lotResult" class="res-value">0.50</span>
-        </div>
-        <div class="res-box">
-            <span class="res-label">Risk Amount</span>
-            <span id="moneyRisk" class="res-value">$1,000</span>
-        </div>
-        <div class="res-box">
-            <span class="res-label">Pip Value (at calc. lot)</span>
-            <span id="pipValAtLot" class="res-value">$50.00</span>
+<div class="pro-calc">
+    <div class="header-gradient">
+        <div class="header-content">
+            <h1>Prop Firm Risk Manager</h1>
         </div>
     </div>
 
-    <div class="info-text">
-        *Calculation based on a standard USD account. For JPY pairs, pip value fluctuates slightly with exchange rates. Always verify with your broker's specific contract size.
-    </div>
+    <div class="body-content">
+        <div class="input-grid">
+            <div class="field full-width">
+                <label>Currency Pair / Instrument</label>
+                <select id="asset" onchange="updateUI()">
+                    <option value="10">EUR/USD, GBP/USD, AUD/USD (Standard)</option>
+                    <option value="0.67">USD/JPY, EUR/JPY (JPY Pairs)</option>
+                    <option value="10">XAU/USD (Gold)</option>
+                    <option value="1">US30 / NAS100 / GER40 (Indices)</option>
+                    <option value="0.1">BTC/USD (Crypto 100 size)</option>
+                </select>
+            </div>
 
-    <a href="/" class="back-btn">← Back to Home</a>
+            <div class="field">
+                <label>Account Balance ($)</label>
+                <input type="number" id="balance" value="100000" oninput="calculate()">
+            </div>
+
+            <div class="field">
+                <label>Risk Percentage (%)</label>
+                <input type="number" id="riskPercent" value="1" step="0.1" oninput="calculate()">
+            </div>
+
+            <div class="field">
+                <label>Stop Loss (Pips)</label>
+                <input type="number" id="stopLoss" value="20" oninput="calculate()">
+            </div>
+
+            <div class="field">
+                <label>Contract Size</label>
+                <select id="contractSize" onchange="calculate()">
+                    <option value="100000">Standard Lot (100k)</option>
+                    <option value="10000">Mini Lot (10k)</option>
+                    <option value="1000">Micro Lot (1k)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="live-results">
+            <div class="lot-display">
+                <span class="lot-label">Recommended Position Size</span>
+                <span id="resLot" class="lot-value">0.50</span>
+                <span class="lot-label">Lots</span>
+            </div>
+
+            <div class="stat-row">
+                <span class="stat-label">Money at Risk:</span>
+                <span id="resMoney" class="stat-val risk-warning">$1,000.00</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Pip Value:</span>
+                <span id="resPipVal" class="stat-val">$10.00</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Units:</span>
+                <span id="resUnits" class="stat-val">50,000</span>
+            </div>
+        </div>
+
+        <div class="info-pill">
+            ℹ️ Pro Tip: For FTMO/Prop firms, we recommend risking max 0.5% - 1% per trade to avoid drawdown violations.
+        </div>
+
+        <center><a href="/" style="color: #444; text-decoration: none; font-size: 12px; display: block; margin-top: 20px;">Return to Dashboard</a></center>
+    </div>
 </div>
+
+
 
 <script>
 function calculate() {
     const balance = parseFloat(document.getElementById('balance').value) || 0;
-    const riskPercent = parseFloat(document.getElementById('risk').value) || 0;
-    const stoploss = parseFloat(document.getElementById('stoploss').value) || 0;
-    const pipValuePerLot = parseFloat(document.getElementById('pipType').value);
+    const riskPercent = parseFloat(document.getElementById('riskPercent').value) || 0;
+    const stopLoss = parseFloat(document.getElementById('stopLoss').value) || 0;
+    const pipValueBase = parseFloat(document.getElementById('asset').value);
+    const contract = parseFloat(document.getElementById('contractSize').value);
 
-    if (balance > 0 && riskPercent > 0 && stoploss > 0) {
-        // 1. Koliko novca rizikujemo
-        const riskMoney = balance * (riskPercent / 100);
+    if (balance > 0 && riskPercent > 0 && stopLoss > 0) {
+        // 1. Iznos novca koji rizikujemo
+        const riskAmount = balance * (riskPercent / 100);
         
-        // 2. Lot Size Formula: Risk / (StopLoss * PipValuePerLot)
-        let lotSize = riskMoney / (stoploss * pipValuePerLot);
+        // 2. Standardna formula: Lot = Risk / (StopLoss * PipValue)
+        // Za standardni lot (100k), pip value na EURUSD je $10.
+        // Prilagođavamo kalkulaciju prema contract size-u (mini/micro)
+        const ratio = contract / 100000;
+        let lotSize = riskAmount / (stopLoss * pipValueBase * ratio);
         
-        // 3. Ukupna pip vrijednost za taj lot size
-        const currentPipVal = lotSize * pipValuePerLot;
-
-        // Prikaz
-        document.getElementById('lotResult').innerText = lotSize.toFixed(2);
-        document.getElementById('moneyRisk').innerText = "$" + riskMoney.toLocaleString();
-        document.getElementById('pipValAtLot').innerText = "$" + currentPipVal.toFixed(2);
-    } else {
-        document.getElementById('lotResult').innerText = "0.00";
-        document.getElementById('moneyRisk').innerText = "$0";
-        document.getElementById('pipValAtLot').innerText = "$0.00";
+        // Ako je contract size manji (npr mini lot), broj lotova će biti veći za isti rizik
+        
+        document.getElementById('resLot').innerText = lotSize.toFixed(2);
+        document.getElementById('resMoney').innerText = "$" + riskAmount.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('resPipVal').innerText = "$" + (lotSize * pipValueBase * ratio).toFixed(2);
+        document.getElementById('resUnits').innerText = (lotSize * contract).toLocaleString();
     }
 }
 
-// Inicijalni proračun
+function updateUI() { calculate(); }
 window.onload = calculate;
 </script>
 
