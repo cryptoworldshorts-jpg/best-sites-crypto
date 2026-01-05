@@ -94,28 +94,39 @@
     box-shadow: 0 0 25px rgba(0,189,255,0.35);
     transform: translateY(-1px);
 }
-
-        .ftmo-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;   /* ← PRAVI CENTAR KARTICE */
+.content-below {
+    max-width: 550px;      /* ISTA širina kao kalkulator */
+    margin: 30px auto;     /* ← CENTRIRA BLOK */
+    color: #cbd5f5;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
-.ftmo-promo {
-    max-width: 420px;          /* vizuelni centar */
-    width: 100%;
-    margin-top: 25px;
-
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-radius: 12px;
-    padding: 18px;
-    border: 1px solid var(--blue);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.content-below h2 {
+    color: #00ff88;
+    font-size: 18px;
     text-align: center;
 }
+
+.content-below h3 {
+    color: #00bdff;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content-below p,
+.content-below ul {
+    text-align: left;   /* čitljivost */
+}
+
+.content-below.boxed {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 20px;
+}
+
 
 
     </style>
@@ -218,21 +229,21 @@ function calculate() {
 window.onload = calculate;
 </script>
 
-    <section style="margin-top:30px;color:#cbd5f5;line-height:1.7;font-size:14px;">
-  <h2 style="color:#00ff88;font-size:18px;">How This FTMO Lot Size Calculator Works</h2>
+    <section class="content-below">
+  <h2>How This FTMO Lot Size Calculator Works</h2>
 
   <p>
-This lot size calculator helps traders calculate the correct position size
-based on account balance, risk percentage and stop loss.
-It is designed for Forex traders and prop firm challenges such as FTMO.
+    This lot size calculator helps traders calculate the correct position size
+    based on account balance, risk percentage and stop loss.
+    It is designed for Forex traders and prop firm challenges such as FTMO.
   </p>
 
   <p>
-Proper position sizing is critical when trading funded accounts.
-Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
+    Proper position sizing is critical when trading funded accounts.
+    Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
   </p>
 
-  <h3 style="color:#00bdff;font-size:16px;">Who Should Use This Calculator?</h3>
+  <h3>Who Should Use This Calculator?</h3>
   <ul>
     <li>FTMO challenge traders</li>
     <li>Forex traders managing risk per trade</li>
@@ -241,24 +252,15 @@ Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
   </ul>
 </section>
 
-    <section style="margin-top:30px;padding:20px;
-background:#0f172a;border:1px solid #1e293b;border-radius:16px;">
-
-<h2 style="color:#00eaff;font-size:18px;">Related Trading Tools & Platforms</h2>
-
-<ul>
-  <li>
-    <a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a>
-  </li>
-  <li>
-    <a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a>
-  </li>
-  <li>
-    <a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a>
-  </li>
-</ul>
-
+    <section class="content-below boxed">
+  <h2>Related Trading Tools & Platforms</h2>
+  <ul>
+    <li><a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a></li>
+    <li><a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a></li>
+    <li><a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a></li>
+  </ul>
 </section>
+
 
     
 
