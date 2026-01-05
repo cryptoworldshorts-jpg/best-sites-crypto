@@ -17,6 +17,8 @@
         header h1 { margin: 10px 0 0; color: #fff; font-size: 2rem; }
         
         .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .promo-banner { background: rgba(0, 234, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 15px; border-radius: 12px; text-align: center; margin-bottom: 30px; font-weight: 600; font-size: 0.95rem; }
+        
         .section-title { font-size: 1.8rem; color: var(--primary); margin: 40px 0 20px; text-align: left; border-left: 4px solid var(--primary); padding-left: 15px; }
         
         .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
@@ -42,7 +44,8 @@
         .net-profit { text-align: center; margin-top: 15px; }
         .net-profit strong { font-size: 1.8rem; display: block; color: var(--accent); }
         
-        .cta-btn { display: block; background: var(--primary); color: #fff; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 20px; font-size: 0.9rem; }
+        .cta-btn { display: block; background: var(--primary); color: #fff; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 20px; font-size: 0.9rem; transition: 0.3s; }
+        .cta-btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
         .leverage-val { color: var(--primary); font-weight: 700; float: right; }
     </style>
 </head>
@@ -54,6 +57,10 @@
 </header>
 
 <div class="main-wrapper">
+    
+    <div class="promo-banner">
+        🔥 KCEX Promo Active: Enjoy 0.00% Spot Fees and 0.01% Futures Taker Fees!
+    </div>
 
     <div class="section-title">Spot Profit Calculator</div>
     <div class="calc-grid">
@@ -72,7 +79,7 @@
             </div>
             <div class="input-group">
                 <label>Fee (%)</label>
-                <div class="input-wrapper"><span>%</span><input type="number" id="spotFee" value="0.1" oninput="calcSpot()"></div>
+                <div class="input-wrapper"><span>%</span><input type="number" id="spotFee" value="0.00" step="0.01" oninput="calcSpot()"></div>
             </div>
         </div>
         <div class="calc-card">
@@ -85,7 +92,7 @@
                     <strong id="spotNet">$0.00</strong>
                 </div>
             </div>
-            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="cta-btn">Buy Crypto on KCEX (Spot)</a>
+            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="cta-btn">Buy Crypto with 0% Fees on KCEX</a>
         </div>
     </div>
 
@@ -112,6 +119,10 @@
                 <label>Exit Price</label>
                 <div class="input-wrapper"><span>$</span><input type="number" id="futExit" value="51000" oninput="calcFut()"></div>
             </div>
+            <div class="input-group">
+                <label>Futures Fee (%)</label>
+                <div class="input-wrapper"><span>%</span><input type="number" id="futFee" value="0.01" step="0.01" oninput="calcFut()"></div>
+            </div>
         </div>
         <div class="calc-card">
             <div class="results-panel">
@@ -124,7 +135,7 @@
                     <strong id="futNet">$0.00</strong>
                 </div>
             </div>
-            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="cta-btn">Trade Futures Up to 100x</a>
+            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM" class="cta-btn">Trade Futures with 0.01% Fee</a>
         </div>
     </div>
 
@@ -149,11 +160,11 @@
         const gross = (ext - ent) * (inv / ent);
         const fees = (inv + (inv + gross)) * (fee / 100);
         const net = gross - fees;
-        const roi = (net / inv) * 100;
+        const roi = (inv > 0) ? (net / inv) * 100 : 0;
 
-        document.getElementById('spotGross').innerText = '$' + gross.toFixed(2);
-        document.getElementById('spotFees').innerText = '$' + fees.toFixed(2);
-        document.getElementById('spotNet').innerText = '$' + net.toFixed(2);
+        document.getElementById('spotGross').innerText = '$' + gross.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('spotFees').innerText = '$' + fees.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('spotNet').innerText = '$' + net.toLocaleString(undefined, {minimumFractionDigits: 2});
         document.getElementById('spotRoi').innerText = roi.toFixed(2) + '%';
         document.getElementById('spotNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
     }
@@ -163,7 +174,7 @@
         const lev = parseFloat(document.getElementById('futLev').value) || 1;
         const ent = parseFloat(document.getElementById('futEntry').value) || 0;
         const ext = parseFloat(document.getElementById('futExit').value) || 0;
-        const fee = 0.06; // Prosječan futures fee (0.06%)
+        const fee = parseFloat(document.getElementById('futFee').value) || 0;
 
         document.getElementById('levDisplay').innerText = lev + 'x';
 
@@ -172,17 +183,17 @@
         
         const fees = (posSize + (posSize + gross)) * (fee / 100);
         const net = gross - fees;
-        const roi = (net / margin) * 100;
+        const roi = (margin > 0) ? (net / margin) * 100 : 0;
 
-        document.getElementById('futPosSize').innerText = '$' + posSize.toFixed(2);
-        document.getElementById('futGross').innerText = '$' + gross.toFixed(2);
-        document.getElementById('futFees').innerText = '$' + fees.toFixed(2);
-        document.getElementById('futNet').innerText = '$' + net.toFixed(2);
+        document.getElementById('futPosSize').innerText = '$' + posSize.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('futGross').innerText = '$' + gross.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('futFees').innerText = '$' + fees.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('futNet').innerText = '$' + net.toLocaleString(undefined, {minimumFractionDigits: 2});
         document.getElementById('futRoi').innerText = roi.toFixed(2) + '%';
         document.getElementById('futNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
     }
 
-    // Initial
+    // Initial load
     calcSpot();
     calcFut();
 </script>
