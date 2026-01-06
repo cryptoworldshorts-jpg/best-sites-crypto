@@ -90,22 +90,35 @@
     }
 
     .mobile-sticky-cta{
-      display:none;
-      position:fixed;
-      left:16px; right:16px; bottom:16px;
-      background:#6966ff;
-      color:#fff;
-      text-align:center;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:800;
-      text-decoration:none;
-      box-shadow:0 10px 25px rgba(0,0,0,0.6);
-      z-index:9999;
-    }
-    @media (max-width:768px){
-      .mobile-sticky-cta{ display:block; }
-    }
+  display:none;
+  position:fixed;
+  left:0; right:0;
+  bottom:0;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(15,17,30,0.92);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #2a2a35;
+  z-index:9999;
+}
+
+.mobile-sticky-cta .mobile-sticky-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#6966ff;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+@media (max-width:768px){
+  .mobile-sticky-cta{ display:block; }
+  body{ padding-bottom:90px; } /* da sadržaj ne bude prekriven sticky barom */
+}
+
   </style>
 </head>
 
@@ -149,17 +162,20 @@
 
   <div class="review-container">
 
-    <nav class="content-section" aria-label="Table of Contents">
-      <h2 style="margin-top:0;">📑 Table of Contents</h2>
-      <ul style="list-style:none; padding-left:0; line-height:1.9;">
-        <li><a href="#why-usa">Why USA VPS for trading</a></li>
-        <li><a href="#best-region">Best USA region (East/Central/West)</a></li>
-        <li><a href="#use-cases">Best use cases (bots + prop firms)</a></li>
-        <li><a href="#setup">Quick setup checklist</a></li>
-        <li><a href="#faq">USA FAQ</a></li>
-        <li><a href="#next">Next steps</a></li>
-      </ul>
-    </nav>
+    <ul style="list-style:none; padding-left:0; line-height:1.9;">
+  <li><a href="#why-usa">Why USA VPS for trading</a></li>
+  <li><a href="#usa-latency-checklist">USA latency checklist</a></li>
+  <li><a href="#best-region">Best USA region (East/Central/West)</a></li>
+  <li><a href="#usa-cities">Popular USA VPS city targets</a></li>
+  <li><a href="#use-cases">Best use cases (bots + prop firms)</a></li>
+  <li><a href="#recommended-usa-setups">Recommended USA setups</a></li>
+  <li><a href="#windows-vs-linux">Windows vs Linux</a></li>
+  <li><a href="#setup">Quick setup checklist</a></li>
+  <li><a href="#security-baseline">Security baseline</a></li>
+  <li><a href="#faq">USA FAQ</a></li>
+  <li><a href="#next">Next steps</a></li>
+</ul>
+
 
     <section class="content-section" id="why-usa">
       <h2>Why choose a USA VPS?</h2>
@@ -250,6 +266,26 @@
       <a href="/vps/vpscore.html" class="cta-secondary">Open the full VPS Core review</a>
     </section>
 
+    <section class="content-section" id="usa-cities">
+  <h2>Popular USA VPS city targets (quick notes)</h2>
+  <p>
+    Many traders search by city (New York, Dallas, Chicago, Miami, Los Angeles), but it’s usually better to think in regions first.
+    If you prefer city-based selection, use these quick rules as a starting point and then validate with a 48-hour stability test.
+  </p>
+  <ul>
+    <li><strong>New York / East:</strong> Often chosen for US + Europe overlap and major financial routes.</li>
+    <li><strong>Chicago / Central:</strong> Common “balanced” choice for broad North American coverage.</li>
+    <li><strong>Dallas / Central-South:</strong> Often good for coverage across USA regions, depending on provider routing.</li>
+    <li><strong>Miami / East-South:</strong> Sometimes preferred by traders connecting to LATAM routes.</li>
+    <li><strong>Los Angeles / West:</strong> Useful if you also need better routes toward Asia-Pacific.</li>
+  </ul>
+  <p style="margin-top:14px;">
+    For the deep review (pricing, who it’s best for, and performance notes), open:
+    <a href="/vps/vpscore.html" style="color:#00eaff;">VPS Core full review</a>.
+  </p>
+</section>
+
+
     <section class="content-section" id="use-cases">
       <h2>Best USA use cases</h2>
       <ul>
@@ -268,6 +304,48 @@
         </a>
       </div>
     </section>
+
+     <section class="content-section" id="windows-vs-linux">
+  <h2>Windows vs Linux VPS (USA trading setups)</h2>
+
+  <p>
+    Picking the right OS is one of the fastest ways to avoid frustration.
+    Many beginners buy the wrong type (usually too heavy Windows for simple bots, or Linux for MetaTrader workflows).
+  </p>
+
+  <div class="mini-grid">
+    <div class="mini-card">
+      <strong>Choose Windows VPS if…</strong>
+      <ul style="margin:10px 0 0 18px;">
+        <li>You use MetaTrader (MT4/MT5) or Windows-only trading tools.</li>
+        <li>You prefer Remote Desktop (RDP) and a familiar UI.</li>
+        <li>You run multiple charting apps + terminals in parallel.</li>
+      </ul>
+    </div>
+
+    <div class="mini-card">
+      <strong>Choose Linux VPS if…</strong>
+      <ul style="margin:10px 0 0 18px;">
+        <li>You run Python/Node scripts, bots, or lightweight servers.</li>
+        <li>You want easy automation, cron jobs, and SSH workflow.</li>
+        <li>You need efficiency (less overhead, often lower cost for same performance).</li>
+      </ul>
+    </div>
+
+    <div class="mini-card">
+      <strong>Hybrid approach</strong>
+      <ul style="margin:10px 0 0 18px;">
+        <li>Linux VPS runs the bot/API logic.</li>
+        <li>Windows VPS is only for manual execution/monitoring.</li>
+        <li>This reduces resource waste and improves reliability.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:18px;">
+    If you’re not sure: start with Windows for convenience, then move serious automation to Linux once your workflow is stable.
+  </p>
+</section>
 
     <section class="content-section" id="recommended-usa-setups">
   <h2>Recommended USA setups (3 simple profiles)</h2>
@@ -310,49 +388,6 @@
       <a href="/vps/vpscore.html" style="color:#00eaff;">Open full review</a>
     </p>
   </div>
-</section>
-
-
-     <section class="content-section" id="windows-vs-linux">
-  <h2>Windows vs Linux VPS (USA trading setups)</h2>
-
-  <p>
-    Picking the right OS is one of the fastest ways to avoid frustration.
-    Many beginners buy the wrong type (usually too heavy Windows for simple bots, or Linux for MetaTrader workflows).
-  </p>
-
-  <div class="mini-grid">
-    <div class="mini-card">
-      <strong>Choose Windows VPS if…</strong>
-      <ul style="margin:10px 0 0 18px;">
-        <li>You use MetaTrader (MT4/MT5) or Windows-only trading tools.</li>
-        <li>You prefer Remote Desktop (RDP) and a familiar UI.</li>
-        <li>You run multiple charting apps + terminals in parallel.</li>
-      </ul>
-    </div>
-
-    <div class="mini-card">
-      <strong>Choose Linux VPS if…</strong>
-      <ul style="margin:10px 0 0 18px;">
-        <li>You run Python/Node scripts, bots, or lightweight servers.</li>
-        <li>You want easy automation, cron jobs, and SSH workflow.</li>
-        <li>You need efficiency (less overhead, often lower cost for same performance).</li>
-      </ul>
-    </div>
-
-    <div class="mini-card">
-      <strong>Hybrid approach</strong>
-      <ul style="margin:10px 0 0 18px;">
-        <li>Linux VPS runs the bot/API logic.</li>
-        <li>Windows VPS is only for manual execution/monitoring.</li>
-        <li>This reduces resource waste and improves reliability.</li>
-      </ul>
-    </div>
-  </div>
-
-  <p style="margin-top:18px;">
-    If you’re not sure: start with Windows for convenience, then move serious automation to Linux once your workflow is stable.
-  </p>
 </section>
 
 
@@ -442,12 +477,15 @@ Use the full review for pricing context, deeper comparisons, and all features:
   </div>
 
   <!-- Mobile sticky CTA -->
-  <a class="mobile-sticky-cta"
+  <div class="mobile-sticky-cta" role="region" aria-label="Mobile call to action">
+  <a class="mobile-sticky-btn"
      href="https://register.vpscore.net/aff.php?aff=2"
      target="_blank"
      rel="nofollow sponsored noopener noreferrer">
      View USA VPS Plans
   </a>
+</div>
+
 
   <footer class="site-footer">
     <p>© 2026 CryptoWorldTools — All Rights Reserved</p>
