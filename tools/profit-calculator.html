@@ -1,327 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Profit Calculator: Spot & Futures Leverage | CryptoWorldTools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="canonical" href="https://cryptoworldtools.com/tools/profit-calculator.html">
+  <title>Crypto Profit Calculator: Spot & Futures Leverage | CryptoWorldTools</title>
+  <link rel="canonical" href="https://cryptoworldtools.com/tools/profit-calculator.html">
 
-    <meta name="description" content="Professional Crypto Profit Calculator for Spot and Futures. Calculate your net profit after exchange fees with up to 100x leverage for KCEX, OKX, and Bitget." />
-    <meta name="author" content="Crypto World" />
-    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Professional Crypto Profit Calculator for Spot and Futures. Calculate your net profit after exchange fees with up to 100x leverage for KCEX, OKX, and Bitget.">
+  <meta name="author" content="Crypto World">
+  <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Free Crypto Profit & Leverage Calculator | Professional Trading Tools" />
-    <meta property="og:description" content="Calculate your exact trading profits after fees. Supports Spot and Futures with leverage. Perfect for NO-KYC exchanges like KCEX." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.postimg.cc/kgTFkwbK/profit-calculator.jpg" />
+  <meta property="og:title" content="Free Crypto Profit & Leverage Calculator | Professional Trading Tools">
+  <meta property="og:description" content="Calculate your exact trading profits after fees. Supports Spot and Futures with leverage. Perfect for NO-KYC exchanges like KCEX.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://i.postimg.cc/kgTFkwbK/profit-calculator.jpg">
 
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png">
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Crypto Profit Calculator",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
-  "description": "Free crypto profit calculator for spot and futures trading with leverage. Calculate ROI, fees and net profit.",
-  "url": "https://cryptoworldtools.com/tools/profit-calculator.html",
-  "creator": {
-    "@type": "Organization",
-    "name": "CryptoWorldTools"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Crypto Profit Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "description": "Free crypto profit calculator for spot and futures trading with leverage. Calculate ROI, fees and net profit.",
+    "url": "https://cryptoworldtools.com/tools/profit-calculator.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "CryptoWorldTools"
+    }
   }
-}
-</script>
+  </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #020617; --bg-card: #0f172a; --primary: #a855f7;
-            --accent: #00eaff; --danger: #ef4444; --text-main: #f1f5f9;
-            --text-muted: #94a3b8; --border: #1e293b;
-        }
-        body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        header { padding: 30px; text-align: center; border-bottom: 1px solid var(--border); background: var(--bg-card); }
-        header a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
-        header h1 { margin: 10px 0 0; color: #fff; font-size: 2rem; }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .promo-banner { background: rgba(0, 234, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 15px; border-radius: 12px; text-align: center; margin-bottom: 30px; font-weight: 600; font-size: 0.95rem; }
+  <style>
+    :root{
+      --bg-dark:#020617; --bg-card:#0f172a; --primary:#a855f7;
+      --accent:#00eaff; --danger:#ef4444; --text-main:#f1f5f9;
+      --text-muted:#94a3b8; --border:#1e293b;
+    }
 
-        .section-title { font-size: 1.8rem; color: var(--primary); margin: 40px 0 20px; text-align: left; border-left: 4px solid var(--primary); padding-left: 15px; }
+    body{
+      background-color:var(--bg-dark);
+      color:var(--text-main);
+      font-family:'Inter',sans-serif;
+      margin:0;
+      padding:0;
+    }
 
-        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
-        @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
+    header{
+      padding:30px;
+      text-align:center;
+      border-bottom:1px solid var(--border);
+      background:var(--bg-card);
+    }
 
-        .calc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .results-panel { background: rgba(255,255,255,0.02); border-radius: 15px; padding: 20px; margin-top: 20px; border: 1px solid rgba(168, 85, 247, 0.1); }
+    header a{
+      color:var(--text-muted);
+      text-decoration:none;
+      font-size:.9rem;
+      transition:.3s;
+    }
 
-        .input-group { margin-bottom: 15px; }
-        .input-group label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
+    header a:hover{ color:var(--accent); }
 
-        .input-wrapper { position: relative; }
-        .input-wrapper span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem; }
+    header h1{
+      margin:10px 0 0;
+      color:#fff;
+      font-size:2rem;
+    }
 
-        input { width: 100%; background: #1e293b; border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px 12px 35px; color: #fff; font-size: 1rem; box-sizing: border-box; outline: none; transition: 0.3s; }
-        input:focus { border-color: var(--primary); }
+    .main-wrapper{
+      max-width:1200px;
+      margin:40px auto;
+      padding:0 20px;
+    }
 
-        .toggle-group { display: flex; gap: 10px; margin-bottom: 15px; }
-        .toggle-btn { flex: 1; padding: 8px; border: 1px solid var(--border); background: #1e293b; color: var(--text-muted); border-radius: 8px; cursor: pointer; font-weight: 600; }
-        .toggle-btn.active { background: var(--primary); color: #fff; }
+    .promo-banner{
+      background:rgba(0,234,255,.1);
+      border:1px solid var(--accent);
+      color:var(--accent);
+      padding:15px;
+      border-radius:12px;
+      text-align:center;
+      margin-bottom:30px;
+      font-weight:600;
+      font-size:.95rem;
+    }
 
-        .res-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
-        .net-profit { text-align: center; margin-top: 15px; }
-        .net-profit strong { font-size: 1.8rem; display: block; color: var(--accent); }
+    .section-title{
+      font-size:1.8rem;
+      color:var(--primary);
+      margin:40px 0 20px;
+      text-align:left;
+      border-left:4px solid var(--primary);
+      padding-left:15px;
+    }
 
-        .cta-btn { display: block; background: var(--primary); color: #fff; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 20px; font-size: 0.9rem; transition: 0.3s; }
-        .cta-btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
-        .leverage-val { color: var(--primary); font-weight: 700; float: right; }
-    </style>
+    .calc-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      margin-bottom:60px;
+    }
+
+    @media (max-width:900px){
+      .calc-grid{ grid-template-columns:1fr; }
+    }
+
+    .calc-card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+    }
+
+    .results-panel{
+      background:rgba(255,255,255,.02);
+      border-radius:15px;
+      padding:20px;
+      margin-top:20px;
+      border:1px solid rgba(168,85,247,.1);
+    }
+
+    .input-group{ margin-bottom:15px; }
+
+    .input-group label{
+      display:block;
+      font-size:.8rem;
+      color:var(--text-muted);
+      margin-bottom:6px;
+      font-weight:600;
+      text-transform:uppercase;
+    }
+
+    .input-wrapper{ position:relative; }
+
+    .input-wrapper span{
+      position:absolute;
+      left:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--text-muted);
+      font-size:.85rem;
+    }
+
+    input{
+      width:100%;
+      background:#1e293b;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px 12px 12px 35px;
+      color:#fff;
+      font-size:1rem;
+      box-sizing:border-box;
+      outline:none;
+      transition:.3s;
+    }
+
+    input:focus{ border-color:var(--primary); }
+
+    .toggle-group{
+      display:flex;
+      gap:10px;
+      margin-bottom:15px;
+    }
+
+    .toggle-btn{
+      flex:1;
+      padding:8px;
+      border:1px solid var(--border);
+      background:#1e293b;
+      color:var(--text-muted);
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .toggle-btn.active{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .res-row{
+      display:flex;
+      justify-content:space-between;
+      padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,.05);
+      font-size:.9rem;
+    }
+
+    .net-profit{
+      text-align:center;
+      margin-top:15px;
+    }
+
+    .net-profit strong{
+      font-size:1.8rem;
+      display:block;
+      color:var(--accent);
+    }
+
+    .cta-btn{
+      display:block;
+      background:var(--primary);
+      color:#fff;
+      text-align:center;
+      padding:12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      margin-top:20px;
+      font-size:.9rem;
+      transition:.3s;
+    }
+
+    .cta-btn:hover{
+      filter:brightness(1.2);
+      transform:translateY(-2px);
+    }
+
+    .cta-btn:visited{ color:#fff; }
+
+    .leverage-val{
+      color:var(--primary);
+      font-weight:700;
+      float:right;
+    }
+
+    /* ---------- Fix purple visited links (LVHA order) ---------- */
+    a:link{ color:var(--accent); }
+    a:visited{ color:var(--accent); }
+    a:hover{ filter:brightness(1.15); }
+    a:active{ color:var(--accent); }
+
+    /* Footer link style (same look as main site) */
+    .footer-disclaimer-link,
+    .footer-disclaimer-link:visited{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:500;
+    }
+    .footer-disclaimer-link:hover{ text-decoration:underline; }
+  </style>
 </head>
+
 <body>
 
-<header>
+  <header>
     <a href="https://cryptoworldtools.com">← Back to CryptoWorldTools</a>
     <h1>Crypto Profit Calculator – Spot & Futures Trading</h1>
     <p style="max-width:720px;margin:15px auto;color:#94a3b8;font-size:15px;">
-This free crypto profit calculator helps traders calculate exact profits, losses,
-ROI and fees for both spot and futures trading.
-It supports leveraged positions up to 100x and is commonly used by traders on
-KCEX, OKX and other low-fee exchanges.
-</p>
-</header>
+      This free crypto profit calculator helps traders calculate exact profits, losses,
+      ROI and fees for both spot and futures trading.
+      It supports leveraged positions up to 100x and is commonly used by traders on
+      KCEX, OKX and other low-fee exchanges.
+    </p>
+  </header>
 
-<div class="main-wrapper">
+  <div class="main-wrapper">
 
     <div class="promo-banner">
-        🔥 KCEX Promo Active: Enjoy 0.00% Spot Fees and 0.01% Futures Taker Fees!
+      🔥 KCEX Promo Active: Enjoy 0.00% Spot Fees and 0.01% Futures Taker Fees!
     </div>
 
     <div class="section-title">Spot Profit Calculator</div>
+
     <div class="calc-grid">
-        <div class="calc-card">
-            <div class="input-group">
-                <label>Investment (USD)</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="spotMargin" value="1000" oninput="calcSpot()"></div>
-            </div>
-            <div class="input-group">
-                <label>Entry Price</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="spotEntry" value="50000" oninput="calcSpot()"></div>
-            </div>
-            <div class="input-group">
-                <label>Exit Price</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="spotExit" value="55000" oninput="calcSpot()"></div>
-            </div>
-            <div class="input-group">
-                <label>Fee (%)</label>
-                <div class="input-wrapper"><span>%</span><input type="number" id="spotFee" value="0.00" step="0.01" oninput="calcSpot()"></div>
-            </div>
+      <div class="calc-card">
+        <div class="input-group">
+          <label>Investment (USD)</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="spotMargin" value="1000" oninput="calcSpot()"></div>
         </div>
-        <div class="calc-card">
-            <div class="results-panel">
-                <div class="res-row"><span>Gross Profit</span><span id="spotGross">$0.00</span></div>
-                <div class="res-row"><span>Fees Paid</span><span id="spotFees" style="color:var(--danger)">$0.00</span></div>
-                <div class="res-row"><span>ROI</span><span id="spotRoi">0%</span></div>
-                <div class="net-profit">
-                    <span style="font-size: 0.8rem; color: var(--text-muted)">NET PROFIT</span>
-                    <strong id="spotNet">$0.00</strong>
-                </div>
-            </div>
-            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
-               class="cta-btn"
-               target="_blank"
-               rel="nofollow sponsored noopener noreferrer">Buy Crypto with 0% Fees on KCEX</a>
+        <div class="input-group">
+          <label>Entry Price</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="spotEntry" value="50000" oninput="calcSpot()"></div>
         </div>
+        <div class="input-group">
+          <label>Exit Price</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="spotExit" value="55000" oninput="calcSpot()"></div>
+        </div>
+        <div class="input-group">
+          <label>Fee (%)</label>
+          <div class="input-wrapper"><span>%</span><input type="number" id="spotFee" value="0.00" step="0.01" oninput="calcSpot()"></div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <div class="results-panel">
+          <div class="res-row"><span>Gross Profit</span><span id="spotGross">$0.00</span></div>
+          <div class="res-row"><span>Fees Paid</span><span id="spotFees" style="color:var(--danger)">$0.00</span></div>
+          <div class="res-row"><span>ROI</span><span id="spotRoi">0%</span></div>
+          <div class="net-profit">
+            <span style="font-size:.8rem;color:var(--text-muted)">NET PROFIT</span>
+            <strong id="spotNet">$0.00</strong>
+          </div>
+        </div>
+        <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
+           class="cta-btn"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer">Buy Crypto with 0% Fees on KCEX</a>
+      </div>
     </div>
 
     <div class="section-title">Futures Leverage Calculator</div>
+
     <div class="calc-grid">
-        <div class="calc-card">
-            <div class="toggle-group">
-                <button class="toggle-btn active" id="longBtn" onclick="setSide('long')">LONG</button>
-                <button class="toggle-btn" id="shortBtn" onclick="setSide('short')">SHORT</button>
-            </div>
-            <div class="input-group">
-                <label>Margin (Your Money)</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="futMargin" value="100" oninput="calcFut()"></div>
-            </div>
-            <div class="input-group">
-                <label>Leverage <span id="levDisplay" class="leverage-val">10x</span></label>
-                <input type="range" id="futLev" min="1" max="100" value="10" step="1" oninput="calcFut()" style="padding: 10px 0;">
-            </div>
-            <div class="input-group">
-                <label>Entry Price</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="futEntry" value="50000" oninput="calcFut()"></div>
-            </div>
-            <div class="input-group">
-                <label>Exit Price</label>
-                <div class="input-wrapper"><span>$</span><input type="number" id="futExit" value="51000" oninput="calcFut()"></div>
-            </div>
-            <div class="input-group">
-                <label>Futures Fee (%)</label>
-                <div class="input-wrapper"><span>%</span><input type="number" id="futFee" value="0.01" step="0.01" oninput="calcFut()"></div>
-            </div>
+      <div class="calc-card">
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="longBtn" onclick="setSide('long')">LONG</button>
+          <button class="toggle-btn" id="shortBtn" onclick="setSide('short')">SHORT</button>
         </div>
-        <div class="calc-card">
-            <div class="results-panel">
-                <div class="res-row"><span>Position Size</span><span id="futPosSize">$0.00</span></div>
-                <div class="res-row"><span>Gross PNL</span><span id="futGross">$0.00</span></div>
-                <div class="res-row"><span>Total Fees</span><span id="futFees" style="color:var(--danger)">$0.00</span></div>
-                <div class="res-row"><span>ROI</span><span id="futRoi">0%</span></div>
-                <div class="net-profit">
-                    <span style="font-size: 0.8rem; color: var(--text-muted)">NET PROFIT</span>
-                    <strong id="futNet">$0.00</strong>
-                </div>
-            </div>
-            <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
-               class="cta-btn"
-               target="_blank"
-               rel="nofollow sponsored noopener noreferrer">Trade Futures with 0.01% Fee</a>
+
+        <div class="input-group">
+          <label>Margin (Your Money)</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="futMargin" value="100" oninput="calcFut()"></div>
         </div>
+
+        <div class="input-group">
+          <label>Leverage <span id="levDisplay" class="leverage-val">10x</span></label>
+          <input type="range" id="futLev" min="1" max="100" value="10" step="1" oninput="calcFut()" style="padding:10px 0;">
+        </div>
+
+        <div class="input-group">
+          <label>Entry Price</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="futEntry" value="50000" oninput="calcFut()"></div>
+        </div>
+
+        <div class="input-group">
+          <label>Exit Price</label>
+          <div class="input-wrapper"><span>$</span><input type="number" id="futExit" value="51000" oninput="calcFut()"></div>
+        </div>
+
+        <div class="input-group">
+          <label>Futures Fee (%)</label>
+          <div class="input-wrapper"><span>%</span><input type="number" id="futFee" value="0.01" step="0.01" oninput="calcFut()"></div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <div class="results-panel">
+          <div class="res-row"><span>Position Size</span><span id="futPosSize">$0.00</span></div>
+          <div class="res-row"><span>Gross PNL</span><span id="futGross">$0.00</span></div>
+          <div class="res-row"><span>Total Fees</span><span id="futFees" style="color:var(--danger)">$0.00</span></div>
+          <div class="res-row"><span>ROI</span><span id="futRoi">0%</span></div>
+          <div class="net-profit">
+            <span style="font-size:.8rem;color:var(--text-muted)">NET PROFIT</span>
+            <strong id="futNet">$0.00</strong>
+          </div>
+        </div>
+
+        <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
+           class="cta-btn"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer">Trade Futures with 0.01% Fee</a>
+      </div>
     </div>
 
-</div>
-
-<script>
-    let futSide = 'long';
-
-    function setSide(s) {
-        futSide = s;
-        document.getElementById('longBtn').classList.toggle('active', s === 'long');
-        document.getElementById('shortBtn').classList.toggle('active', s === 'short');
-        calcFut();
-    }
-
-    function calcSpot() {
-        const inv = parseFloat(document.getElementById('spotMargin').value) || 0;
-        const ent = parseFloat(document.getElementById('spotEntry').value) || 0;
-        const ext = parseFloat(document.getElementById('spotExit').value) || 0;
-        const fee = parseFloat(document.getElementById('spotFee').value) || 0;
-
-        const gross = (ext - ent) * (inv / ent);
-
-        // Fee on buy + sell notional (spot)
-        const buyNotional = inv;
-        const sellNotional = inv + gross;
-        const fees = (buyNotional + sellNotional) * (fee / 100);
-
-        const net = gross - fees;
-        const roi = (inv > 0) ? (net / inv) * 100 : 0;
-
-        document.getElementById('spotGross').innerText = '$' + gross.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('spotFees').innerText = '$' + fees.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('spotNet').innerText = '$' + net.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('spotRoi').innerText = roi.toFixed(2) + '%';
-        document.getElementById('spotNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
-    }
-
-    function calcFut() {
-        const margin = parseFloat(document.getElementById('futMargin').value) || 0;
-        const lev = parseFloat(document.getElementById('futLev').value) || 1;
-        const ent = parseFloat(document.getElementById('futEntry').value) || 0;
-        const ext = parseFloat(document.getElementById('futExit').value) || 0;
-        const fee = parseFloat(document.getElementById('futFee').value) || 0;
-
-        document.getElementById('levDisplay').innerText = lev + 'x';
-
-        const posSize = margin * lev;
-        const gross = (futSide === 'long')
-          ? (ext - ent) * (posSize / ent)
-          : (ent - ext) * (posSize / ent);
-
-        // Fee on open + close notional (approx futures)
-        const entryNotional = posSize;
-        const exitNotional = posSize * (ext / ent);
-        const fees = (entryNotional + exitNotional) * (fee / 100);
-
-        const net = gross - fees;
-        const roi = (margin > 0) ? (net / margin) * 100 : 0;
-
-        document.getElementById('futPosSize').innerText = '$' + posSize.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('futGross').innerText = '$' + gross.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('futFees').innerText = '$' + fees.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('futNet').innerText = '$' + net.toLocaleString(undefined, {minimumFractionDigits: 2});
-        document.getElementById('futRoi').innerText = roi.toFixed(2) + '%';
-        document.getElementById('futNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
-    }
-
-    // Initial load
-    calcSpot();
-    calcFut();
-</script>
-
-<section style="max-width:900px;margin:60px auto;color:#cbd5f5;line-height:1.7;">
-  <h2 style="color:#a855f7;">How This Crypto Profit Calculator Works</h2>
-
-  <p>
-This calculator allows you to estimate real trading results by including
-entry price, exit price, leverage and exchange fees.
-Unlike simple calculators, it shows net profit after fees,
-which is critical for active traders and scalpers.
-  </p>
-
-  <p>
-For futures trading, leverage increases position size but also magnifies both
-profits and losses. This tool helps traders visualize risk before entering a trade.
-  </p>
-
-  <h3 style="color:#00eaff;">Who Is This Calculator For?</h3>
-  <ul>
-    <li>Spot traders calculating ROI</li>
-    <li>Futures traders using leverage</li>
-    <li>KCEX users trading with low fees</li>
-    <li>Automated and manual traders</li>
-  </ul>
-</section>
-
-<section style="max-width:900px;margin:50px auto;padding:25px;
-background:#0f172a;border:1px solid #1e293b;border-radius:16px;">
-
-<h2 style="color:#00eaff;">Recommended Trading Platforms</h2>
-
-<p>
-This calculator is commonly used by traders on the following platforms:
-</p>
-
-<ul>
-  <li><a href="/exchange/kcex.html">KCEX Exchange (0% Spot Fees)</a></li>
-  <li><a href="/exchange/binance.html">Binance Futures & Spot</a></li>
-  <li><a href="/exchange/bybit.html">Bybit Derivatives</a></li>
-</ul>
-
-<p>
-For 24/7 trading bots and uninterrupted execution,
-many traders also use a dedicated <a href="/vps/vpscore.html">crypto VPS</a>.
-</p>
-
-</section>
-
-    <footer class="footer" style="text-align:center;padding:18px 12px 26px;opacity:.95;">
-  <div style="margin-bottom:10px;">
-    <a class="footer-disclaimer-link" href="/">Home</a>
-    <span style="opacity:.55;"> | </span>
-    <a class="footer-disclaimer-link" href="/is-cryptoworldtools-legit.html">Is CryptoWorldTools legit?</a>
-    <span style="opacity:.55;"> | </span>
-    <a class="footer-disclaimer-link" href="/contact.html">Contact</a>
-    <span style="opacity:.55;"> | </span>
-    <a class="footer-disclaimer-link" href="/disclaimer.html">Disclaimer</a>
-    <span style="opacity:.55;"> | </span>
-    <a class="footer-disclaimer-link" href="/privacy.html">Privacy</a>
-  </div>
-
-  <div style="font-size:13px;opacity:.75;">
-    © <span id="y"></span> CryptoWorldTools •
-    <a class="footer-disclaimer-link" href="mailto:contact.cryptoworldtools@gmail.com">
-      contact.cryptoworldtools@gmail.com
-    </a>
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</footer>
+    let futSide = 'long';
 
+    function setSide(s) {
+      futSide = s;
+      document.getElementById('longBtn').classList.toggle('active', s === 'long');
+      document.getElementById('shortBtn').classList.toggle('active', s === 'short');
+      calcFut();
+    }
+
+    function calcSpot() {
+      const inv = parseFloat(document.getElementById('spotMargin').value) || 0;
+      const ent = parseFloat(document.getElementById('spotEntry').value) || 0;
+      const ext = parseFloat(document.getElementById('spotExit').value) || 0;
+      const fee = parseFloat(document.getElementById('spotFee').value) || 0;
+
+      const gross = (ext - ent) * (inv / ent);
+
+      const buyNotional = inv;
+      const sellNotional = inv + gross;
+      const fees = (buyNotional + sellNotional) * (fee / 100);
+
+      const net = gross - fees;
+      const roi = (inv > 0) ? (net / inv) * 100 : 0;
+
+      document.getElementById('spotGross').innerText = '$' + gross.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('spotFees').innerText = '$' + fees.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('spotNet').innerText = '$' + net.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('spotRoi').innerText = roi.toFixed(2) + '%';
+      document.getElementById('spotNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
+    }
+
+    function calcFut() {
+      const margin = parseFloat(document.getElementById('futMargin').value) || 0;
+      const lev = parseFloat(document.getElementById('futLev').value) || 1;
+      const ent = parseFloat(document.getElementById('futEntry').value) || 0;
+      const ext = parseFloat(document.getElementById('futExit').value) || 0;
+      const fee = parseFloat(document.getElementById('futFee').value) || 0;
+
+      document.getElementById('levDisplay').innerText = lev + 'x';
+
+      const posSize = margin * lev;
+      const gross = (futSide === 'long')
+        ? (ext - ent) * (posSize / ent)
+        : (ent - ext) * (posSize / ent);
+
+      const entryNotional = posSize;
+      const exitNotional = posSize * (ext / ent);
+      const fees = (entryNotional + exitNotional) * (fee / 100);
+
+      const net = gross - fees;
+      const roi = (margin > 0) ? (net / margin) * 100 : 0;
+
+      document.getElementById('futPosSize').innerText = '$' + posSize.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('futGross').innerText = '$' + gross.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('futFees').innerText = '$' + fees.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('futNet').innerText = '$' + net.toLocaleString(undefined, { minimumFractionDigits: 2 });
+      document.getElementById('futRoi').innerText = roi.toFixed(2) + '%';
+      document.getElementById('futNet').style.color = net >= 0 ? 'var(--accent)' : 'var(--danger)';
+    }
+
+    calcSpot();
+    calcFut();
+  </script>
+
+  <section style="max-width:900px;margin:60px auto;color:#cbd5f5;line-height:1.7;padding:0 20px;">
+    <h2 style="color:#a855f7;">How This Crypto Profit Calculator Works</h2>
+
+    <p>
+      This calculator allows you to estimate real trading results by including
+      entry price, exit price, leverage and exchange fees.
+      Unlike simple calculators, it shows net profit after fees,
+      which is critical for active traders and scalpers.
+    </p>
+
+    <p>
+      For futures trading, leverage increases position size but also magnifies both
+      profits and losses. This tool helps traders visualize risk before entering a trade.
+    </p>
+
+    <h3 style="color:#00eaff;">Who Is This Calculator For?</h3>
+    <ul>
+      <li>Spot traders calculating ROI</li>
+      <li>Futures traders using leverage</li>
+      <li>KCEX users trading with low fees</li>
+      <li>Automated and manual traders</li>
+    </ul>
+  </section>
+
+  <section style="max-width:900px;margin:50px auto;padding:25px;background:#0f172a;border:1px solid #1e293b;border-radius:16px;">
+    <h2 style="color:#00eaff;">Recommended Trading Platforms</h2>
+
+    <p>This calculator is commonly used by traders on the following platforms:</p>
+
+    <ul>
+      <li><a href="/exchange/kcex.html">KCEX Exchange (0% Spot Fees)</a></li>
+      <li><a href="/exchange/binance.html">Binance Futures & Spot</a></li>
+      <li><a href="/exchange/bybit.html">Bybit Derivatives</a></li>
+    </ul>
+
+    <p>
+      For 24/7 trading bots and uninterrupted execution,
+      many traders also use a dedicated <a href="/vps/vpscore.html">crypto VPS</a>.
+    </p>
+  </section>
+
+  <footer class="footer" style="text-align:center;padding:18px 12px 26px;opacity:.95;">
+    <div style="margin-bottom:10px;">
+      <a class="footer-disclaimer-link" href="/">Home</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/is-cryptoworldtools-legit.html">Is CryptoWorldTools legit?</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/contact.html">Contact</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/disclaimer.html">Disclaimer</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/privacy.html">Privacy</a>
+    </div>
+
+    <div style="font-size:13px;opacity:.75;">
+      © <span id="y"></span> CryptoWorldTools •
+      <a class="footer-disclaimer-link" href="mailto:contact.cryptoworldtools@gmail.com">
+        contact.cryptoworldtools@gmail.com
+      </a>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </footer>
 
 </body>
 </html>
