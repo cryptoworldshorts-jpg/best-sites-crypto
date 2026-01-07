@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Profit Calculator: Spot & Futures Leverage | CryptoWorldTools</title>
 
-<link rel="canonical" href="https://cryptoworldtools.com/tools/profit-calculator.html">
+    <link rel="canonical" href="https://cryptoworldtools.com/tools/profit-calculator.html">
 
-<meta name="description" content="Professional Crypto Profit Calculator for Spot and Futures. Calculate your net profit after exchange fees with up to 100x leverage for KCEX, OKX, and Bitget." />
-<meta name="author" content="Crypto World" />
-<meta name="robots" content="index, follow" />
+    <meta name="description" content="Professional Crypto Profit Calculator for Spot and Futures. Calculate your net profit after exchange fees with up to 100x leverage for KCEX, OKX, and Bitget." />
+    <meta name="author" content="Crypto World" />
+    <meta name="robots" content="index, follow" />
 
-<meta property="og:title" content="Free Crypto Profit & Leverage Calculator | Professional Trading Tools" />
-<meta property="og:description" content="Calculate your exact trading profits after fees. Supports Spot and Futures with leverage. Perfect for NO-KYC exchanges like KCEX." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://i.postimg.cc/kgTFkwbK/profit-calculator.jpg" />
+    <meta property="og:title" content="Free Crypto Profit & Leverage Calculator | Professional Trading Tools" />
+    <meta property="og:description" content="Calculate your exact trading profits after fees. Supports Spot and Futures with leverage. Perfect for NO-KYC exchanges like KCEX." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.postimg.cc/kgTFkwbK/profit-calculator.jpg" />
 
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
     <script type="application/ld+json">
 {
@@ -34,7 +34,6 @@
 }
 </script>
 
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,27 +45,27 @@
         header { padding: 30px; text-align: center; border-bottom: 1px solid var(--border); background: var(--bg-card); }
         header a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
         header h1 { margin: 10px 0 0; color: #fff; font-size: 2rem; }
-        
+
         .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         .promo-banner { background: rgba(0, 234, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 15px; border-radius: 12px; text-align: center; margin-bottom: 30px; font-weight: 600; font-size: 0.95rem; }
-        
+
         .section-title { font-size: 1.8rem; color: var(--primary); margin: 40px 0 20px; text-align: left; border-left: 4px solid var(--primary); padding-left: 15px; }
-        
+
         .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 60px; }
         @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
 
         .calc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .results-panel { background: rgba(255,255,255,0.02); border-radius: 15px; padding: 20px; margin-top: 20px; border: 1px solid rgba(168, 85, 247, 0.1); }
-        
+
         .input-group { margin-bottom: 15px; }
         .input-group label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
-        
+
         .input-wrapper { position: relative; }
         .input-wrapper span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem; }
-        
+
         input { width: 100%; background: #1e293b; border: 1px solid var(--border); border-radius: 10px; padding: 12px 12px 12px 35px; color: #fff; font-size: 1rem; box-sizing: border-box; outline: none; transition: 0.3s; }
         input:focus { border-color: var(--primary); }
-        
+
         .toggle-group { display: flex; gap: 10px; margin-bottom: 15px; }
         .toggle-btn { flex: 1; padding: 8px; border: 1px solid var(--border); background: #1e293b; color: var(--text-muted); border-radius: 8px; cursor: pointer; font-weight: 600; }
         .toggle-btn.active { background: var(--primary); color: #fff; }
@@ -74,7 +73,7 @@
         .res-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
         .net-profit { text-align: center; margin-top: 15px; }
         .net-profit strong { font-size: 1.8rem; display: block; color: var(--accent); }
-        
+
         .cta-btn { display: block; background: var(--primary); color: #fff; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 20px; font-size: 0.9rem; transition: 0.3s; }
         .cta-btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
         .leverage-val { color: var(--primary); font-weight: 700; float: right; }
@@ -94,7 +93,7 @@ KCEX, OKX and other low-fee exchanges.
 </header>
 
 <div class="main-wrapper">
-    
+
     <div class="promo-banner">
         🔥 KCEX Promo Active: Enjoy 0.00% Spot Fees and 0.01% Futures Taker Fees!
     </div>
@@ -130,11 +129,10 @@ KCEX, OKX and other low-fee exchanges.
                 </div>
             </div>
             <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
-   class="cta-btn"
-   target="_blank"
-   rel="nofollow sponsored noopener noreferrer">
-   Buy Crypto with 0% Fees on KCEX
-</a>
+               class="cta-btn"
+               target="_blank"
+               rel="nofollow sponsored noopener noreferrer">Buy Crypto with 0% Fees on KCEX</a>
+        </div>
     </div>
 
     <div class="section-title">Futures Leverage Calculator</div>
@@ -177,11 +175,10 @@ KCEX, OKX and other low-fee exchanges.
                 </div>
             </div>
             <a href="https://www.kcex.com/register?inviteCode=ZZNQQM"
-   class="cta-btn"
-   target="_blank"
-   rel="nofollow sponsored noopener noreferrer">
-   Trade Futures with 0.01% Fee
-</a>
+               class="cta-btn"
+               target="_blank"
+               rel="nofollow sponsored noopener noreferrer">Trade Futures with 0.01% Fee</a>
+        </div>
     </div>
 
 </div>
@@ -203,7 +200,12 @@ KCEX, OKX and other low-fee exchanges.
         const fee = parseFloat(document.getElementById('spotFee').value) || 0;
 
         const gross = (ext - ent) * (inv / ent);
-        const fees = (inv + (inv + gross)) * (fee / 100);
+
+        // Fee on buy + sell notional (spot)
+        const buyNotional = inv;
+        const sellNotional = inv + gross;
+        const fees = (buyNotional + sellNotional) * (fee / 100);
+
         const net = gross - fees;
         const roi = (inv > 0) ? (net / inv) * 100 : 0;
 
@@ -224,9 +226,15 @@ KCEX, OKX and other low-fee exchanges.
         document.getElementById('levDisplay').innerText = lev + 'x';
 
         const posSize = margin * lev;
-        let gross = (futSide === 'long') ? (ext - ent) * (posSize / ent) : (ent - ext) * (posSize / ent);
-        
-        const fees = (posSize + (posSize + gross)) * (fee / 100);
+        const gross = (futSide === 'long')
+          ? (ext - ent) * (posSize / ent)
+          : (ent - ext) * (posSize / ent);
+
+        // Fee on open + close notional (approx futures)
+        const entryNotional = posSize;
+        const exitNotional = posSize * (ext / ent);
+        const fees = (entryNotional + exitNotional) * (fee / 100);
+
         const net = gross - fees;
         const roi = (margin > 0) ? (net / margin) * 100 : 0;
 
@@ -242,7 +250,8 @@ KCEX, OKX and other low-fee exchanges.
     calcSpot();
     calcFut();
 </script>
-    <section style="max-width:900px;margin:60px auto;color:#cbd5f5;line-height:1.7;">
+
+<section style="max-width:900px;margin:60px auto;color:#cbd5f5;line-height:1.7;">
   <h2 style="color:#a855f7;">How This Crypto Profit Calculator Works</h2>
 
   <p>
@@ -266,7 +275,7 @@ profits and losses. This tool helps traders visualize risk before entering a tra
   </ul>
 </section>
 
-    <section style="max-width:900px;margin:50px auto;padding:25px;
+<section style="max-width:900px;margin:50px auto;padding:25px;
 background:#0f172a;border:1px solid #1e293b;border-radius:16px;">
 
 <h2 style="color:#00eaff;">Recommended Trading Platforms</h2>
@@ -287,8 +296,6 @@ many traders also use a dedicated <a href="/vps/vpscore.html">crypto VPS</a>.
 </p>
 
 </section>
-
-
 
 </body>
 </html>
