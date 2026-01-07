@@ -202,24 +202,24 @@ body {
   color: #ffdd99;
 }
 
-  /* Fix purple visited links on this page (LVHA order) */
-.review-container a:link,
-.content-section a:link,
-.review-container a:visited,
-.content-section a:visited{
+  /* Fix purple visited links on this page (LVHA) — exclude CTA buttons */
+.review-container a:not(.cta-button):link,
+.content-section a:not(.cta-button):link,
+.review-container a:not(.cta-button):visited,
+.content-section a:not(.cta-button):visited{
   color:#00b8d4;
   text-decoration:none;
   font-weight:600;
 }
 
-.review-container a:hover,
-.content-section a:hover{
+.review-container a:not(.cta-button):hover,
+.content-section a:not(.cta-button):hover{
   color:#00eaff;
   text-decoration:underline;
 }
 
-.review-container a:active,
-.content-section a:active{
+.review-container a:not(.cta-button):active,
+.content-section a:not(.cta-button):active{
   color:#00eaff;
 }
 
