@@ -6,10 +6,12 @@
     <title>Forex & FTMO Lot Size Calculator | CryptoWorldTools</title>
 
     <link rel="canonical" href="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
-    
+
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
     <meta name="description" content="Professional Lot Size Calculator for Forex & Prop Firms. Perfect for FTMO, MyForexFunds and Funded Challenges. Calculate your risk like a pro." />
+    <meta name="robots" content="index, follow" />
+
     <meta property="og:title" content="FTMO & Forex Position Sizer - Risk Management Tool" />
     <meta property="og:description" content="Calculate the exact lot size for your trading account. Optimize your risk for FTMO challenges." />
     <meta property="og:image" content="https://i.postimg.cc/6QkkvChx/Calculate-your-position-ftmo.jpg" />
@@ -32,14 +34,13 @@
 }
 </script>
 
-
     <link rel="stylesheet" href="../style.css?v=14">
     <style>
         :root { --neon: #00ff88; --blue: #00bdff; --dark: #050816; --card: #0b1228; }
         body { background: var(--dark); color: #fff; font-family: 'Inter', system-ui, sans-serif; margin: 0; padding: 10px; }
-        
+
         .pro-wrapper { max-width: 550px; margin: 30px auto; background: var(--card); border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.7); }
-        
+
         .top-banner { background: linear-gradient(90deg, #00ff88, #00bdff); padding: 15px; text-align: center; color: #000; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
         .top-banner a { color: #000; text-decoration: none; }
 
@@ -58,24 +59,23 @@
         .results-area { margin-top: 25px; background: rgba(0,0,0,0.2); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); }
         .big-res { text-align: center; margin-bottom: 15px; }
         .lot-val { font-size: 50px; font-weight: 900; color: var(--neon); display: block; }
-        
+
         .stat-line { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
         .risk-text { color: #ff4d4d; font-weight: 700; }
 
         .ftmo-promo {
-    margin-top: 25px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-radius: 12px;
-    padding: 18px;
-    border: 1px solid var(--blue);
+            margin-top: 25px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid var(--blue);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* ← PRAVI CENTAR */
-    justify-content: center;
-    gap: 8px;
-}
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;   /* ← PRAVI CENTAR */
+            justify-content: center;
+            gap: 8px;
+        }
 
         .ftmo-btn { display: inline-block; background: var(--blue); color: #000; padding: 10px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; margin-top: 10px; transition: 0.3s; }
         .ftmo-btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(0, 189, 255, 0.4); }
@@ -84,68 +84,67 @@
         .footer-nav a { color: #64748b; text-decoration: none; font-size: 12px; }
 
         .ftmo-text {
-    font-size: 13px;
-    font-weight: 600;
-    text-align: center;
-    margin: 0;
-}
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0;
+        }
 
         .ftmo-promo:hover {
-    box-shadow: 0 0 25px rgba(0,189,255,0.35);
-    transform: translateY(-1px);
-}
-.content-below {
-    max-width: 550px;      /* ISTA širina kao kalkulator */
-    margin: 30px auto;     /* ← CENTRIRA BLOK */
-    color: #cbd5f5;
-    line-height: 1.7;
-    font-size: 14px;
-}
+            box-shadow: 0 0 25px rgba(0,189,255,0.35);
+            transform: translateY(-1px);
+        }
+        .content-below {
+            max-width: 550px;      /* ISTA širina kao kalkulator */
+            margin: 30px auto;     /* ← CENTRIRA BLOK */
+            color: #cbd5f5;
+            line-height: 1.7;
+            font-size: 14px;
+        }
 
-.content-below h2 {
-    color: #00ff88;
-    font-size: 18px;
-    text-align: center;
-}
+        .content-below h2 {
+            color: #00ff88;
+            font-size: 18px;
+            text-align: center;
+        }
 
-.content-below h3 {
-    color: #00bdff;
-    font-size: 16px;
-    margin-top: 20px;
-    text-align: center;
-}
+        .content-below h3 {
+            color: #00bdff;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
 
-.content-below p,
-.content-below ul {
-    text-align: left;   /* čitljivost */
-}
+        .content-below p,
+        .content-below ul {
+            text-align: left;   /* čitljivost */
+        }
 
-.content-below.boxed {
-    background: #0f172a;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 20px;
-}
-
-
-
+        .content-below.boxed {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
 
 <div class="pro-wrapper">
     <div class="top-banner">
-        🚀 <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg" target="_blank">Ready for a Funded Account? Get Started with FTMO</a>
+        🚀 <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
+             target="_blank"
+             rel="nofollow sponsored noopener noreferrer">Ready for a Funded Account? Get Started with FTMO</a>
     </div>
 
     <div class="calc-body">
         <div class="main-title">
-  <h1>Forex & FTMO Lot Size Calculator</h1>
-  <p>
-    Professional position size and risk management calculator for Forex traders,
-    FTMO challenges and funded accounts.
-  </p>
-</div>
+            <h1>Forex & FTMO Lot Size Calculator</h1>
+            <p>
+                Professional position size and risk management calculator for Forex traders,
+                FTMO challenges and funded accounts.
+            </p>
+        </div>
 
         <div class="input-grid">
             <div class="field full">
@@ -199,7 +198,10 @@
 
         <div class="ftmo-promo">
             <p class="ftmo-text">Trade up to $200,000 on FTMO</p>
-            <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg" class="ftmo-btn" target="_blank">START CHALLENGE</a>
+            <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
+               class="ftmo-btn"
+               target="_blank"
+               rel="nofollow sponsored noopener noreferrer">START CHALLENGE</a>
         </div>
 
         <div class="footer-nav">
@@ -229,40 +231,37 @@ function calculate() {
 window.onload = calculate;
 </script>
 
-    <section class="content-below">
-  <h2>How This FTMO Lot Size Calculator Works</h2>
+<section class="content-below">
+    <h2>How This FTMO Lot Size Calculator Works</h2>
 
-  <p>
-    This lot size calculator helps traders calculate the correct position size
-    based on account balance, risk percentage and stop loss.
-    It is designed for Forex traders and prop firm challenges such as FTMO.
-  </p>
+    <p>
+        This lot size calculator helps traders calculate the correct position size
+        based on account balance, risk percentage and stop loss.
+        It is designed for Forex traders and prop firm challenges such as FTMO.
+    </p>
 
-  <p>
-    Proper position sizing is critical when trading funded accounts.
-    Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
-  </p>
+    <p>
+        Proper position sizing is critical when trading funded accounts.
+        Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
+    </p>
 
-  <h3>Who Should Use This Calculator?</h3>
-  <ul>
-    <li>FTMO challenge traders</li>
-    <li>Forex traders managing risk per trade</li>
-    <li>Funded account holders</li>
-    <li>Prop firm applicants</li>
-  </ul>
+    <h3>Who Should Use This Calculator?</h3>
+    <ul>
+        <li>FTMO challenge traders</li>
+        <li>Forex traders managing risk per trade</li>
+        <li>Funded account holders</li>
+        <li>Prop firm applicants</li>
+    </ul>
 </section>
 
-    <section class="content-below boxed">
-  <h2>Related Trading Tools & Platforms</h2>
-  <ul>
-    <li><a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a></li>
-    <li><a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a></li>
-    <li><a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a></li>
-  </ul>
+<section class="content-below boxed">
+    <h2>Related Trading Tools & Platforms</h2>
+    <ul>
+        <li><a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a></li>
+        <li><a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a></li>
+        <li><a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a></li>
+    </ul>
 </section>
-
-
-    
 
 </body>
 </html>
