@@ -1,267 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex & FTMO Lot Size Calculator | CryptoWorldTools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="canonical" href="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
+  <title>Forex & FTMO Lot Size Calculator | CryptoWorldTools</title>
+  <link rel="canonical" href="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
 
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cryptoworldshorts-jpg/image-hosting/main/preview.png" />
 
-    <meta name="description" content="Professional Lot Size Calculator for Forex & Prop Firms. Perfect for FTMO, MyForexFunds and Funded Challenges. Calculate your risk like a pro." />
-    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Professional Lot Size Calculator for Forex & Prop Firms. Perfect for FTMO, MyForexFunds and Funded Challenges. Calculate your risk like a pro.">
+  <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="FTMO & Forex Position Sizer - Risk Management Tool" />
-    <meta property="og:description" content="Calculate the exact lot size for your trading account. Optimize your risk for FTMO challenges." />
-    <meta property="og:image" content="https://i.postimg.cc/6QkkvChx/Calculate-your-position-ftmo.jpg" />
-    <meta property="og:url" content="https://cryptoworldtools.com/tools/forex-lot-calculator.html" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:title" content="FTMO & Forex Position Sizer - Risk Management Tool">
+  <meta property="og:description" content="Calculate the exact lot size for your trading account. Optimize your risk for FTMO challenges.">
+  <meta property="og:image" content="https://i.postimg.cc/6QkkvChx/Calculate-your-position-ftmo.jpg">
+  <meta property="og:url" content="https://cryptoworldtools.com/tools/forex-lot-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Forex & FTMO Lot Size Calculator",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
-  "description": "Professional lot size and risk management calculator for Forex traders and FTMO challenges.",
-  "url": "https://cryptoworldtools.com/tools/forex-lot-calculator.html",
-  "creator": {
-    "@type": "Organization",
-    "name": "CryptoWorldTools"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Forex & FTMO Lot Size Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "description": "Professional lot size and risk management calculator for Forex traders and FTMO challenges.",
+    "url": "https://cryptoworldtools.com/tools/forex-lot-calculator.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "CryptoWorldTools"
+    }
   }
-}
-</script>
+  </script>
 
-    <link rel="stylesheet" href="../style.css?v=14">
-    <style>
-        :root { --neon: #00ff88; --blue: #00bdff; --dark: #050816; --card: #0b1228; }
-        body { background: var(--dark); color: #fff; font-family: 'Inter', system-ui, sans-serif; margin: 0; padding: 10px; }
+  <!-- Optional: keep site CSS (footer styles etc.) -->
+  <link rel="stylesheet" href="/style.css?v=14">
 
-        .pro-wrapper { max-width: 550px; margin: 30px auto; background: var(--card); border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.7); }
+  <style>
+    :root { --neon:#00ff88; --blue:#00bdff; --dark:#050816; --card:#0b1228; }
 
-        .top-banner { background: linear-gradient(90deg, #00ff88, #00bdff); padding: 15px; text-align: center; color: #000; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
-        .top-banner a { color: #000; text-decoration: none; }
+    body{
+      background:var(--dark);
+      color:#fff;
+      font-family:'Inter',system-ui,sans-serif;
+      margin:0;
+      padding:10px;
+    }
 
-        .calc-body { padding: 30px; }
-        .main-title { text-align: center; margin-bottom: 25px; }
-        .main-title h1 { font-size: 24px; margin: 0; color: var(--neon); text-transform: uppercase; }
-        .main-title p { color: #64748b; font-size: 13px; margin-top: 5px; }
+    .pro-wrapper{
+      max-width:550px;
+      margin:30px auto;
+      background:var(--card);
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,0.08);
+      overflow:hidden;
+      box-shadow:0 25px 50px rgba(0,0,0,0.7);
+    }
 
-        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .full { grid-column: 1 / -1; }
+    .top-banner{
+      background:linear-gradient(90deg,#00ff88,#00bdff);
+      padding:15px;
+      text-align:center;
+      color:#000;
+      font-weight:800;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
 
-        label { display: block; font-size: 11px; color: #8892b0; margin-bottom: 6px; text-transform: uppercase; font-weight: 700; }
-        input, select { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid #1e293b; background: #0f172a; color: #fff; font-size: 15px; outline: none; transition: 0.3s; box-sizing: border-box; }
-        input:focus { border-color: var(--neon); box-shadow: 0 0 12px rgba(0, 255, 136, 0.2); }
+    .calc-body{ padding:30px; }
 
-        .results-area { margin-top: 25px; background: rgba(0,0,0,0.2); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); }
-        .big-res { text-align: center; margin-bottom: 15px; }
-        .lot-val { font-size: 50px; font-weight: 900; color: var(--neon); display: block; }
+    .main-title{ text-align:center; margin-bottom:25px; }
+    .main-title h1{ font-size:24px; margin:0; color:var(--neon); text-transform:uppercase; }
+    .main-title p{ color:#64748b; font-size:13px; margin-top:5px; }
 
-        .stat-line { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
-        .risk-text { color: #ff4d4d; font-weight: 700; }
+    .input-grid{ display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+    .full{ grid-column:1 / -1; }
 
-        .ftmo-promo {
-            margin-top: 25px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border-radius: 12px;
-            padding: 18px;
-            border: 1px solid var(--blue);
+    label{
+      display:block;
+      font-size:11px;
+      color:#8892b0;
+      margin-bottom:6px;
+      text-transform:uppercase;
+      font-weight:700;
+    }
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;   /* ← PRAVI CENTAR */
-            justify-content: center;
-            gap: 8px;
-        }
+    input, select{
+      width:100%;
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #1e293b;
+      background:#0f172a;
+      color:#fff;
+      font-size:15px;
+      outline:none;
+      transition:0.3s;
+      box-sizing:border-box;
+    }
 
-        .ftmo-btn { display: inline-block; background: var(--blue); color: #000; padding: 10px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; margin-top: 10px; transition: 0.3s; }
-        .ftmo-btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(0, 189, 255, 0.4); }
+    input:focus{ border-color:var(--neon); box-shadow:0 0 12px rgba(0,255,136,0.2); }
 
-        .footer-nav { text-align: center; margin-top: 20px; }
-        .footer-nav a { color: #64748b; text-decoration: none; font-size: 12px; }
+    .results-area{
+      margin-top:25px;
+      background:rgba(0,0,0,0.2);
+      border-radius:16px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
 
-        .ftmo-text {
-            font-size: 13px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0;
-        }
+    .big-res{ text-align:center; margin-bottom:15px; }
+    .lot-val{ font-size:50px; font-weight:900; color:var(--neon); display:block; }
 
-        .ftmo-promo:hover {
-            box-shadow: 0 0 25px rgba(0,189,255,0.35);
-            transform: translateY(-1px);
-        }
-        .content-below {
-            max-width: 550px;      /* ISTA širina kao kalkulator */
-            margin: 30px auto;     /* ← CENTRIRA BLOK */
-            color: #cbd5f5;
-            line-height: 1.7;
-            font-size: 14px;
-        }
+    .stat-line{
+      display:flex;
+      justify-content:space-between;
+      padding:10px 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      font-size:14px;
+    }
 
-        .content-below h2 {
-            color: #00ff88;
-            font-size: 18px;
-            text-align: center;
-        }
+    .risk-text{ color:#ff4d4d; font-weight:700; }
 
-        .content-below h3 {
-            color: #00bdff;
-            font-size: 16px;
-            margin-top: 20px;
-            text-align: center;
-        }
+    .ftmo-promo{
+      margin-top:25px;
+      background:linear-gradient(135deg,#1e293b,#0f172a);
+      border-radius:12px;
+      padding:18px;
+      border:1px solid var(--blue);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      transition:0.25s;
+    }
 
-        .content-below p,
-        .content-below ul {
-            text-align: left;   /* čitljivost */
-        }
+    .ftmo-text{
+      font-size:13px;
+      font-weight:600;
+      text-align:center;
+      margin:0;
+    }
 
-        .content-below.boxed {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 16px;
-            padding: 20px;
-        }
-    </style>
+    .ftmo-btn{
+      display:inline-block;
+      background:var(--blue);
+      color:#000;
+      padding:10px 20px;
+      border-radius:8px;
+      font-weight:800;
+      text-decoration:none;
+      margin-top:10px;
+      transition:0.3s;
+    }
+
+    .ftmo-btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 15px rgba(0,189,255,0.4);
+    }
+
+    .ftmo-promo:hover{
+      box-shadow:0 0 25px rgba(0,189,255,0.35);
+      transform:translateY(-1px);
+    }
+
+    .footer-nav{ text-align:center; margin-top:20px; }
+    .footer-nav a{ color:#64748b; text-decoration:none; font-size:12px; }
+
+    .content-below{
+      max-width:550px;
+      margin:30px auto;
+      color:#cbd5f5;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .content-below h2{
+      color:var(--neon);
+      font-size:18px;
+      text-align:center;
+    }
+
+    .content-below h3{
+      color:var(--blue);
+      font-size:16px;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    .content-below p,
+    .content-below ul{ text-align:left; }
+
+    .content-below.boxed{
+      background:#0f172a;
+      border:1px solid #1e293b;
+      border-radius:16px;
+      padding:20px;
+    }
+
+    /* ---------- Fix purple visited links (LVHA order) ---------- */
+    a:link{ color:var(--blue); text-decoration:underline; }
+    a:visited{ color:var(--blue); text-decoration:underline; }
+    a:hover{ filter:brightness(1.15); }
+    a:active{ color:var(--blue); }
+
+    /* Keep the top banner link black */
+    .top-banner a:link,
+    .top-banner a:visited{ color:#000; text-decoration:none; }
+    .top-banner a:hover{ text-decoration:underline; }
+  </style>
 </head>
+
 <body>
 
-<div class="pro-wrapper">
+  <div class="pro-wrapper">
     <div class="top-banner">
-        🚀 <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
-             target="_blank"
-             rel="nofollow sponsored noopener noreferrer">Ready for a Funded Account? Get Started with FTMO</a>
+      🚀 <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer">Ready for a Funded Account? Get Started with FTMO</a>
     </div>
 
     <div class="calc-body">
-        <div class="main-title">
-            <h1>Forex & FTMO Lot Size Calculator</h1>
-            <p>
-                Professional position size and risk management calculator for Forex traders,
-                FTMO challenges and funded accounts.
-            </p>
+      <div class="main-title">
+        <h1>Forex & FTMO Lot Size Calculator</h1>
+        <p>
+          Professional position size and risk management calculator for Forex traders,
+          FTMO challenges and funded accounts.
+        </p>
+      </div>
+
+      <div class="input-grid">
+        <div class="field full">
+          <label>Instrument</label>
+          <select id="asset" onchange="calculate()">
+            <option value="10">Forex Majors (EURUSD, GBPUSD...)</option>
+            <option value="10">Gold (XAUUSD)</option>
+            <option value="0.75">JPY Pairs (USDJPY, EURJPY)</option>
+            <option value="1">Indices (US30, NAS100, DAX)</option>
+          </select>
         </div>
 
-        <div class="input-grid">
-            <div class="field full">
-                <label>Instrument</label>
-                <select id="asset" onchange="calculate()">
-                    <option value="10">Forex Majors (EURUSD, GBPUSD...)</option>
-                    <option value="10">Gold (XAUUSD)</option>
-                    <option value="0.75">JPY Pairs (USDJPY, EURJPY)</option>
-                    <option value="1">Indices (US30, NAS100, DAX)</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label>Balance (USD)</label>
-                <input type="number" id="balance" value="100000" oninput="calculate()">
-            </div>
-
-            <div class="field">
-                <label>Risk (%)</label>
-                <input type="number" id="risk" value="1" step="0.1" oninput="calculate()">
-            </div>
-
-            <div class="field">
-                <label>Stop Loss (Pips)</label>
-                <input type="number" id="sl" value="20" oninput="calculate()">
-            </div>
-
-            <div class="field">
-                <label>Account Type</label>
-                <select id="contract" onchange="calculate()">
-                    <option value="100000">Standard (100k)</option>
-                    <option value="10000">Mini (10k)</option>
-                </select>
-            </div>
+        <div class="field">
+          <label>Balance (USD)</label>
+          <input type="number" id="balance" value="100000" oninput="calculate()">
         </div>
 
-        <div class="results-area">
-            <div class="big-res">
-                <span style="font-size: 12px; color: #8892b0; text-transform: uppercase;">Lot Size to Use</span>
-                <span id="resLot" class="lot-val">0.50</span>
-            </div>
-            <div class="stat-line">
-                <span>Money at Risk:</span>
-                <span id="resMoney" class="risk-text">$1,000.00</span>
-            </div>
-            <div class="stat-line">
-                <span>Pip Value:</span>
-                <span id="resPip">$10.00</span>
-            </div>
+        <div class="field">
+          <label>Risk (%)</label>
+          <input type="number" id="risk" value="1" step="0.1" oninput="calculate()">
         </div>
 
-        <div class="ftmo-promo">
-            <p class="ftmo-text">Trade up to $200,000 on FTMO</p>
-            <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
-               class="ftmo-btn"
-               target="_blank"
-               rel="nofollow sponsored noopener noreferrer">START CHALLENGE</a>
+        <div class="field">
+          <label>Stop Loss (Pips)</label>
+          <input type="number" id="sl" value="20" oninput="calculate()">
         </div>
 
-        <div class="footer-nav">
-            <a href="https://cryptoworldtools.com/">← Back to CryptoWorldTools</a>
+        <div class="field">
+          <label>Account Type</label>
+          <select id="contract" onchange="calculate()">
+            <option value="100000">Standard (100k)</option>
+            <option value="10000">Mini (10k)</option>
+          </select>
         </div>
+      </div>
+
+      <div class="results-area">
+        <div class="big-res">
+          <span style="font-size:12px;color:#8892b0;text-transform:uppercase;">Lot Size to Use</span>
+          <span id="resLot" class="lot-val">0.50</span>
+        </div>
+        <div class="stat-line">
+          <span>Money at Risk:</span>
+          <span id="resMoney" class="risk-text">$1,000.00</span>
+        </div>
+        <div class="stat-line">
+          <span>Pip Value:</span>
+          <span id="resPip">$10.00</span>
+        </div>
+      </div>
+
+      <div class="ftmo-promo">
+        <p class="ftmo-text">Trade up to $200,000 on FTMO</p>
+        <a href="https://trader.ftmo.com/?affiliates=gNUHmQwhzxzcRtlncDEg"
+           class="ftmo-btn"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer">START CHALLENGE</a>
+      </div>
+
+      <div class="footer-nav">
+        <a href="https://cryptoworldtools.com/">← Back to CryptoWorldTools</a>
+      </div>
     </div>
-</div>
+  </div>
 
-<script>
-function calculate() {
-    const balance = parseFloat(document.getElementById('balance').value) || 0;
-    const risk = parseFloat(document.getElementById('risk').value) || 0;
-    const sl = parseFloat(document.getElementById('sl').value) || 0;
-    const assetVal = parseFloat(document.getElementById('asset').value);
-    const contract = parseFloat(document.getElementById('contract').value);
+  <script>
+    function calculate() {
+      const balance = parseFloat(document.getElementById('balance').value) || 0;
+      const risk = parseFloat(document.getElementById('risk').value) || 0;
+      const sl = parseFloat(document.getElementById('sl').value) || 0;
+      const assetVal = parseFloat(document.getElementById('asset').value);
+      const contract = parseFloat(document.getElementById('contract').value);
 
-    if(balance > 0 && risk > 0 && sl > 0) {
+      if (balance > 0 && risk > 0 && sl > 0) {
         const riskMoney = balance * (risk / 100);
         const ratio = contract / 100000;
-        let lotSize = riskMoney / (sl * assetVal * ratio);
+        const lotSize = riskMoney / (sl * assetVal * ratio);
 
         document.getElementById('resLot').innerText = lotSize.toFixed(2);
-        document.getElementById('resMoney').innerText = "$" + riskMoney.toLocaleString(undefined, {minimumFractionDigits: 2});
+        document.getElementById('resMoney').innerText = "$" + riskMoney.toLocaleString(undefined, { minimumFractionDigits: 2 });
         document.getElementById('resPip').innerText = "$" + (lotSize * assetVal * ratio).toFixed(2);
+      }
     }
-}
-window.onload = calculate;
-</script>
+    window.onload = calculate;
+  </script>
 
-<section class="content-below">
+  <section class="content-below">
     <h2>How This FTMO Lot Size Calculator Works</h2>
 
     <p>
-        This lot size calculator helps traders calculate the correct position size
-        based on account balance, risk percentage and stop loss.
-        It is designed for Forex traders and prop firm challenges such as FTMO.
+      This lot size calculator helps traders calculate the correct position size
+      based on account balance, risk percentage and stop loss.
+      It is designed for Forex traders and prop firm challenges such as FTMO.
     </p>
 
     <p>
-        Proper position sizing is critical when trading funded accounts.
-        Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
+      Proper position sizing is critical when trading funded accounts.
+      Using incorrect lot sizes can quickly violate daily or maximum drawdown rules.
     </p>
 
     <h3>Who Should Use This Calculator?</h3>
     <ul>
-        <li>FTMO challenge traders</li>
-        <li>Forex traders managing risk per trade</li>
-        <li>Funded account holders</li>
-        <li>Prop firm applicants</li>
+      <li>FTMO challenge traders</li>
+      <li>Forex traders managing risk per trade</li>
+      <li>Funded account holders</li>
+      <li>Prop firm applicants</li>
     </ul>
-</section>
+  </section>
 
-<section class="content-below boxed">
+  <section class="content-below boxed">
     <h2>Related Trading Tools & Platforms</h2>
     <ul>
-        <li><a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a></li>
-        <li><a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a></li>
-        <li><a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a></li>
+      <li><a href="/shop/ftmo.html">FTMO Review – Rules, Payouts & Challenges</a></li>
+      <li><a href="/tools/profit-calculator.html">Crypto Profit & Futures Calculator</a></li>
+      <li><a href="/vps/vpscore.html">Best VPS for Trading Bots & FTMO</a></li>
     </ul>
-</section>
+  </section>
+
+  <!-- Standard site footer -->
+  <footer class="footer" style="text-align:center;padding:18px 12px 26px;opacity:.95;">
+    <div style="margin-bottom:10px;">
+      <a class="footer-disclaimer-link" href="/">Home</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/is-cryptoworldtools-legit.html">Is CryptoWorldTools legit?</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/contact.html">Contact</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/disclaimer.html">Disclaimer</a>
+      <span style="opacity:.55;"> | </span>
+      <a class="footer-disclaimer-link" href="/privacy.html">Privacy</a>
+    </div>
+
+    <div style="font-size:13px;opacity:.75;">
+      © <span id="y"></span> CryptoWorldTools •
+      <a class="footer-disclaimer-link" href="mailto:contact.cryptoworldtools@gmail.com">
+        contact.cryptoworldtools@gmail.com
+      </a>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </footer>
 
 </body>
 </html>
