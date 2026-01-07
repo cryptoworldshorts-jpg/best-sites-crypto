@@ -209,3 +209,10 @@ body{
 .footer-disclaimer-link:hover{
   text-decoration:underline;
 }
+
+/* Global link colors (prevents purple visited links) */
+a:link { color: #00b8d4; }
+a:visited { color: #00b8d4; }
+a:hover { color: #00eaff; text-decoration: underline; }
+a:active { color: #00eaff; }
+
