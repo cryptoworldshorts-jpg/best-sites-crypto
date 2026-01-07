@@ -216,3 +216,18 @@ a:visited { color: #00b8d4; }
 a:hover { color: #00eaff; text-decoration: underline; }
 a:active { color: #00eaff; }
 
+/* Keep button-like <a> styles (override global link color) */
+a.btn:link, a.btn:visited { color:#001; text-decoration:none; }
+a.shop-button:link, a.shop-button:visited { color:#000; text-decoration:none; }
+a.details-btn:link, a.details-btn:visited { color:#fff; text-decoration:none; }
+
+
+/* Global: keep CTA links white (all your button classes) */
+a.cta-button:link, a.cta-button:visited,
+a.cta-btn:link, a.cta-btn:visited,
+a.cta:link, a.cta:visited{
+  color:#fff;
+  text-decoration:none;
+}
+
+
