@@ -5,25 +5,25 @@
 CryptoWorldTools publishes exchange reviews and practical tools for active traders. Some exchanges restrict certain regions; always check official terms before using any platform.
 
 ## Top Recommendation
-- [KCEX Review (EN)](https://cryptoworldtools.com/exchange/kcex.html): Updated 2026 review (fees, safety, withdrawals, risk-control issues).
-- [KCEX Erfahrungen (DE)](https://cryptoworldtools.com/exchange/kcex-de.html): German version of the KCEX review.
+- [KCEX Review (EN)](https://cryptoworldtools.com/exchange/kcex): Updated 2026 review (fees, safety, withdrawals, risk-control issues).
+- [KCEX Erfahrungen (DE)](https://cryptoworldtools.com/exchange/kcex-de): German version of the KCEX review.
 
 ## Regional Guides
-- [KCEX in the USA](https://cryptoworldtools.com/exchange/kcex-usa.html): Availability, restrictions, and risks overview for U.S. residents.
+- [KCEX in the USA](https://cryptoworldtools.com/exchange/kcex-usa): Availability, restrictions, and risks overview for U.S. residents.
 
 ## Exchange Reviews
-- [OKX](https://cryptoworldtools.com/exchange/okx.html): Features, referrals, and bonuses.
-- [Bitget](https://cryptoworldtools.com/exchange/bitget.html): Copy trading and rewards.
-- [KuCoin](https://cryptoworldtools.com/exchange/kucoin.html): Altcoins and platform overview.
-- [BingX](https://cryptoworldtools.com/exchange/bingx.html): Social trading features.
-- [Binance](https://cryptoworldtools.com/exchange/binance.html): Exchange overview.
-- [MEXC](https://cryptoworldtools.com/exchange/mexc.html): Listings and trading notes.
-- [Bybit](https://cryptoworldtools.com/exchange/bybit.html): Derivatives trading overview.
+- [OKX](https://cryptoworldtools.com/exchange/okx): Features, referrals, and bonuses.
+- [Bitget](https://cryptoworldtools.com/exchange/bitget): Copy trading and rewards.
+- [KuCoin](https://cryptoworldtools.com/exchange/kucoin): Altcoins and platform overview.
+- [BingX](https://cryptoworldtools.com/exchange/bingx): Social trading features.
+- [Binance](https://cryptoworldtools.com/exchange/binance): Exchange overview.
+- [MEXC](https://cryptoworldtools.com/exchange/mexc): Listings and trading notes.
+- [Bybit](https://cryptoworldtools.com/exchange/bybit): Derivatives trading overview.
 
 ## Tools
-- [Profit Calculator](https://cryptoworldtools.com/tools/profit-calculator.html): Fee-aware profit and ROI calculator.
+- [Profit Calculator](https://cryptoworldtools.com/tools/profit-calculator): Fee-aware profit and ROI calculator.
 
 ## Policies
-- [Disclaimer](https://cryptoworldtools.com/disclaimer.html)
-- [Privacy](https://cryptoworldtools.com/privacy.html)
+- [Disclaimer](https://cryptoworldtools.com/disclaimer)
+- [Privacy](https://cryptoworldtools.com/privacy)
 
