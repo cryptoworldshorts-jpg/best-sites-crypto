@@ -15,10 +15,11 @@
         .heading-font {
             font-family: 'Space Grotesk', sans-serif;
         }
-        /* Luxury Gold & Purple Glow FX */
+        /* Luxury Gold Glow FX */
         .gold-glow {
             text-shadow: 0 0 30px rgba(245, 158, 11, 0.35);
         }
+        /* Glassmorphism Premium Cards */
         .premium-card {
             border: 1px solid rgba(245, 158, 11, 0.1);
             background: linear-gradient(135deg, rgba(15, 17, 26, 0.7) 0%, rgba(10, 11, 18, 0.8) 100%);
@@ -36,11 +37,12 @@
 
     <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[150px] pointer-events-none"></div>
     <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-[2200px] left-1/3 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-    <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-12 text-center">
+    <header id="hero" class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-12 text-center">
         <div class="max-w-4xl mx-auto z-10">
             
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-500/10 rounded-full border border-amber-500/20 mb-8 animate-fade-in">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-500/10 rounded-full border border-amber-500/20 mb-8">
                 <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Official Partner Portal
             </span>
 
@@ -69,7 +71,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="https://aurumx.cc/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black font-bold rounded-xl shadow-xl shadow-amber-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center">
+                <a href="https://aurumx.cc/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-black font-bold rounded-xl shadow-xl shadow-amber-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center">
                     Launch AurumX App
                 </a>
                 <a href="#ecosystem" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-gray-300 font-medium rounded-xl border border-white/10 transition duration-300 text-center">
@@ -80,83 +82,194 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12" id="ecosystem">
-        
-        <div class="text-center mb-16">
-            <h2 class="heading-font text-3xl sm:text-4xl font-bold text-white mb-4">Ecosystem Product Matrix</h2>
-            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">A multi-engine-driven financial operating system integrating execution, data, and asset layers.</p>
-        </div>
+    <main class="max-w-6xl mx-auto px-6">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-            <div class="premium-card rounded-2xl p-6">
-                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">01</div>
-                <h3 class="heading-font text-xl font-bold text-white mb-3">Flagship Prediction: Manadia</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    A trust-minimized infrastructure providing verifiable data settlement, financial oracle capabilities, and AI-coordinated algorithmic forecasting scenarios.
-                </p>
+        <section id="ecosystem" class="py-20 border-t border-white/5">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-white mb-4">Ecosystem Product Matrix</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">A multi-engine-driven financial operating system integrating execution, data, and asset layers.</p>
             </div>
-            <div class="premium-card rounded-2xl p-6">
-                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 font-bold mb-6 text-xl">02</div>
-                <h3 class="heading-font text-xl font-bold text-white mb-3">AI Financial Strategy Engine</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Maximizes capital efficiency through automated yield balancing pools, real-time portfolio optimization, and intelligent asset allocation strategies.
-                </p>
-            </div>
-            <div class="premium-card rounded-2xl p-6">
-                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">03</div>
-                <h3 class="heading-font text-xl font-bold text-white mb-3">RWA & Asset Tokenization</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Bridging traditional assets onto the blockchain. Expanding global asset boundaries through unified clearing and decentralized compliance models.
-                </p>
-            </div>
-        </div>
 
-        <div class="premium-card rounded-3xl p-8 sm:p-12 border border-amber-500/10 mb-20 relative overflow-hidden">
-            <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">Tokenomics</span>
-                    <h3 class="heading-font text-3xl font-bold text-white mt-4 mb-6">Sustainably Scalable Dual-Token Architecture</h3>
-                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
-                        AurumX operates a highly optimized economic recirculatory model driven by two foundational assets designed to isolate governance volatility from transactional processing fuel.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="premium-card rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">01</div>
+                    <h3 class="heading-font text-xl font-bold text-white mb-3">Flagship Prediction: Manadia</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        A trust-minimized infrastructure providing verifiable data settlement, financial oracle capabilities, and AI-coordinated algorithmic forecasting scenarios.
                     </p>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="text-amber-400 font-bold mt-0.5">✓</span>
-                            <span><strong>AUR (Platform Token):</strong> Core equity asset capturing exchange value, protocol governance, and direct buyback-and-burn cycles.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-amber-400 font-bold mt-0.5">✓</span>
-                            <span><strong>UMX (Ecosystem Token):</strong> Native public chain gas and computing power mining asset backing systemic liquidity.</span>
-                        </li>
-                    </ul>
                 </div>
-                <div class="bg-[#090A0F] border border-white/5 rounded-2xl p-6 sm:p-8">
-                    <h4 class="heading-font text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-400"></span> AurumX Ecological Base Fund
-                    </h4>
-                    <p class="text-xs text-gray-400 leading-relaxed mb-6">
-                        A foundational asset pool engineered to safeguard economy mechanics, stabilize market structural volatility, and guarantee linear structural risk-absorption.
+                <div class="premium-card rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 font-bold mb-6 text-xl">02</div>
+                    <h3 class="heading-font text-xl font-bold text-white mb-3">AI Financial Strategy Engine</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Maximizes capital efficiency through automated yield balancing pools, real-time portfolio optimization, and intelligent asset allocation strategies.
                     </p>
-                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
-                            <div class="font-bold text-white mb-1">65%</div>
-                            <div class="text-[10px] text-gray-500">Base Fund</div>
+                </div>
+                <div class="premium-card rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">03</div>
+                    <h3 class="heading-font text-xl font-bold text-white mb-3">RWA & Asset Tokenization</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Bridging traditional assets onto the blockchain. Expanding global asset boundaries through unified clearing and decentralized compliance models.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vaults" class="py-24 relative">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">
+                    Staking & Yields
+                </span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-white mt-4 mb-3">
+                    Liquidity Vault Yields
+                </h2>
+                <p class="text-sm text-gray-400 max-w-xl mx-auto">
+                    Strategic asset pools supported by the Base Fund for maximum stability and predictable growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <div class="premium-card rounded-3xl p-8 border border-amber-500/20 relative flex flex-col justify-between">
+                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                        Most Popular
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="heading-font text-5xl font-extrabold text-white tracking-tight">180</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-white/5 text-gray-400 rounded-md border border-white/5">More flexible</span>
                         </div>
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
-                            <div class="font-bold text-white mb-1">35%</div>
-                            <div class="text-[10px] text-gray-500">Ambassadors</div>
+                        
+                        <h3 class="heading-font text-lg font-bold text-white mb-1">Standard Liquidity Pool</h3>
+                        <p class="text-xs text-amber-400 mb-6 font-medium">Select duration: 180 Days</p>
+                        
+                        <div class="p-4 bg-white/[0.02] border border-white/5 rounded-xl mb-6">
+                            <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Monthly Yield (Estimated)</span>
+                            <span class="heading-font text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">8% - 15%</span>
                         </div>
-                        <div class="p-3 bg-amber-500/10 rounded-lg border border-amber-500/20 text-amber-400">
-                            <div class="font-bold mb-1">100%</div>
-                            <div class="text-[10px]">On-Chain</div>
+                        
+                        <ul class="space-y-3.5 text-xs text-gray-400 mb-8 pl-1">
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> 180-Day Liquidity Cycle</li>
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> AI-Optimized Balancing</li>
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> Priority Distribution</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://aurumx.cc/" target="_blank" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-xl text-center text-sm transition duration-200 block shadow-md">
+                        Stake Now
+                    </a>
+                </div>
+
+                <div class="premium-card rounded-3xl p-8 border-2 border-amber-500 relative flex flex-col justify-between shadow-xl shadow-amber-500/5">
+                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                        Higher rewards
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="heading-font text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 tracking-tight">360</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-amber-500/10 text-amber-400 rounded-md border border-amber-500/20">Max Acceleration</span>
+                        </div>
+                        
+                        <h3 class="heading-font text-lg font-bold text-white mb-1">High-Yield Alpha Pool</h3>
+                        <p class="text-xs text-amber-400 mb-6 font-medium">Select duration: 360 Days</p>
+                        
+                        <div class="p-4 bg-amber-500/5 border border-amber-500/10 rounded-xl mb-6">
+                            <span class="text-[10px] uppercase tracking-wider text-amber-500 block mb-1">Monthly Yield (Estimated)</span>
+                            <span class="heading-font text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">15% - 25%</span>
+                        </div>
+                        
+                        <ul class="space-y-3.5 text-xs text-gray-300 mb-8 pl-1">
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> 360-Day Liquidity Cycle</li>
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> Full Ecosystem Integration</li>
+                            <li class="flex items-center gap-2.5"><span class="text-amber-400 font-bold text-sm">•</span> Maximum Value Capture</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://aurumx.cc/" target="_blank" class="w-full py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-black font-extrabold rounded-xl text-center text-sm transition duration-200 block shadow-lg shadow-amber-500/10">
+                        Stake Now
+                    </a>
+                </div>
+
+                <div class="premium-card rounded-3xl p-8 border border-white/5 opacity-50 relative flex flex-col justify-between bg-black/40 select-none">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="heading-font text-5xl font-extrabold text-gray-600 tracking-tight">540</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 bg-white/5 text-gray-500 rounded uppercase border border-white/5 tracking-wider">Under Development</span>
+                        </div>
+                        
+                        <h3 class="heading-font text-lg font-bold text-gray-500 mb-1">Institutional Vault</h3>
+                        <p class="text-xs text-gray-600 mb-6 font-medium">Coming → Soon</p>
+                        
+                        <div class="p-4 bg-white/[0.01] border border-white/5 rounded-xl mb-6">
+                            <span class="text-[10px] uppercase tracking-wider text-gray-600 block mb-1">Yield optimization in progress</span>
+                            <span class="heading-font text-xl font-bold text-gray-600">Coming → Soon</span>
+                        </div>
+                        
+                        <ul class="space-y-3.5 text-xs text-gray-600 mb-8 pl-1">
+                            <li class="flex items-center gap-2.5"><span class="text-gray-700 font-bold text-sm">•</span> 540-Day Ultra Cycle</li>
+                            <li class="flex items-center gap-2.5"><span class="text-gray-700 font-bold text-sm">•</span> Deep Tier Clearing Institutional Yields</li>
+                            <li class="flex items-center gap-2.5"><span class="text-gray-700 font-bold text-sm">•</span> Dedicated Sovereignty Node Access</li>
+                        </ul>
+                    </div>
+                    
+                    <button disabled class="w-full py-3 bg-white/5 text-gray-600 font-semibold rounded-xl text-center text-sm cursor-not-allowed border border-white/5">
+                        Coming Soon
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tokenomics" class="py-20 border-t border-white/5">
+            <div class="premium-card rounded-3xl p-8 sm:p-12 border border-amber-500/10 relative overflow-hidden">
+                <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">Tokenomics</span>
+                        <h3 class="heading-font text-3xl font-bold text-white mt-4 mb-6">Sustainably Scalable Dual-Token Architecture</h3>
+                        <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
+                            AurumX operates a highly optimized economic recirculatory model driven by two foundational assets designed to isolate governance volatility from transactional processing fuel.
+                        </p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-400 font-bold mt-0.5">✓</span>
+                                <span><strong>AUR (Platform Token):</strong> Core equity asset capturing exchange value, protocol governance, and direct buyback-and-burn cycles.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-400 font-bold mt-0.5">✓</span>
+                                <span><strong>UMX (Ecosystem Token):</strong> Native public chain gas and computing power mining asset backing systemic liquidity.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-[#090A0F] border border-white/5 rounded-2xl p-6 sm:p-8">
+                        <h4 class="heading-font text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-400"></span> AurumX Ecological Base Fund
+                        </h4>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">
+                            A foundational asset pool engineered to safeguard economy mechanics, stabilize market structural volatility, and guarantee linear structural risk-absorption.
+                        </p>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                                <div class="font-bold text-white mb-1">65%</div>
+                                <div class="text-[10px] text-gray-500">Base Fund</div>
+                            </div>
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                                <div class="font-bold text-white mb-1">35%</div>
+                                <div class="text-[10px] text-gray-500">Ambassadors</div>
+                            </div>
+                            <div class="p-3 bg-amber-500/10 rounded-lg border border-amber-500/20 text-amber-400">
+                                <div class="font-bold mb-1">100%</div>
+                                <div class="text-[10px]">On-Chain</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="mb-12">
+        <section id="compliance" class="py-20 border-t border-white/5 mb-12">
             <div class="text-center mb-12">
                 <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mb-3">Institutional Compliance & Licensing</h2>
                 <p class="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto">Operating transparently under robust multinational regulatory entities to bridge digital systems into legacy frameworks.</p>
@@ -179,25 +292,23 @@
                     <p class="text-xs text-gray-500">Comprehensive scope digital asset infrastructure coverage.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
     </main>
 
-    <footer class="border-t border-white/5 bg-[#030406] py-8 text-center text-xs text-gray-600">
+    <footer id="footer" class="border-t border-white/5 bg-[#030406] py-8 text-center text-xs text-gray-600">
         <p>&copy; 2026 Crypto World Tools | Independent Referral Portal. Powered by AurumX Global Protocol Core Systems.</p>
     </footer>
 
     <script>
         function copyReferral() {
-            // Target the text content inside the referral badge
             const codeText = document.getElementById("refCode").innerText.trim();
             
-            // Execute HTML5 modern Navigator Clipboard Copy execution
             navigator.clipboard.writeText(codeText).then(() => {
                 const copyBtn = document.getElementById("copyBtn");
                 const originalHtml = copyBtn.innerHTML;
                 
-                // Visual Confirmation State Update
+                // Visual Switch to Success State
                 copyBtn.innerHTML = `
                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                     <span class="text-green-400 font-bold">Copied!</span>
@@ -205,14 +316,14 @@
                 copyBtn.classList.remove("bg-amber-500", "hover:bg-amber-600");
                 copyBtn.classList.add("bg-green-500/20", "border", "border-green-500/40");
 
-                // Revert to original design state after delay
+                // Timeout to revert back to normal state
                 setTimeout(() => {
                     copyBtn.innerHTML = originalHtml;
                     copyBtn.classList.remove("bg-green-500/20", "border", "border-green-500/40");
                     copyBtn.classList.add("bg-amber-500", "hover:bg-amber-600");
                 }, 1500);
             }).catch(err => {
-                console.error("Failed to copy text: ", err);
+                console.error("Failed to copy code: ", err);
             });
         }
     </script>
