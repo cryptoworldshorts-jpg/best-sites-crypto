@@ -1,61 +1,221 @@
 <!DOCTYPE html>
-<html lang="hr" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AurumX | Crypto World Tools</title>
+    <title>AurumX | Global One-Stop On-Chain Financial System</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Premium tamna pozadina s blagim sjajem */
         body {
-            background-color: #0B0C10;
+            background-color: #06070B;
             font-family: 'Inter', sans-serif;
         }
-        /* Custom zlatni neon efekt za AurumX */
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Luxury Gold & Purple Glow FX */
         .gold-glow {
-            text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            text-shadow: 0 0 30px rgba(245, 158, 11, 0.35);
         }
-        .gold-border {
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        .premium-card {
+            border: 1px solid rgba(245, 158, 11, 0.1);
+            background: linear-gradient(135deg, rgba(15, 17, 26, 0.7) 0%, rgba(10, 11, 18, 0.8) 100%);
             backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
         }
-        .gold-border:hover {
-            border-color: rgba(245, 158, 11, 0.6);
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.15);
+        .premium-card:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.05);
+            transform: translateY(-2px);
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="text-gray-200 overflow-x-hidden">
+<body class="text-gray-300 overflow-x-hidden antialiased">
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-        
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute top-[1200px] right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[130px] pointer-events-none"></div>
 
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-500/10 rounded-full border border-amber-500/20 mb-6">
-                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Powered by CryptoWorldTools
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-12 text-center">
+        <div class="max-w-4xl mx-auto z-10">
+            
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-500/10 rounded-full border border-amber-500/20 mb-8 animate-fade-in">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Official Partner Portal
             </span>
 
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-                The Next Evolution of Digital Wealth: <span class="text-amber-400 gold-glow">AurumX</span>
+            <h1 class="heading-font text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Global One-Stop <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 gold-glow">On-Chain Financial System</span>
             </h1>
 
-            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                Sigurna, brza i napredna kripto rješenja nove generacije. Preuzmite kontrolu nad svojom digitalnom imovinom uz najsuvremenije alate.
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                A compliant, intelligent, all-scenario infrastructure for next-generation finance. Powered by AUR Labs and institutional-grade clearing ecosystems.
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#explore" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-xl shadow-lg shadow-amber-500/20 transition duration-300 transform hover:-translate-y-0.5">
-                    Pokreni AurumX
+            <div class="max-w-md mx-auto mb-12 p-1 bg-gradient-to-r from-amber-500/20 via-purple-500/10 to-amber-500/20 rounded-2xl border border-amber-500/30 shadow-2xl">
+                <div class="bg-[#0D0F16] rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-left sm:pl-2">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-0.5">Your Exclusive Invitation Code</p>
+                        <span id="refCode" onclick="copyReferral()" class="heading-font text-2xl font-bold text-white tracking-wider cursor-pointer hover:text-amber-400 transition duration-150 block">
+                            VjQEFQg6
+                        </span>
+                    </div>
+                    <button id="copyBtn" onclick="copyReferral()" class="w-full sm:w-auto px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition duration-200 flex items-center justify-center gap-2 text-sm shadow-md active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                        Copy Code
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://aurumx.cc/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black font-bold rounded-xl shadow-xl shadow-amber-500/10 transition duration-300 transform hover:-translate-y-0.5 text-center">
+                    Launch AurumX App
                 </a>
-                <a href="#docs" class="px-8 py-4 gold-border text-amber-400 font-semibold rounded-xl transition duration-300 bg-white/5">
-                    Bijela Knjiga (Whitepaper)
+                <a href="#ecosystem" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-gray-300 font-medium rounded-xl border border-white/10 transition duration-300 text-center">
+                    Explore Ecosystem Matrix
                 </a>
             </div>
+
         </div>
-    </section>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12" id="ecosystem">
+        
+        <div class="text-center mb-16">
+            <h2 class="heading-font text-3xl sm:text-4xl font-bold text-white mb-4">Ecosystem Product Matrix</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">A multi-engine-driven financial operating system integrating execution, data, and asset layers.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <div class="premium-card rounded-2xl p-6">
+                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">01</div>
+                <h3 class="heading-font text-xl font-bold text-white mb-3">Flagship Prediction: Manadia</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    A trust-minimized infrastructure providing verifiable data settlement, financial oracle capabilities, and AI-coordinated algorithmic forecasting scenarios.
+                </p>
+            </div>
+            <div class="premium-card rounded-2xl p-6">
+                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 font-bold mb-6 text-xl">02</div>
+                <h3 class="heading-font text-xl font-bold text-white mb-3">AI Financial Strategy Engine</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Maximizes capital efficiency through automated yield balancing pools, real-time portfolio optimization, and intelligent asset allocation strategies.
+                </p>
+            </div>
+            <div class="premium-card rounded-2xl p-6">
+                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">03</div>
+                <h3 class="heading-font text-xl font-bold text-white mb-3">RWA & Asset Tokenization</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Bridging traditional assets onto the blockchain. Expanding global asset boundaries through unified clearing and decentralized compliance models.
+                </p>
+            </div>
+        </div>
+
+        <div class="premium-card rounded-3xl p-8 sm:p-12 border border-amber-500/10 mb-20 relative overflow-hidden">
+            <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">Tokenomics</span>
+                    <h3 class="heading-font text-3xl font-bold text-white mt-4 mb-6">Sustainably Scalable Dual-Token Architecture</h3>
+                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
+                        AurumX operates a highly optimized economic recirculatory model driven by two foundational assets designed to isolate governance volatility from transactional processing fuel.
+                    </p>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-400 font-bold mt-0.5">✓</span>
+                            <span><strong>AUR (Platform Token):</strong> Core equity asset capturing exchange value, protocol governance, and direct buyback-and-burn cycles.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-400 font-bold mt-0.5">✓</span>
+                            <span><strong>UMX (Ecosystem Token):</strong> Native public chain gas and computing power mining asset backing systemic liquidity.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-[#090A0F] border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h4 class="heading-font text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-400"></span> AurumX Ecological Base Fund
+                    </h4>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-6">
+                        A foundational asset pool engineered to safeguard economy mechanics, stabilize market structural volatility, and guarantee linear structural risk-absorption.
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                            <div class="font-bold text-white mb-1">65%</div>
+                            <div class="text-[10px] text-gray-500">Base Fund</div>
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                            <div class="font-bold text-white mb-1">35%</div>
+                            <div class="text-[10px] text-gray-500">Ambassadors</div>
+                        </div>
+                        <div class="p-3 bg-amber-500/10 rounded-lg border border-amber-500/20 text-amber-400">
+                            <div class="font-bold mb-1">100%</div>
+                            <div class="text-[10px]">On-Chain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-2xl sm:text-3xl font-bold text-white mb-3">Institutional Compliance & Licensing</h2>
+                <p class="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto">Operating transparently under robust multinational regulatory entities to bridge digital systems into legacy frameworks.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-1">Hong Kong SFC</h4>
+                    <p class="text-xs text-gray-500">Type 4 & Type 9 Licenses for Asset Management & Advisory.</p>
+                </div>
+                <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-1">United States MSB</h4>
+                    <p class="text-xs text-gray-500">FinCEN Money Transmission Regulation Architecture.</p>
+                </div>
+                <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-1">European MiCA</h4>
+                    <p class="text-xs text-gray-500">Framework compliant for sovereign distribution across EU members.</p>
+                </div>
+                <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-1">Middle East VARA</h4>
+                    <p class="text-xs text-gray-500">Comprehensive scope digital asset infrastructure coverage.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-white/5 bg-[#030406] py-8 text-center text-xs text-gray-600">
+        <p>&copy; 2026 Crypto World Tools | Independent Referral Portal. Powered by AurumX Global Protocol Core Systems.</p>
+    </footer>
+
+    <script>
+        function copyReferral() {
+            // Target the text content inside the referral badge
+            const codeText = document.getElementById("refCode").innerText.trim();
+            
+            // Execute HTML5 modern Navigator Clipboard Copy execution
+            navigator.clipboard.writeText(codeText).then(() => {
+                const copyBtn = document.getElementById("copyBtn");
+                const originalHtml = copyBtn.innerHTML;
+                
+                // Visual Confirmation State Update
+                copyBtn.innerHTML = `
+                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    <span class="text-green-400 font-bold">Copied!</span>
+                `;
+                copyBtn.classList.remove("bg-amber-500", "hover:bg-amber-600");
+                copyBtn.classList.add("bg-green-500/20", "border", "border-green-500/40");
+
+                // Revert to original design state after delay
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalHtml;
+                    copyBtn.classList.remove("bg-green-500/20", "border", "border-green-500/40");
+                    copyBtn.classList.add("bg-amber-500", "hover:bg-amber-600");
+                }, 1500);
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
 
 </body>
 </html>
