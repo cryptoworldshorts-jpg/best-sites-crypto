@@ -59,6 +59,13 @@
             box-shadow: 0 10px 30px rgba(245, 158, 11, 0.05);
             transform: translateY(-2px);
         }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            background-color: #06070B;
+            font-family: 'Inter', sans-serif;
+        }
     </style>
 </head>
 <body class="text-gray-300 overflow-x-hidden antialiased">
@@ -306,7 +313,7 @@
             </div>
         </section>
 
-        <section id="agents" class="py-24 border-t border-white/5 relative">
+        <section id="agents" class="py-24 border-t border-white/5 relative overflow-hidden">
             <div class="absolute top-1/2 left-1/4 w-[350px] h-[350px] bg-amber-500/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">
@@ -461,7 +468,7 @@
             </p>
         </section>
 
-        <section id="nodes" class="py-20 border-t border-white/5 relative">
+        <section id="nodes" class="py-20 border-t border-white/5 relative overflow-hidden">
             <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600/[0.02] rounded-full blur-3xl pointer-events-none"></div>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5">
@@ -552,7 +559,7 @@
             </div>
         </section>
 
-        <section id="roadmap" class="py-24 border-t border-white/5 relative">
+        <section id="roadmap" class="py-24 border-t border-white/5 relative overflow-hidden">
             <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-purple-600/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
             <div class="text-center mb-20">
                 <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-md">
