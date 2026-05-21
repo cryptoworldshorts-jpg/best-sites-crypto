@@ -294,7 +294,7 @@
             </div>
         </section>
 
-        <section id="agents" class="py-24 border-t border-white/5 relative">
+       <section id="agents" class="py-24 border-t border-white/5 relative">
             
             <div class="absolute top-1/2 left-1/4 w-[350px] h-[350px] bg-amber-500/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -311,66 +311,150 @@
             </div>
 
             <div class="w-full overflow-x-auto rounded-2xl border border-white/5 bg-[#0A0B10]/60 backdrop-blur-md shadow-2xl">
-                <table class="w-full text-left border-collapse min-w-[700px]">
+                <table class="w-full text-left border-collapse min-w-[900px]">
                     <thead>
                         <tr class="border-b border-white/10 bg-white/[0.02]">
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-amber-400">Agent Level</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Direct Users</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Direct Performance</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Subordinate Nodes</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Team Performance</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-amber-400">Base Reward</th>
-                            <th class="p-5 heading-font text-xs font-bold uppercase tracking-wider text-purple-400">Performance Pool</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-amber-400">Agent Level</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Direct Users</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Direct Performance</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Subordinate Nodes</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-gray-400">Team Performance</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-amber-400">Base Reward</th>
+                            <th class="p-4 heading-font text-xs font-bold uppercase tracking-wider text-purple-400">Performance Pool</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-white/5 text-sm">
+                    <tbody class="divide-y divide-white/5 text-xs sm:text-sm">
                         
                         <tr class="hover:bg-white/[0.02] transition duration-150">
-                            <td class="p-5 font-bold text-white flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> L1 Agent
-                            </td>
-                            <td class="p-5 text-gray-300">≥ 5 Users</td>
-                            <td class="p-5 text-gray-300">$2,000</td>
-                            <td class="p-5 text-gray-500">—</td>
-                            <td class="p-5 text-gray-500">—</td>
-                            <td class="p-5 font-semibold text-amber-400">10%</td>
-                            <td class="p-5 font-semibold text-purple-400">3%</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> L1 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 5 Users</td>
+                            <td class="p-4 text-gray-300">$2,000</td>
+                            <td class="p-4 text-gray-500">—</td>
+                            <td class="p-4 text-gray-500">—</td>
+                            <td class="p-4 font-semibold text-amber-400">10%</td>
+                            <td class="p-4 font-semibold text-purple-400">3%</td>
                         </tr>
 
                         <tr class="hover:bg-white/[0.02] transition duration-150">
-                            <td class="p-5 font-bold text-white flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> L2 Agent
-                            </td>
-                            <td class="p-5 text-gray-300">≥ 10 Users</td>
-                            <td class="p-5 text-gray-300">$5,000</td>
-                            <td class="p-5 text-gray-300">2 Lineages (L1)</td>
-                            <td class="p-5 text-gray-300">$20,000</td>
-                            <td class="p-5 font-semibold text-amber-400">15%</td>
-                            <td class="p-5 font-semibold text-purple-400">5%</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> L2 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 10 Users</td>
+                            <td class="p-4 text-gray-300">$5,000</td>
+                            <td class="p-4 text-gray-300">2 Lineages (L1)</td>
+                            <td class="p-4 text-gray-300">$20,000</td>
+                            <td class="p-4 font-semibold text-amber-400">15%</td>
+                            <td class="p-4 font-semibold text-purple-400">5%</td>
                         </tr>
 
                         <tr class="hover:bg-white/[0.02] transition duration-150 bg-amber-500/[0.01]">
-                            <td class="p-5 font-bold text-white flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)]"></span> L3 Agent
-                            </td>
-                            <td class="p-5 text-gray-300">≥ 15 Users</td>
-                            <td class="p-5 text-gray-300">$10,000</td>
-                            <td class="p-5 text-gray-300">3 Lineages (L2)</td>
-                            <td class="p-5 text-gray-300">$100,000</td>
-                            <td class="p-5 font-semibold text-amber-400">20%</td>
-                            <td class="p-5 font-semibold text-purple-400">8%</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)]"></span> L3 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 15 Users</td>
+                            <td class="p-4 text-gray-300">$10,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L2)</td>
+                            <td class="p-4 text-gray-300">$100,000</td>
+                            <td class="p-4 font-semibold text-amber-400">20%</td>
+                            <td class="p-4 font-semibold text-purple-400">8%</td>
                         </tr>
 
                         <tr class="hover:bg-white/[0.02] transition duration-150">
-                            <td class="p-5 font-bold text-white flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_6px_rgba(168,85,247,0.8)]"></span> L4 Agent
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L4 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 20 Users</td>
+                            <td class="p-4 text-gray-300">$30,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L3)</td>
+                            <td class="p-4 text-gray-300">$500,000</td>
+                            <td class="p-4 font-semibold text-amber-400">25%</td>
+                            <td class="p-4 font-semibold text-purple-400">10%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L5 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 25 Users</td>
+                            <td class="p-4 text-gray-300">$50,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L4)</td>
+                            <td class="p-4 text-gray-300">$1,500,000</td>
+                            <td class="p-4 font-semibold text-amber-400">30%</td>
+                            <td class="p-4 font-semibold text-purple-400">11%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L6 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 30 Users</td>
+                            <td class="p-4 text-gray-300">$80,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L5)</td>
+                            <td class="p-4 text-gray-300">$3,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">35%</td>
+                            <td class="p-4 font-semibold text-purple-400">12%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L7 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 35 Users</td>
+                            <td class="p-4 text-gray-300">$120,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L6)</td>
+                            <td class="p-4 text-gray-300">$6,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">40%</td>
+                            <td class="p-4 font-semibold text-purple-400">13%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L8 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 40 Users</td>
+                            <td class="p-4 text-gray-300">$200,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L7)</td>
+                            <td class="p-4 text-gray-300">$12,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">45%</td>
+                            <td class="p-4 font-semibold text-purple-400">14%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L9 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 45 Users</td>
+                            <td class="p-4 text-gray-300">$300,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L8)</td>
+                            <td class="p-4 text-gray-300">$25,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">50%</td>
+                            <td class="p-4 font-semibold text-purple-400 text-purple-400">15%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L10 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 50 Users</td>
+                            <td class="p-4 text-gray-300">$500,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L9)</td>
+                            <td class="p-4 text-gray-300">$60,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">55%</td>
+                            <td class="p-4 font-semibold text-purple-400 text-purple-400">16%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L11 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 55 Users</td>
+                            <td class="p-4 text-gray-300">$80,0000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L10)</td>
+                            <td class="p-4 text-gray-300">$150,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">60%</td>
+                            <td class="p-4 font-semibold text-purple-400 text-purple-400">17%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150">
+                            <td class="p-4 font-bold text-white flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> L12 Agent</td>
+                            <td class="p-4 text-gray-300">≥ 60 Users</td>
+                            <td class="p-4 text-gray-300">$1,200,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L11)</td>
+                            <td class="p-4 text-gray-300">$400,000,000</td>
+                            <td class="p-4 font-semibold text-amber-400">65%</td>
+                            <td class="p-4 font-semibold text-purple-400 text-purple-400">18%</td>
+                        </tr>
+
+                        <tr class="hover:bg-white/[0.02] transition duration-150 bg-gradient-to-r from-amber-500/[0.02] to-purple-500/[0.02]">
+                            <td class="p-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-amber-400 to-purple-400 shadow-[0_0_8px_rgba(245,158,11,1)]"></span> L13 Agent
                             </td>
-                            <td class="p-5 text-gray-300">≥ 20 Users</td>
-                            <td class="p-5 text-gray-300">$30,000</td>
-                            <td class="p-5 text-gray-300">3 Lineages (L3)</td>
-                            <td class="p-5 text-gray-300">$500,000</td>
-                            <td class="p-5 font-semibold text-amber-400">25%</td>
-                            <td class="p-5 font-semibold text-purple-400">10%</td>
+                            <td class="p-4 font-medium text-white">≥ 70 Users</td>
+                            <td class="p-4 font-medium text-white">$2,000,000</td>
+                            <td class="p-4 text-gray-300">3 Lineages (L12)</td>
+                            <td class="p-4 font-medium text-white">$1,000,000,000</td>
+                            <td class="p-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 text-base">70%</td>
+                            <td class="p-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 text-base">20%</td>
                         </tr>
 
                     </tbody>
@@ -378,11 +462,10 @@
             </div>
 
             <p class="text-center text-[11px] text-gray-500 mt-4 italic">
-                * Note: Lineage restrictions require nodes to be distributed across distinct infrastructure branches for valid structural qualification.
+                * Note: Lineage restrictions require nodes to be distributed across distinct infrastructure branches for valid structural qualification. Extended L5-L13 architectures inherit deep compression volume aggregation.
             </p>
 
         </section>
-
         <section id="roadmap" class="py-24 border-t border-white/5 relative">
             
             <div class="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-purple-600/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
